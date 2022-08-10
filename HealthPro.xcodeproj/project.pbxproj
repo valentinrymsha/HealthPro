@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE5650C628A0E6A0001E1668 /* StartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */; };
+		CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5650C928A118D5001E1668 /* Registration.storyboard */; };
+		CE5650D128A11CBE001E1668 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650D028A11CBE001E1668 /* MainPageViewController.swift */; };
+		CE759121289BD39B00F7098A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE759120289BD39B00F7098A /* StartViewController.swift */; };
 		CE8A6B33289ACF41002F1DD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B32289ACF41002F1DD7 /* AppDelegate.swift */; };
 		CE8A6B35289ACF41002F1DD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B34289ACF41002F1DD7 /* SceneDelegate.swift */; };
-		CE8A6B37289ACF41002F1DD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B36289ACF41002F1DD7 /* ViewController.swift */; };
 		CE8A6B3A289ACF41002F1DD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8A6B38289ACF41002F1DD7 /* Main.storyboard */; };
 		CE8A6B3C289ACF43002F1DD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8A6B3B289ACF43002F1DD7 /* Assets.xcassets */; };
 		CE8A6B3F289ACF43002F1DD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8A6B3D289ACF43002F1DD7 /* LaunchScreen.storyboard */; };
+		CE8A6B4C289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE8A6B4B289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf */; };
+		CE8A6B5A289ADC11002F1DD7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B59289ADC11002F1DD7 /* LoginViewController.swift */; };
+		CE8A6B5E289ADC24002F1DD7 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B5D289ADC24002F1DD7 /* SigninViewController.swift */; };
+		E773A7C3EE0C34D9266F2839 /* Pods_HealthPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A204F500672533D41DC8477 /* Pods-HealthPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthPro.debug.xcconfig"; path = "Target Support Files/Pods-HealthPro/Pods-HealthPro.debug.xcconfig"; sourceTree = "<group>"; };
+		C673CCB482C24BEEEE58DCC8 /* Pods-HealthPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthPro.release.xcconfig"; path = "Target Support Files/Pods-HealthPro/Pods-HealthPro.release.xcconfig"; sourceTree = "<group>"; };
+		CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE5650C928A118D5001E1668 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		CE5650D028A11CBE001E1668 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		CE759120289BD39B00F7098A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		CE8A6B2F289ACF41002F1DD7 /* HealthPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8A6B32289ACF41002F1DD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8A6B34289ACF41002F1DD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE8A6B36289ACF41002F1DD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE8A6B39289ACF41002F1DD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE8A6B3B289ACF43002F1DD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8A6B3E289ACF43002F1DD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8A6B40289ACF43002F1DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE8A6B4B289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TheBiggerTheBetter.ttf; sourceTree = "<group>"; };
+		CE8A6B59289ADC11002F1DD7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE8A6B5D289ADC24002F1DD7 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E773A7C3EE0C34D9266F2839 /* Pods_HealthPro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22741BBFB38CA4D81C593385 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A204F500672533D41DC8477 /* Pods-HealthPro.debug.xcconfig */,
+				C673CCB482C24BEEEE58DCC8 /* Pods-HealthPro.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B6CC62698F923E3A4A3F06DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE5650C828A118AF001E1668 /* Storuboards */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A6B3D289ACF43002F1DD7 /* LaunchScreen.storyboard */,
+				CE8A6B38289ACF41002F1DD7 /* Main.storyboard */,
+				CE5650C928A118D5001E1668 /* Registration.storyboard */,
+			);
+			path = Storuboards;
+			sourceTree = "<group>";
+		};
 		CE8A6B26289ACF40002F1DD7 = {
 			isa = PBXGroup;
 			children = (
 				CE8A6B31289ACF41002F1DD7 /* HealthPro */,
 				CE8A6B30289ACF41002F1DD7 /* Products */,
+				22741BBFB38CA4D81C593385 /* Pods */,
+				B6CC62698F923E3A4A3F06DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +102,43 @@
 		CE8A6B31289ACF41002F1DD7 /* HealthPro */ = {
 			isa = PBXGroup;
 			children = (
+				CE5650C828A118AF001E1668 /* Storuboards */,
+				CE8B457B289BD5B800003DEF /* View */,
+				CE8A6B58289ADBF2002F1DD7 /* Controller */,
+				CE8A6B4A289AD0CC002F1DD7 /* fonts */,
 				CE8A6B32289ACF41002F1DD7 /* AppDelegate.swift */,
 				CE8A6B34289ACF41002F1DD7 /* SceneDelegate.swift */,
-				CE8A6B36289ACF41002F1DD7 /* ViewController.swift */,
-				CE8A6B38289ACF41002F1DD7 /* Main.storyboard */,
 				CE8A6B3B289ACF43002F1DD7 /* Assets.xcassets */,
-				CE8A6B3D289ACF43002F1DD7 /* LaunchScreen.storyboard */,
 				CE8A6B40289ACF43002F1DD7 /* Info.plist */,
 			);
 			path = HealthPro;
+			sourceTree = "<group>";
+		};
+		CE8A6B4A289AD0CC002F1DD7 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A6B4B289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		CE8A6B58289ADBF2002F1DD7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A6B59289ADC11002F1DD7 /* LoginViewController.swift */,
+				CE8A6B5D289ADC24002F1DD7 /* SigninViewController.swift */,
+				CE759120289BD39B00F7098A /* StartViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE8B457B289BD5B800003DEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */,
+				CE5650D028A11CBE001E1668 /* MainPageViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE8A6B43289ACF43002F1DD7 /* Build configuration list for PBXNativeTarget "HealthPro" */;
 			buildPhases = (
+				2226B8DB75B82D1752F35313 /* [CP] Check Pods Manifest.lock */,
 				CE8A6B2B289ACF41002F1DD7 /* Sources */,
 				CE8A6B2C289ACF41002F1DD7 /* Frameworks */,
 				CE8A6B2D289ACF41002F1DD7 /* Resources */,
+				CEE2F98E28A3A94F00B2B426 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -124,20 +200,70 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */,
 				CE8A6B3F289ACF43002F1DD7 /* LaunchScreen.storyboard in Resources */,
 				CE8A6B3C289ACF43002F1DD7 /* Assets.xcassets in Resources */,
+				CE8A6B4C289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf in Resources */,
 				CE8A6B3A289ACF41002F1DD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2226B8DB75B82D1752F35313 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthPro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEE2F98E28A3A94F00B2B426 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE8A6B2B289ACF41002F1DD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8A6B37289ACF41002F1DD7 /* ViewController.swift in Sources */,
+				CE759121289BD39B00F7098A /* StartViewController.swift in Sources */,
+				CE5650D128A11CBE001E1668 /* MainPageViewController.swift in Sources */,
+				CE5650C628A0E6A0001E1668 /* StartCollectionViewCell.swift in Sources */,
+				CE8A6B5A289ADC11002F1DD7 /* LoginViewController.swift in Sources */,
+				CE8A6B5E289ADC24002F1DD7 /* SigninViewController.swift in Sources */,
 				CE8A6B33289ACF41002F1DD7 /* AppDelegate.swift in Sources */,
 				CE8A6B35289ACF41002F1DD7 /* SceneDelegate.swift in Sources */,
 			);
@@ -283,11 +409,13 @@
 		};
 		CE8A6B44289ACF43002F1DD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A204F500672533D41DC8477 /* Pods-HealthPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HealthPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,17 +423,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.vironit.HealthPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CE8A6B45289ACF43002F1DD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C673CCB482C24BEEEE58DCC8 /* Pods-HealthPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HealthPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +443,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.vironit.HealthPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
