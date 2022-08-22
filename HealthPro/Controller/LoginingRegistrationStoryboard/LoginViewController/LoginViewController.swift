@@ -8,24 +8,24 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     // MARK: Outlets
     
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet private weak var userNameTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var loginButton: UIButton!
     
     // MARK: Properties
     
-    let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    private let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
-    func oopsAlert() {
+    private func oopsAlert() {
         let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Try to input data againg!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
-    func invalidLoginDataAlert() {
+    private func invalidLoginDataAlert() {
         let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Invalid login or password!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
@@ -41,13 +41,13 @@ class LoginViewController: UIViewController {
     
     // MARK: Actions
     
-    @IBAction func backToStartPageButton(_ sender: Any) {
+    @IBAction private func backToStartPageButton(_ sender: Any) {
         if let startVC = mainStoryBoard.instantiateViewController(withIdentifier: "StartVC") as? StartViewController {
             present(startVC, animated: false, completion: nil)
         }
     }
     
-    @IBAction func loginButton(_ sender: Any) {
+    @IBAction private func loginButton(_ sender: Any) {
         guard userNameTextField.hasText && passwordTextField.hasText else { return oopsAlert() }
         if UsersData.userDefault.dictionary(forKey: "\(userNameTextField.text!)") as? Dictionary == ["\(userNameTextField.text!)": "\(passwordTextField.text!)"] {
             if let mainVC = mainStoryBoard.instantiateViewController(withIdentifier: "MainPageVC") as? MainPageViewController {

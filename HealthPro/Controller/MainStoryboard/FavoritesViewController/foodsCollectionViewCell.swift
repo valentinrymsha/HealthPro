@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FoodsCollectionViewCell: UICollectionViewCell {
+final class FoodsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var foodImageView: UIImageView!
     

@@ -11,15 +11,15 @@ class SignUpViewController: UIViewController {
 
     // MARK: Outlets
     
-    @IBOutlet weak var submitButton: UIButton!
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet private weak var submitButton: UIButton!
+    @IBOutlet private weak var userNameTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
     
     // MARK: Properties
     
-    let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    private let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
-    func oopsAlert() {
+    private func oopsAlert() {
         let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Try to input data againg!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
@@ -35,13 +35,13 @@ class SignUpViewController: UIViewController {
     
     // MARK: Actions
     
-    @IBAction func backToStartPageButton(_ sender: Any) {
+    @IBAction private func backToStartPageButton(_ sender: Any) {
         if let startVC = mainStoryBoard.instantiateViewController(withIdentifier: "StartVC") as? StartViewController {
             present(startVC, animated: false, completion: nil)
         }
     }
     
-    @IBAction func submitButton(_ sender: Any) {
+    @IBAction private func submitButton(_ sender: Any) {
         if !self.userNameTextField.hasText || self.userNameTextField.text?.count ?? 0 >= 10 {
             oopsAlert()
         } else if !self.passwordTextField.hasText || self.passwordTextField.text?.count ?? 0 >= 15 {

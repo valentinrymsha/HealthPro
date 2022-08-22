@@ -6,6 +6,12 @@ target 'HealthPro' do
   use_frameworks!
 
   # Pods for HealthPro
+
+pod 'Alamofire','4.9.1'
+pod 'SwiftyJSON', '~> 4.0'
+pod 'AlamofireSwiftyJSON'
+pod 'AlamofireImage'
 pod 'SwiftLint'
+pod 'BetterSegmentedControl', '~> 1.3'
 
 end

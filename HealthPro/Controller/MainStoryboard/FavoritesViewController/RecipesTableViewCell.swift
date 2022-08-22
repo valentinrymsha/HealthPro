@@ -7,18 +7,21 @@
 
 import UIKit
 
-class RecipesTableViewCell: UITableViewCell {
+final class RecipesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var recipeImageView: UIImageView!
+    @IBOutlet weak var recipeTitileLabel: UILabel!
     
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        recipeImageView.layer.cornerRadius = 13
         // Initialization code
     }
 
