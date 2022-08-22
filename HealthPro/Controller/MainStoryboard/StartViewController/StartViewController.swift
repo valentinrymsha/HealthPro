@@ -8,7 +8,10 @@
 import UIKit
 
 // swiftlint:disable line_length
+
 class StartViewController: UIViewController {
+    
+    // MARK: Outlets
     
     @IBOutlet weak var startPageController: UIPageControl!
     
@@ -16,16 +19,13 @@ class StartViewController: UIViewController {
     
     @IBOutlet weak var startCollectionView: UICollectionView!
     
+    // MARK: Properties
+    
     private var images: [UIImage] {
         Array(0...2).compactMap { UIImage(named: "png\($0)") }
     }
     
-    
-    @IBAction func getStartedButton(_ sender: Any) {
-    }
-    
-    @IBAction func logInButton(_ sender: Any) {
-    }
+    let registrationStoryBoard: UIStoryboard = UIStoryboard(name: "Registration", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +37,20 @@ class StartViewController: UIViewController {
         startPageController.numberOfPages = images.count
         startPageController.hidesForSinglePage = true
     }
+
+    // MARK: Actions
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        self.startPageController.currentPage = indexPath.item
+    @IBAction func getStartedButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func logInButton(_ sender: Any) {
+        guard let loginVC = registrationStoryBoard.instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController else { return }
+        present(loginVC, animated: true, completion: nil)
     }
 
 }
-// MARK: - Cell description
+// MARK: - CollectionDataSource, Delegate
 
 extension StartViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -59,6 +66,9 @@ extension StartViewController: UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        self.startPageController.currentPage = indexPath.item
+    }
     
 }
 
