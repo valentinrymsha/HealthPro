@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     // MARK: Outlets
     
@@ -48,7 +48,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction private func loginButton(_ sender: Any) {
-        guard userNameTextField.hasText && passwordTextField.hasText else { return oopsAlert() }
+        guard userNameTextField.hasText,
+              passwordTextField.hasText,
+              userNameTextField.text?.contains("#@$^&*()?!§±№;%><=+") == false,
+              passwordTextField.text?.contains("#@$^&*()?!§±№;%><=+") == false
+              
+              else { return self.oopsAlert() }
         if UsersData.userDefault.dictionary(forKey: "\(userNameTextField.text!)") as? Dictionary == ["\(userNameTextField.text!)": "\(passwordTextField.text!)"] {
             if let mainVC = mainStoryBoard.instantiateViewController(withIdentifier: "MainPageVC") as? MainPageViewController {
                 present(mainVC, animated: true, completion: nil)
@@ -58,5 +63,9 @@ class LoginViewController: UIViewController {
         } else {
             invalidLoginDataAlert()
         }
+    }
+    
+    @IBAction private func forgotPassword(_ sender: Any) {
+        
     }
 }

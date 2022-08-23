@@ -15,7 +15,7 @@ final class Manager {
     static func checkUserOnServer(complition: @escaping (Root?) -> Void) {
         let session = URLSession.shared
         // Get API
-        let api = "https://api.spoonacular.com/recipes/random?apiKey=9f40dbb7b8a54e3b9d76a431a5c55615&number=10"
+        let api = "https://api.spoonacular.com/recipes/random?apiKey=9f40dbb7b8a54e3b9d76a431a5c55615&number=20"
         // Create API URL
         guard let apiURL = URL(string: api) else {
             return

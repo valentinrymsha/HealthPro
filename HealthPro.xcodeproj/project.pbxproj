@@ -13,6 +13,10 @@
 		CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5650C928A118D5001E1668 /* Registration.storyboard */; };
 		CE5650D128A11CBE001E1668 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650D028A11CBE001E1668 /* MainPageViewController.swift */; };
 		CE759121289BD39B00F7098A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE759120289BD39B00F7098A /* StartViewController.swift */; };
+		CE77F1BD28B4F55300F29069 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */; };
+		CE77F1C328B506E900F29069 /* BMRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1C228B506E900F29069 /* BMRViewController.swift */; };
+		CE77F1C828B5229300F29069 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1C728B5229300F29069 /* RecipeViewController.swift */; };
+		CE77F1CC28B5244B00F29069 /* dfxgsjkhi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE77F1CB28B5244B00F29069 /* dfxgsjkhi.storyboard */; };
 		CE8A6B33289ACF41002F1DD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B32289ACF41002F1DD7 /* AppDelegate.swift */; };
 		CE8A6B35289ACF41002F1DD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B34289ACF41002F1DD7 /* SceneDelegate.swift */; };
 		CE8A6B3A289ACF41002F1DD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8A6B38289ACF41002F1DD7 /* Main.storyboard */; };
@@ -36,6 +40,10 @@
 		CE5650C928A118D5001E1668 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Registration.storyboard; path = /Users/user/Documents/HealthPro/HealthPro/Controller/LoginingRegistrationStoryboard/Registration.storyboard; sourceTree = "<absolute>"; };
 		CE5650D028A11CBE001E1668 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		CE759120289BD39B00F7098A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		CE77F1C228B506E900F29069 /* BMRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMRViewController.swift; sourceTree = "<group>"; };
+		CE77F1C728B5229300F29069 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		CE77F1CB28B5244B00F29069 /* dfxgsjkhi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = dfxgsjkhi.storyboard; sourceTree = "<group>"; };
 		CE8A6B2F289ACF41002F1DD7 /* HealthPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8A6B32289ACF41002F1DD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8A6B34289ACF41002F1DD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,11 +122,37 @@
 		CE18465E28ABCC56003BCD42 /* FavoritesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CE77F1C628B5226C00F29069 /* RecipesCellViewController */,
 				CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */,
 				CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */,
 				CEA2B3BF28ABF2280027D3D4 /* RecipesTableViewCell.swift */,
 			);
 			path = FavoritesViewController;
+			sourceTree = "<group>";
+		};
+		CE77F1B528B4F50800F29069 /* CalculatorViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE77F1C128B506D200F29069 /* BMRVC */,
+				CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */,
+			);
+			path = CalculatorViewController;
+			sourceTree = "<group>";
+		};
+		CE77F1C128B506D200F29069 /* BMRVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE77F1C228B506E900F29069 /* BMRViewController.swift */,
+			);
+			path = BMRVC;
+			sourceTree = "<group>";
+		};
+		CE77F1C628B5226C00F29069 /* RecipesCellViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE77F1C728B5229300F29069 /* RecipeViewController.swift */,
+			);
+			path = RecipesCellViewController;
 			sourceTree = "<group>";
 		};
 		CE8A6B26289ACF40002F1DD7 = {
@@ -190,8 +224,10 @@
 			children = (
 				CE8A6B38289ACF41002F1DD7 /* Main.storyboard */,
 				CE5650D028A11CBE001E1668 /* MainPageViewController.swift */,
+				CE77F1B528B4F50800F29069 /* CalculatorViewController */,
 				CE18465E28ABCC56003BCD42 /* FavoritesViewController */,
 				CEB9562428ACF1C20021D261 /* StartViewController */,
+				CE77F1CB28B5244B00F29069 /* dfxgsjkhi.storyboard */,
 			);
 			path = MainStoryboard;
 			sourceTree = "<group>";
@@ -273,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */,
+				CE77F1CC28B5244B00F29069 /* dfxgsjkhi.storyboard in Resources */,
 				CE8A6B3F289ACF43002F1DD7 /* LaunchScreen.storyboard in Resources */,
 				CE8A6B3C289ACF43002F1DD7 /* Assets.xcassets in Resources */,
 				CE8A6B4C289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf in Resources */,
@@ -358,8 +395,11 @@
 				CEAFFA1628AE7FDA00011E65 /* Manager.swift in Sources */,
 				CE8A6B5E289ADC24002F1DD7 /* SignUpViewController.swift in Sources */,
 				CE8A6B33289ACF41002F1DD7 /* AppDelegate.swift in Sources */,
+				CE77F1C328B506E900F29069 /* BMRViewController.swift in Sources */,
+				CE77F1BD28B4F55300F29069 /* CalculatorViewController.swift in Sources */,
 				CEB9562B28AD2AFC0021D261 /* UsersData.swift in Sources */,
 				CE8A6B35289ACF41002F1DD7 /* SceneDelegate.swift in Sources */,
+				CE77F1C828B5229300F29069 /* RecipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

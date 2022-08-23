@@ -24,6 +24,7 @@ class FavoritesViewController: UIViewController {
     
     private var recipesArray: Root?
     private var recipes: [Recipe]?
+    private var imagesForColletion: [UIImage]?
     
     private var imagesOfFood: [UIImage] {
         Array(0...2).compactMap { UIImage(named: "png\($0)") }
@@ -44,6 +45,7 @@ class FavoritesViewController: UIViewController {
     
         searchButton.layer.cornerRadius = 13
         
+        
         recipesTableView.delegate = self
         recipesTableView.dataSource = self
         
@@ -56,6 +58,7 @@ class FavoritesViewController: UIViewController {
         super.viewWillAppear(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.recipesTableView.reloadData()
+            self.foodsTableView.reloadData()
         }
     }
     
@@ -92,14 +95,26 @@ class FavoritesViewController: UIViewController {
 
 extension FavoritesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        imagesOfFood.count
+//        imagesOfFood.count
+        recipes?.count ?? 1
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodsCollectionVC", for: indexPath) as? FoodsCollectionViewCell else { fatalError() }
         //        collectionView.tintColor = .white
-        cell.foodImageView.image = imagesOfFood[indexPath.row]
+//        cell.foodImageView.image = imagesOfFood[indexPath.row]
+        let recipe = recipes?[indexPath.row]
+        
+        if let imageUrl = recipe?.image {
+        Alamofire.request(imageUrl).responseImage { response in
+            if let image = response.result.value {
+                DispatchQueue.main.async {
+                    cell.foodImageView.image = image
+                }
+            }
+        }
+        }
         
         cell.layer.cornerRadius = 13
         
@@ -137,7 +152,7 @@ extension FavoritesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
-        return recipes?.count ?? 0
+        return recipes?.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -179,4 +194,6 @@ extension FavoritesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         120
     }
+    
+    
 }

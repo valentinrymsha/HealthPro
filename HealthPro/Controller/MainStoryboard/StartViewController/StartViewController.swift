@@ -13,19 +13,19 @@ class StartViewController: UIViewController {
     
     // MARK: Outlets
     
-    @IBOutlet weak var startPageController: UIPageControl!
+    @IBOutlet private weak var startPageController: UIPageControl!
     
-    @IBOutlet weak var getStartedButton: UIButton!
+    @IBOutlet private weak var getStartedButton: UIButton!
     
-    @IBOutlet weak var startCollectionView: UICollectionView!
+    @IBOutlet private weak var startCollectionView: UICollectionView!
     
     // MARK: Properties
     
     private var images: [UIImage] {
-        Array(0...2).compactMap { UIImage(named: "png\($0)") }
+        Array(3...5).compactMap { UIImage(named: "png\($0)") }
     }
     
-    let registrationStoryBoard: UIStoryboard = UIStoryboard(name: "Registration", bundle: nil)
+    private let registrationStoryBoard: UIStoryboard = UIStoryboard(name: "Registration", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,17 +40,22 @@ class StartViewController: UIViewController {
 
     // MARK: Actions
     
-    @IBAction func getStartedButton(_ sender: Any) {
-        
+    @IBAction private func getStartedButton(_ sender: Any) {
+        guard let registrationVC = registrationStoryBoard.instantiateViewController(identifier: "RegistrationVC") as? SignUpViewController else { return }
+        if startPageController.currentPage == 2 {
+            present(registrationVC, animated: false, completion: nil)
+        }
     }
     
-    @IBAction func logInButton(_ sender: Any) {
+    @IBAction private func logInButton(_ sender: Any) {
         guard let loginVC = registrationStoryBoard.instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController else { return }
-        present(loginVC, animated: true, completion: nil)
+        if startPageController.currentPage == 2 {
+            present(loginVC, animated: false, completion: nil)
+        }
     }
 
 }
-// MARK: - CollectionDataSource, Delegate
+// MARK: - CollectionDataSource
 
 extension StartViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -71,6 +76,8 @@ extension StartViewController: UICollectionViewDataSource {
     }
     
 }
+
+// MARK: CollectionDelegate
 
 extension StartViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
