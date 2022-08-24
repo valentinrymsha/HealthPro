@@ -145,8 +145,9 @@
                     </view>
                     <connections>
                         <outlet property="getStartedButton" destination="y4X-d3-F5n" id="z6y-AZ-3TL"/>
+                        <outlet property="loginButton" destination="lT5-qY-tgf" id="kw4-wp-rFW"/>
                         <outlet property="startCollectionView" destination="KWJ-1E-qeO" id="iph-is-3aq"/>
-                        <outlet property="startPageController" destination="ZnS-L9-8a1" id="TwS-dZ-VyK"/>
+                        <outlet property="startPageControl" destination="ZnS-L9-8a1" id="6rl-Ox-joA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -345,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISj-0Y-6hI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2565" y="469"/>
+            <point key="canvasLocation" x="2565" y="485"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tOA-RM-PW9">

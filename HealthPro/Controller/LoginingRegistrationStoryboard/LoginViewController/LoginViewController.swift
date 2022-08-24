@@ -31,6 +31,15 @@ final class LoginViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "showRecovery" else { return }
+        guard let destination = segue.destination as? RecoveryViewController else { return }
+        
+       
+        
+        
+    }
+    
     // MARK: ViewDidLoad
     
     override func viewDidLoad() {

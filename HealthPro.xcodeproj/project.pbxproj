@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */; };
 		CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */; };
+		CE367D6328B63D2600B615FA /* RecoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE367D6228B63D2600B615FA /* RecoveryViewController.swift */; };
 		CE5650C628A0E6A0001E1668 /* StartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */; };
 		CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5650C928A118D5001E1668 /* Registration.storyboard */; };
 		CE5650D128A11CBE001E1668 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650D028A11CBE001E1668 /* MainPageViewController.swift */; };
@@ -16,7 +17,6 @@
 		CE77F1BD28B4F55300F29069 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */; };
 		CE77F1C328B506E900F29069 /* BMRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1C228B506E900F29069 /* BMRViewController.swift */; };
 		CE77F1C828B5229300F29069 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1C728B5229300F29069 /* RecipeViewController.swift */; };
-		CE77F1CC28B5244B00F29069 /* dfxgsjkhi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE77F1CB28B5244B00F29069 /* dfxgsjkhi.storyboard */; };
 		CE8A6B33289ACF41002F1DD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B32289ACF41002F1DD7 /* AppDelegate.swift */; };
 		CE8A6B35289ACF41002F1DD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B34289ACF41002F1DD7 /* SceneDelegate.swift */; };
 		CE8A6B3A289ACF41002F1DD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8A6B38289ACF41002F1DD7 /* Main.storyboard */; };
@@ -36,6 +36,7 @@
 		C673CCB482C24BEEEE58DCC8 /* Pods-HealthPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthPro.release.xcconfig"; path = "Target Support Files/Pods-HealthPro/Pods-HealthPro.release.xcconfig"; sourceTree = "<group>"; };
 		CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodsCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE367D6228B63D2600B615FA /* RecoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryViewController.swift; sourceTree = "<group>"; };
 		CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE5650C928A118D5001E1668 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Registration.storyboard; path = /Users/user/Documents/HealthPro/HealthPro/Controller/LoginingRegistrationStoryboard/Registration.storyboard; sourceTree = "<absolute>"; };
 		CE5650D028A11CBE001E1668 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		CE77F1C228B506E900F29069 /* BMRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMRViewController.swift; sourceTree = "<group>"; };
 		CE77F1C728B5229300F29069 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
-		CE77F1CB28B5244B00F29069 /* dfxgsjkhi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = dfxgsjkhi.storyboard; sourceTree = "<group>"; };
 		CE8A6B2F289ACF41002F1DD7 /* HealthPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8A6B32289ACF41002F1DD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8A6B34289ACF41002F1DD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +128,14 @@
 				CEA2B3BF28ABF2280027D3D4 /* RecipesTableViewCell.swift */,
 			);
 			path = FavoritesViewController;
+			sourceTree = "<group>";
+		};
+		CE367D6128B63D0C00B615FA /* RecoveryPassViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE367D6228B63D2600B615FA /* RecoveryViewController.swift */,
+			);
+			path = RecoveryPassViewController;
 			sourceTree = "<group>";
 		};
 		CE77F1B528B4F50800F29069 /* CalculatorViewController */ = {
@@ -227,7 +235,6 @@
 				CE77F1B528B4F50800F29069 /* CalculatorViewController */,
 				CE18465E28ABCC56003BCD42 /* FavoritesViewController */,
 				CEB9562428ACF1C20021D261 /* StartViewController */,
-				CE77F1CB28B5244B00F29069 /* dfxgsjkhi.storyboard */,
 			);
 			path = MainStoryboard;
 			sourceTree = "<group>";
@@ -243,6 +250,7 @@
 		CEF6FB4728AD41C50057D530 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CE367D6128B63D0C00B615FA /* RecoveryPassViewController */,
 				CE8A6B59289ADC11002F1DD7 /* LoginViewController.swift */,
 			);
 			path = LoginViewController;
@@ -309,7 +317,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */,
-				CE77F1CC28B5244B00F29069 /* dfxgsjkhi.storyboard in Resources */,
 				CE8A6B3F289ACF43002F1DD7 /* LaunchScreen.storyboard in Resources */,
 				CE8A6B3C289ACF43002F1DD7 /* Assets.xcassets in Resources */,
 				CE8A6B4C289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf in Resources */,
@@ -390,6 +397,7 @@
 				CE5650D128A11CBE001E1668 /* MainPageViewController.swift in Sources */,
 				CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */,
 				CE5650C628A0E6A0001E1668 /* StartCollectionViewCell.swift in Sources */,
+				CE367D6328B63D2600B615FA /* RecoveryViewController.swift in Sources */,
 				CEA2B3C028ABF2280027D3D4 /* RecipesTableViewCell.swift in Sources */,
 				CE8A6B5A289ADC11002F1DD7 /* LoginViewController.swift in Sources */,
 				CEAFFA1628AE7FDA00011E65 /* Manager.swift in Sources */,
