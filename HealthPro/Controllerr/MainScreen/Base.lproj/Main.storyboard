@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TheBiggerTheBetter.ttf">
+            <string>TheBiggerTheBetter</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--StartVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="StartVC" title="StartVC" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="StartViewController" customModule="HealthPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="StartView" customModule="HealthPro" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4X-d3-F5n">
+                                <rect key="frame" x="32" y="711" width="350" height="45"/>
+                                <color key="backgroundColor" red="0.56696587799999998" green="0.78151768450000003" blue="0.53913027049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="hvz-Xj-YvE"/>
+                                    <constraint firstAttribute="height" constant="45" id="sDs-ZK-odf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="24"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getStartedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rcA-Az-Ypr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already Have An Acount?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbf-5t-W3e">
+                                <rect key="frame" x="60" y="763" width="193.5" height="14"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZnS-L9-8a1">
+                                <rect key="frame" x="146" y="662" width="122" height="28"/>
+                                <color key="pageIndicatorTintColor" red="0.94461995359999995" green="0.74340277909999997" blue="0.72528654339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.95693010089999997" green="0.52160859110000002" blue="0.4804977775" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KWJ-1E-qeO">
+                                <rect key="frame" x="0.0" y="149" width="414" height="498"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7nf-eF-4EF">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="startCollectionViewCell" id="NTy-LD-u2Y" customClass="StartCollectionViewCell" customModule="HealthPro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="vXz-4j-hpx">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SuJ-i8-oHl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="SuJ-i8-oHl" secondAttribute="bottom" id="Uxw-n0-9hh"/>
+                                                <constraint firstItem="SuJ-i8-oHl" firstAttribute="leading" secondItem="vXz-4j-hpx" secondAttribute="leading" id="cWc-JG-KRJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="SuJ-i8-oHl" secondAttribute="trailing" id="deo-sX-oFX"/>
+                                                <constraint firstItem="SuJ-i8-oHl" firstAttribute="top" secondItem="vXz-4j-hpx" secondAttribute="top" id="irp-46-pGf"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="128" height="128"/>
+                                        <connections>
+                                            <outlet property="startImageView" destination="SuJ-i8-oHl" id="2ca-sM-Fde"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HealthPro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbl-rO-4bA">
+                                <rect key="frame" x="147" y="74" width="120" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="DJj-aJ-xkG"/>
+                                    <constraint firstAttribute="height" constant="45" id="RoB-Iq-GIv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TheBiggerTheBetter" family="The Bigger The Better" pointSize="32"/>
+                                <color key="textColor" red="0.56696587799999998" green="0.78151768450000003" blue="0.53913027049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lT5-qY-tgf">
+                                <rect key="frame" x="283.5" y="756.5" width="85.5" height="27"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="15"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="0.56696587799999998" green="0.78151768450000003" blue="0.53913027049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NFj-KY-CGD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KWJ-1E-qeO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3SC-Qm-mgJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lT5-qY-tgf" secondAttribute="trailing" constant="44.999999999999943" id="5dy-KG-QIC"/>
+                            <constraint firstItem="ZnS-L9-8a1" firstAttribute="top" secondItem="KWJ-1E-qeO" secondAttribute="bottom" constant="15" id="A5f-xR-ezO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ZnS-L9-8a1" secondAttribute="trailing" constant="146" id="EzB-Dw-aAt"/>
+                            <constraint firstItem="pbf-5t-W3e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="HTE-0J-EK6"/>
+                            <constraint firstItem="ZnS-L9-8a1" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="IQZ-6a-7oK"/>
+                            <constraint firstItem="lT5-qY-tgf" firstAttribute="leading" relation="lessThanOrEqual" secondItem="pbf-5t-W3e" secondAttribute="trailing" constant="30" id="KDs-8b-0pF"/>
+                            <constraint firstItem="pbf-5t-W3e" firstAttribute="centerY" secondItem="lT5-qY-tgf" secondAttribute="centerY" id="Llw-Wd-XMu"/>
+                            <constraint firstItem="KWJ-1E-qeO" firstAttribute="top" secondItem="kbl-rO-4bA" secondAttribute="bottom" constant="30" id="SYJ-QH-LvP"/>
+                            <constraint firstItem="KWJ-1E-qeO" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.555687" id="a4B-K0-7FF"/>
+                            <constraint firstItem="ZnS-L9-8a1" firstAttribute="centerX" secondItem="y4X-d3-F5n" secondAttribute="centerX" id="eMM-kE-6xj"/>
+                            <constraint firstItem="kbl-rO-4bA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="eSC-4o-xyn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pbf-5t-W3e" secondAttribute="bottom" constant="30" id="juk-zG-bqW"/>
+                            <constraint firstItem="pbf-5t-W3e" firstAttribute="top" secondItem="y4X-d3-F5n" secondAttribute="bottom" constant="7" id="kY8-sr-JZf"/>
+                            <constraint firstItem="ZnS-L9-8a1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mYj-Pb-8Mj"/>
+                            <constraint firstItem="KWJ-1E-qeO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="mly-Zb-oK3"/>
+                            <constraint firstItem="y4X-d3-F5n" firstAttribute="top" secondItem="ZnS-L9-8a1" secondAttribute="bottom" constant="21" id="n16-Nt-vcZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KWJ-1E-qeO" secondAttribute="trailing" id="pxs-xU-agF"/>
+                            <constraint firstItem="kbl-rO-4bA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qc4-pJ-3pm"/>
+                            <constraint firstItem="lT5-qY-tgf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pbf-5t-W3e" secondAttribute="trailing" constant="15" id="rCm-B2-sAm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getStartedButton" destination="y4X-d3-F5n" id="z6y-AZ-3TL"/>
+                        <outlet property="loginButton" destination="lT5-qY-tgf" id="kw4-wp-rFW"/>
+                        <outlet property="startCollectionView" destination="KWJ-1E-qeO" id="iph-is-3aq"/>
+                        <outlet property="startPageControl" destination="ZnS-L9-8a1" id="6rl-Ox-joA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.13043478260872" y="103.125"/>
+        </scene>
+    </scenes>
+</document>

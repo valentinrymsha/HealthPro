@@ -20,6 +20,7 @@ final class SignUpViewController: UIViewController {
     // MARK: Properties
     
     private let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    private let mainTabBarStoryboard: UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
     
     private func oopsAlert() {
         let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Try to input data againg!", preferredStyle: .alert)
@@ -57,7 +58,7 @@ final class SignUpViewController: UIViewController {
             self.passwordTextField.text?.count ?? 0 < 5
         {
             oopsAlert()
-        } else if let mainVC = mainStoryBoard.instantiateViewController(withIdentifier: "MainPageVC") as? MainPageViewController {
+        } else if let mainVC = mainTabBarStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController {
             
             guard userNameTextField.hasText,        passwordTextField.hasText,
                   repeatedPasswordTextField.text == passwordTextField.text

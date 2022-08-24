@@ -9,8 +9,16 @@ import UIKit
 
 final class RecipesTableViewCell: UITableViewCell {
 
+    // MARK: Outlets
+    
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeTitileLabel: UILabel!
+    
+    // MARK: Properties
+    
+    private let recipeStoryboard: UIStoryboard = UIStoryboard(name: "Recipe", bundle: nil)
+    
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -28,7 +36,10 @@ final class RecipesTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+    
         // Configure the view for the selected state
     }
+    
+    
 
 }

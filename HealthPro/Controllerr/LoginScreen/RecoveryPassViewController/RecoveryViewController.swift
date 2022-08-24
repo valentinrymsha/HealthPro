@@ -36,6 +36,7 @@ class RecoveryViewController: UIViewController {
         } else {
             yourPasswordLabel.text = "You have not account yet"
         }
+        loginTextField.text = ""
     }
     
 }

@@ -15,7 +15,10 @@ final class Manager {
     static func checkUserOnServer(complition: @escaping (Root?) -> Void) {
         let session = URLSession.shared
         // Get API
-        let api = "https://api.spoonacular.com/recipes/random?apiKey=9f40dbb7b8a54e3b9d76a431a5c55615&number=20"
+        let key1 = "9f40dbb7b8a54e3b9d76a431a5c55615"
+        let key2 = "64e3c271154342c2b257b67ffa540bbc"
+        
+        let api = "https://api.spoonacular.com/recipes/random?apiKey=c086eddbb7774da5822b81a9f6f45a22&number=20"
         // Create API URL
         guard let apiURL = URL(string: api) else {
             return
@@ -34,6 +37,7 @@ final class Manager {
                     complition(.init(recipe))
                     print("success")
                     print(recipe)
+                    print(recipe.recipes[0].extendedIngredients)
                 } else {
                     complition(nil)
                     print("error")
@@ -51,4 +55,9 @@ struct Root: Codable {
 struct Recipe: Codable {
     var title: String
     var image: String
+    var extendedIngredients: [ExtendedIngredient]
+}
+
+struct ExtendedIngredient: Codable {
+    var name: String
 }

@@ -32,6 +32,8 @@ class StartViewController: UIViewController {
     
     private let registrationStoryBoard: UIStoryboard = UIStoryboard(name: "Registration", bundle: nil)
     
+    private let loginStoryBoard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+    
     private func isGetStartedButtonEnabled(_ isEnabled: Bool = true) {
         getStartedButton.alpha = isEnabled ? 1 : 0.5
         getStartedButton.isUserInteractionEnabled = isEnabled
@@ -70,7 +72,7 @@ class StartViewController: UIViewController {
     }
     
     @IBAction private func logInButton(_ sender: Any) {
-        guard let loginVC = registrationStoryBoard.instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController else { return }
+        guard let loginVC = loginStoryBoard.instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController else { return }
         if startPageControl.currentPage == lastIndex {
             present(loginVC, animated: false, completion: nil)
         }
@@ -123,16 +125,30 @@ extension StartViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: CollectionDelegate
 
-extension UIImage {
-    enum JPEGQuality: CGFloat {
-        case lowest  = 0
-        case low     = 0.25
-        case medium  = 0.5
-        case high    = 0.75
-        case highest = 1
-    }
-
-    func jpeg(_ quality: JPEGQuality) -> Data? {
-        return self.jpegData(compressionQuality: quality.rawValue)
-    }
-}
+//extension UIImage {
+//    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
+//          let size = image.size
+//
+//          let widthRatio  = targetSize.width  / size.width
+//          let heightRatio = targetSize.height / size.height
+//
+//          // Figure out what our orientation is, and use that to form the rectangle
+//          var newSize: CGSize
+//          if(widthRatio > heightRatio) {
+//              newSize = CGSize(width: size.width  heightRatio, height: size.height  heightRatio)
+//          } else {
+//              newSize = CGSize(width: size.width  widthRatio, height: size.height  widthRatio)
+//          }
+//
+//          // This is the rect that we've calculated out and this is what is actually used below
+//          let rect = CGRect(origin: .zero, size: newSize)
+//
+//          // Actually do the resizing to the rect using the ImageContext stuff
+//          UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+//          image.draw(in: rect)
+//          let newImage = UIGraphicsGetImageFromCurrentImageContext()
+//          UIGraphicsEndImageContext()
+//
+//          return newImage
+//      }
+//}

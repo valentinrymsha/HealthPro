@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NRx-Kn-iOk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--mainTabBarVC-->
+        <scene sceneID="jju-gU-cn9">
+            <objects>
+                <tabBarController storyboardIdentifier="mainTabBarVC" title="mainTabBarVC" modalPresentationStyle="fullScreen" id="NRx-Kn-iOk" customClass="MainTabBarViewController" customModule="HealthPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lRq-af-0FN"/>
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="Qjq-si-DNf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.5" green="0.81689101460000002" blue="0.58956712479999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.5" green="0.81689101460000002" blue="0.58956712479999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0MF-bY-KAJ" kind="relationship" relationship="viewControllers" id="vfp-aQ-j0g"/>
+                        <segue destination="JJv-kX-s75" kind="relationship" relationship="viewControllers" id="W0f-zQ-JH2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bz1-9A-akW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="104"/>
+        </scene>
+        <!--Calculator-->
+        <scene sceneID="jfI-G1-Ue5">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="calculatorVC" storyboardName="Calculator" id="0MF-bY-KAJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xqP-R4-jcc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U0I-NO-nSi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1551" y="228"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="f0N-9g-AW1">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="favoritesVC" storyboardName="Favorites" id="JJv-kX-s75" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="scI-aq-zZO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y47-JV-O4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1551" y="297"/>
+        </scene>
+    </scenes>
+</document>

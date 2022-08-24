@@ -22,6 +22,8 @@ class FavoritesViewController: UIViewController {
     
     // MARK: Properties
     
+    private let recipeStoryboard: UIStoryboard = UIStoryboard(name: "Recipe", bundle: nil)
+    
     private var recipesArray: Root?
     private var recipes: [Recipe]?
     private var imagesForColletion: [UIImage]?
@@ -30,7 +32,8 @@ class FavoritesViewController: UIViewController {
         Array(0...2).compactMap { UIImage(named: "png\($0)") }
     }
     
-    // MARK: ViewDidLoad
+    
+    // MARK: Lifecircle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,10 +59,12 @@ class FavoritesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.recipesTableView.reloadData()
             self.foodsTableView.reloadData()
         }
+        
+        
     }
     
     // MARK: Actions
@@ -72,7 +77,7 @@ class FavoritesViewController: UIViewController {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.recipesTableView.reloadData()
         }
     }
@@ -95,15 +100,16 @@ class FavoritesViewController: UIViewController {
 
 extension FavoritesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        imagesOfFood.count
+        
         recipes?.count ?? 1
+    
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodsCollectionVC", for: indexPath) as? FoodsCollectionViewCell else { fatalError() }
-        //        collectionView.tintColor = .white
-//        cell.foodImageView.image = imagesOfFood[indexPath.row]
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodsCollectionVC",
+                                                            for: indexPath) as? FoodsCollectionViewCell else { fatalError() }
+
         let recipe = recipes?[indexPath.row]
         
         if let imageUrl = recipe?.image {
@@ -121,6 +127,15 @@ extension FavoritesViewController: UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let foodVC = UIStoryboard(name: "Food", bundle: nil).instantiateViewController(identifier: "foodVC") as? FoodViewController {
+            let recipe = recipes?[indexPath.row]
+            foodVC.imageURL = recipe?.image
+            present(foodVC, animated: true, completion: nil)
+            
+//            recipeVC.recipeTitleLabel.text = recipe?.title
+        }
+    }
     
 }
 
@@ -157,24 +172,49 @@ extension FavoritesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "recipesTableViewCell") as? RecipesTableViewCell else { fatalError() }
+        
         let recipe = recipes?[indexPath.row]
         
+       
         if let imageUrl = recipe?.image {
         Alamofire.request(imageUrl).responseImage { response in
             if let image = response.result.value {
                 DispatchQueue.main.async {
                     cell.recipeImageView.image = image
+                    
                 }
             }
         }
         }
         
+        
         cell.recipeTitileLabel.text = recipe?.title
-    
         cell.layer.cornerRadius = 13
+    
+        
         
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let recipeVC = recipeStoryboard.instantiateViewController(identifier: "recipeVC") as? RecipeViewController {
+            let recipe = recipes?[indexPath.row]
+            recipeVC.imageURL = recipe?.image
+            recipeVC.text = recipe?.title
+            var string = String()
+            recipe?.extendedIngredients.forEach {
+                string.append("\($0.name), ")
+            }
+            recipeVC.recipeText = String("Ingredients:\n" + string.dropLast(2))
+            present(recipeVC, animated: true, completion: nil)
+            
+//            recipeVC.recipeTitleLabel.text = recipe?.title
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -194,6 +234,4 @@ extension FavoritesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         120
     }
-    
-    
 }

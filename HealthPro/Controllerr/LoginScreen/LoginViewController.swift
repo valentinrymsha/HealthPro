@@ -18,6 +18,7 @@ final class LoginViewController: UIViewController {
     // MARK: Properties
     
     private let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    private let mainTabBarStoryboard: UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
     
     private func oopsAlert() {
         let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Try to input data againg!", preferredStyle: .alert)
@@ -29,15 +30,6 @@ final class LoginViewController: UIViewController {
         let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Invalid login or password!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "showRecovery" else { return }
-        guard let destination = segue.destination as? RecoveryViewController else { return }
-        
-       
-        
-        
     }
     
     // MARK: ViewDidLoad
@@ -64,7 +56,7 @@ final class LoginViewController: UIViewController {
               
               else { return self.oopsAlert() }
         if UsersData.userDefault.dictionary(forKey: "\(userNameTextField.text!)") as? Dictionary == ["\(userNameTextField.text!)": "\(passwordTextField.text!)"] {
-            if let mainVC = mainStoryBoard.instantiateViewController(withIdentifier: "MainPageVC") as? MainPageViewController {
+            if let mainVC = mainTabBarStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController {
                 present(mainVC, animated: true, completion: nil)
                 
             }

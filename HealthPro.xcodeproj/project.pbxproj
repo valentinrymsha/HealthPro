@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE17BCCF28B6A09200DE5B3D /* Food.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17BCCE28B6A09200DE5B3D /* Food.storyboard */; };
+		CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17BCD128B6A09F00DE5B3D /* FoodViewController.swift */; };
 		CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */; };
 		CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */; };
 		CE367D6328B63D2600B615FA /* RecoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE367D6228B63D2600B615FA /* RecoveryViewController.swift */; };
+		CE367D7128B64EFB00B615FA /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D7028B64EFB00B615FA /* Favorites.storyboard */; };
+		CE367D7628B6529900B615FA /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D7528B6529900B615FA /* Calculator.storyboard */; };
+		CE367D7B28B653D500B615FA /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D7A28B653D500B615FA /* MainTabBar.storyboard */; };
+		CE367D8028B655DA00B615FA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D7F28B655DA00B615FA /* Login.storyboard */; };
+		CE367D8428B6576D00B615FA /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D8328B6576D00B615FA /* Recipe.storyboard */; };
 		CE5650C628A0E6A0001E1668 /* StartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */; };
 		CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5650C928A118D5001E1668 /* Registration.storyboard */; };
-		CE5650D128A11CBE001E1668 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650D028A11CBE001E1668 /* MainPageViewController.swift */; };
+		CE5650D128A11CBE001E1668 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650D028A11CBE001E1668 /* MainTabBarViewController.swift */; };
 		CE759121289BD39B00F7098A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE759120289BD39B00F7098A /* StartViewController.swift */; };
 		CE77F1BD28B4F55300F29069 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */; };
 		CE77F1C328B506E900F29069 /* BMRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1C228B506E900F29069 /* BMRViewController.swift */; };
@@ -34,12 +41,19 @@
 /* Begin PBXFileReference section */
 		0A204F500672533D41DC8477 /* Pods-HealthPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthPro.debug.xcconfig"; path = "Target Support Files/Pods-HealthPro/Pods-HealthPro.debug.xcconfig"; sourceTree = "<group>"; };
 		C673CCB482C24BEEEE58DCC8 /* Pods-HealthPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthPro.release.xcconfig"; path = "Target Support Files/Pods-HealthPro/Pods-HealthPro.release.xcconfig"; sourceTree = "<group>"; };
+		CE17BCCE28B6A09200DE5B3D /* Food.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Food.storyboard; sourceTree = "<group>"; };
+		CE17BCD128B6A09F00DE5B3D /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE367D6228B63D2600B615FA /* RecoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryViewController.swift; sourceTree = "<group>"; };
+		CE367D7028B64EFB00B615FA /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		CE367D7528B6529900B615FA /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
+		CE367D7A28B653D500B615FA /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
+		CE367D7F28B655DA00B615FA /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		CE367D8328B6576D00B615FA /* Recipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recipe.storyboard; sourceTree = "<group>"; };
 		CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE5650C928A118D5001E1668 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Registration.storyboard; path = /Users/user/Documents/HealthPro/HealthPro/Controller/LoginingRegistrationStoryboard/Registration.storyboard; sourceTree = "<absolute>"; };
-		CE5650D028A11CBE001E1668 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		CE5650D028A11CBE001E1668 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		CE759120289BD39B00F7098A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		CE77F1C228B506E900F29069 /* BMRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMRViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +103,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE17BCCD28B6A07E00DE5B3D /* FoodViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE17BCCE28B6A09200DE5B3D /* Food.storyboard */,
+				CE17BCD128B6A09F00DE5B3D /* FoodViewController.swift */,
+			);
+			path = FoodViewController;
+			sourceTree = "<group>";
+		};
 		CE18464928AB9A2D003BCD42 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,25 +132,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		CE18465828ABAC7B003BCD42 /* LoginingRegistrationStoryboard */ = {
+		CE18465E28ABCC56003BCD42 /* FavoritesScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CE5650C928A118D5001E1668 /* Registration.storyboard */,
-				CEF6FB4728AD41C50057D530 /* LoginViewController */,
-				CEF6FB4628AD41B20057D530 /* SignInViewController */,
-			);
-			path = LoginingRegistrationStoryboard;
-			sourceTree = "<group>";
-		};
-		CE18465E28ABCC56003BCD42 /* FavoritesViewController */ = {
-			isa = PBXGroup;
-			children = (
-				CE77F1C628B5226C00F29069 /* RecipesCellViewController */,
+				CE17BCCD28B6A07E00DE5B3D /* FoodViewController */,
+				CE367D7028B64EFB00B615FA /* Favorites.storyboard */,
 				CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */,
 				CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */,
 				CEA2B3BF28ABF2280027D3D4 /* RecipesTableViewCell.swift */,
+				CE77F1C628B5226C00F29069 /* RecipesViewController */,
 			);
-			path = FavoritesViewController;
+			path = FavoritesScreen;
 			sourceTree = "<group>";
 		};
 		CE367D6128B63D0C00B615FA /* RecoveryPassViewController */ = {
@@ -138,29 +153,63 @@
 			path = RecoveryPassViewController;
 			sourceTree = "<group>";
 		};
-		CE77F1B528B4F50800F29069 /* CalculatorViewController */ = {
+		CE367D6828B647CE00B615FA /* Controllerr */ = {
 			isa = PBXGroup;
 			children = (
-				CE77F1C128B506D200F29069 /* BMRVC */,
-				CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */,
+				CE367D6928B647F700B615FA /* MainScreen */,
+				CEF6FB4628AD41B20057D530 /* SignUpScreen */,
+				CEF6FB4728AD41C50057D530 /* LoginScreen */,
+				CE367D6C28B648D100B615FA /* TabBarViewController */,
 			);
-			path = CalculatorViewController;
+			path = Controllerr;
 			sourceTree = "<group>";
 		};
-		CE77F1C128B506D200F29069 /* BMRVC */ = {
+		CE367D6928B647F700B615FA /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A6B38289ACF41002F1DD7 /* Main.storyboard */,
+				CE759120289BD39B00F7098A /* StartViewController.swift */,
+				CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		CE367D6C28B648D100B615FA /* TabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE367D7A28B653D500B615FA /* MainTabBar.storyboard */,
+				CE5650D028A11CBE001E1668 /* MainTabBarViewController.swift */,
+				CE18465E28ABCC56003BCD42 /* FavoritesScreen */,
+				CE77F1B528B4F50800F29069 /* CalculatorScreen */,
+			);
+			path = TabBarViewController;
+			sourceTree = "<group>";
+		};
+		CE77F1B528B4F50800F29069 /* CalculatorScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE367D7528B6529900B615FA /* Calculator.storyboard */,
+				CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */,
+				CE77F1C128B506D200F29069 /* BMRScreen */,
+			);
+			path = CalculatorScreen;
+			sourceTree = "<group>";
+		};
+		CE77F1C128B506D200F29069 /* BMRScreen */ = {
 			isa = PBXGroup;
 			children = (
 				CE77F1C228B506E900F29069 /* BMRViewController.swift */,
 			);
-			path = BMRVC;
+			path = BMRScreen;
 			sourceTree = "<group>";
 		};
-		CE77F1C628B5226C00F29069 /* RecipesCellViewController */ = {
+		CE77F1C628B5226C00F29069 /* RecipesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CE367D8328B6576D00B615FA /* Recipe.storyboard */,
 				CE77F1C728B5229300F29069 /* RecipeViewController.swift */,
 			);
-			path = RecipesCellViewController;
+			path = RecipesViewController;
 			sourceTree = "<group>";
 		};
 		CE8A6B26289ACF40002F1DD7 = {
@@ -187,7 +236,7 @@
 				CE18464928AB9A2D003BCD42 /* Resources */,
 				CE18464B28AB9AEE003BCD42 /* Model */,
 				CE8B457B289BD5B800003DEF /* View */,
-				CE8A6B58289ADBF2002F1DD7 /* Controller */,
+				CE367D6828B647CE00B615FA /* Controllerr */,
 				CE8A6B40289ACF43002F1DD7 /* Info.plist */,
 				CE8A6B4A289AD0CC002F1DD7 /* fonts */,
 			);
@@ -202,15 +251,6 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
-		CE8A6B58289ADBF2002F1DD7 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CEB9562528ACF1DE0021D261 /* MainStoryboard */,
-				CE18465828ABAC7B003BCD42 /* LoginingRegistrationStoryboard */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		CE8B457B289BD5B800003DEF /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,42 +258,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CEB9562428ACF1C20021D261 /* StartViewController */ = {
+		CEF6FB4628AD41B20057D530 /* SignUpScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CE759120289BD39B00F7098A /* StartViewController.swift */,
-				CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */,
-			);
-			path = StartViewController;
-			sourceTree = "<group>";
-		};
-		CEB9562528ACF1DE0021D261 /* MainStoryboard */ = {
-			isa = PBXGroup;
-			children = (
-				CE8A6B38289ACF41002F1DD7 /* Main.storyboard */,
-				CE5650D028A11CBE001E1668 /* MainPageViewController.swift */,
-				CE77F1B528B4F50800F29069 /* CalculatorViewController */,
-				CE18465E28ABCC56003BCD42 /* FavoritesViewController */,
-				CEB9562428ACF1C20021D261 /* StartViewController */,
-			);
-			path = MainStoryboard;
-			sourceTree = "<group>";
-		};
-		CEF6FB4628AD41B20057D530 /* SignInViewController */ = {
-			isa = PBXGroup;
-			children = (
+				CE5650C928A118D5001E1668 /* Registration.storyboard */,
 				CE8A6B5D289ADC24002F1DD7 /* SignUpViewController.swift */,
 			);
-			path = SignInViewController;
+			path = SignUpScreen;
 			sourceTree = "<group>";
 		};
-		CEF6FB4728AD41C50057D530 /* LoginViewController */ = {
+		CEF6FB4728AD41C50057D530 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CE367D6128B63D0C00B615FA /* RecoveryPassViewController */,
+				CE367D7F28B655DA00B615FA /* Login.storyboard */,
 				CE8A6B59289ADC11002F1DD7 /* LoginViewController.swift */,
+				CE367D6128B63D0C00B615FA /* RecoveryPassViewController */,
 			);
-			path = LoginViewController;
+			path = LoginScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,9 +339,15 @@
 			files = (
 				CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */,
 				CE8A6B3F289ACF43002F1DD7 /* LaunchScreen.storyboard in Resources */,
+				CE367D7128B64EFB00B615FA /* Favorites.storyboard in Resources */,
 				CE8A6B3C289ACF43002F1DD7 /* Assets.xcassets in Resources */,
+				CE367D8428B6576D00B615FA /* Recipe.storyboard in Resources */,
 				CE8A6B4C289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf in Resources */,
+				CE367D7B28B653D500B615FA /* MainTabBar.storyboard in Resources */,
+				CE17BCCF28B6A09200DE5B3D /* Food.storyboard in Resources */,
 				CE8A6B3A289ACF41002F1DD7 /* Main.storyboard in Resources */,
+				CE367D7628B6529900B615FA /* Calculator.storyboard in Resources */,
+				CE367D8028B655DA00B615FA /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +421,8 @@
 			files = (
 				CE759121289BD39B00F7098A /* StartViewController.swift in Sources */,
 				CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */,
-				CE5650D128A11CBE001E1668 /* MainPageViewController.swift in Sources */,
+				CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */,
+				CE5650D128A11CBE001E1668 /* MainTabBarViewController.swift in Sources */,
 				CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */,
 				CE5650C628A0E6A0001E1668 /* StartCollectionViewCell.swift in Sources */,
 				CE367D6328B63D2600B615FA /* RecoveryViewController.swift in Sources */,
