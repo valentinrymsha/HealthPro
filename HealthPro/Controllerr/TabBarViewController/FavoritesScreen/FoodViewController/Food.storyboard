@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G6f-zj-hZI">
-                                <rect key="frame" x="20" y="167" width="374" height="562"/>
+                                <rect key="frame" x="20" y="223.5" width="374" height="449"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ixc-Tx-2og"/>
@@ -30,11 +30,11 @@
                             <constraint firstItem="O0z-Ay-7SI" firstAttribute="leading" secondItem="Ixc-Tx-2og" secondAttribute="leading" id="BeL-mh-4Yv"/>
                             <constraint firstItem="Ixc-Tx-2og" firstAttribute="bottom" secondItem="O0z-Ay-7SI" secondAttribute="bottom" id="CpZ-bc-E6k"/>
                             <constraint firstItem="G6f-zj-hZI" firstAttribute="centerX" secondItem="BIL-HR-wu9" secondAttribute="centerX" id="Tjy-pI-wHl"/>
-                            <constraint firstItem="G6f-zj-hZI" firstAttribute="height" secondItem="BIL-HR-wu9" secondAttribute="height" multiplier="0.627232" id="UdS-36-KVz"/>
                             <constraint firstItem="Ixc-Tx-2og" firstAttribute="trailing" secondItem="O0z-Ay-7SI" secondAttribute="trailing" id="YeT-VH-9GJ"/>
                             <constraint firstItem="G6f-zj-hZI" firstAttribute="width" secondItem="BIL-HR-wu9" secondAttribute="width" multiplier="0.903382" id="bGy-Gk-Gs3"/>
                             <constraint firstItem="G6f-zj-hZI" firstAttribute="centerY" secondItem="BIL-HR-wu9" secondAttribute="centerY" id="rRZ-5V-qap"/>
                             <constraint firstItem="O0z-Ay-7SI" firstAttribute="top" secondItem="Ixc-Tx-2og" secondAttribute="top" id="sA9-JB-5Wi"/>
+                            <constraint firstItem="G6f-zj-hZI" firstAttribute="height" secondItem="BIL-HR-wu9" secondAttribute="height" multiplier="0.501116" id="xih-GW-z9Q"/>
                         </constraints>
                     </view>
                     <connections>

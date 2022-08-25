@@ -17,7 +17,7 @@ class BMRViewController: UIViewController {
     
     // MARK: Properties
 
-    var currentBMR = 0.15
+    var currentBMR = Double()
     var currentSex = String()
     // MARK: viewDidLoad
     

@@ -151,12 +151,12 @@
 		CE18465E28ABCC56003BCD42 /* FavoritesScreen */ = {
 			isa = PBXGroup;
 			children = (
+				CE77F1C628B5226C00F29069 /* RecipesViewController */,
 				CE17BCCD28B6A07E00DE5B3D /* FoodViewController */,
 				CE367D7028B64EFB00B615FA /* Favorites.storyboard */,
 				CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */,
 				CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */,
 				CEA2B3BF28ABF2280027D3D4 /* RecipesTableViewCell.swift */,
-				CE77F1C628B5226C00F29069 /* RecipesViewController */,
 			);
 			path = FavoritesScreen;
 			sourceTree = "<group>";

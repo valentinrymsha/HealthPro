@@ -21,6 +21,7 @@ final class SignUpViewController: UIViewController {
     
     private let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     private let mainTabBarStoryboard: UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
+    private let homeStoryboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
     
     private func oopsAlert() {
         let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Try to input data againg!", preferredStyle: .alert)
@@ -68,6 +69,7 @@ final class SignUpViewController: UIViewController {
                   repeatedPasswordTextField.text == passwordTextField.text
             else { return oopsAlert() }
             UsersData.userDefault.setValue(["\(userNameTextField.text!)": "\(passwordTextField.text!)"], forKey: "\(userNameTextField.text!)")
+                    
             present(mainVC, animated: true, completion: nil)
             
         }

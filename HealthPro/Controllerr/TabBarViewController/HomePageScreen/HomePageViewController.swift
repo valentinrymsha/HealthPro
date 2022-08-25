@@ -11,9 +11,13 @@ class HomePageViewController: UIViewController {
 
     // MARK: Outlets
     
+    @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var newsTableView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     // MARK: Properties
+    
+    var nameOfUser = String()
     
     private var images: [UIImage] {
         Array(1...3).compactMap { UIImage(named: "home\($0)")  }
@@ -24,8 +28,15 @@ class HomePageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        dump(newsTableView)
+        
         newsTableView.delegate = self
         newsTableView.dataSource = self
+        
+        pageControl.numberOfPages = images.count
+        pageControl.hidesForSinglePage = true
+        
+        greetingLabel.text = "Hello, " + nameOfUser
         
         newsTableView.layer.cornerRadius = 13
     }
@@ -39,23 +50,30 @@ extension HomePageViewController: UICollectionViewDataSource {
         images.count
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        1
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsVCell", for: indexPath) as? NewsMainPageCollectionViewCell else { fatalError() }
         
-        collectionView.tintColor = #colorLiteral(red: 0.7626346361, green: 1, blue: 0.8789471334, alpha: 1)
+        collectionView.backgroundColor = #colorLiteral(red: 0.7626346361, green: 1, blue: 0.8789471334, alpha: 1)
         
         cell.newsImage.image = images[indexPath.row]
         
         return cell
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        pageControl.currentPage = Int(newsTableView.contentOffset.x / newsTableView.frame.size.width)
+    }
     
 }
 
 extension HomePageViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width, height: collectionView.frame.height)
+        return .init(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -69,4 +87,7 @@ extension HomePageViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
+    
+    
 }

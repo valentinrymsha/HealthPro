@@ -57,6 +57,8 @@ class CalculatorViewController: UIViewController {
         weightStepper.value = 60
         heightSlider.value = 1.75
         
+        sex = "Female"
+        
         calculateButton.layer.cornerRadius = 13
     }
     
