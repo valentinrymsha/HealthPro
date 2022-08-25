@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="68M-uS-7lk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--homeVC-->
+        <scene sceneID="I3l-WM-H2X">
+            <objects>
+                <viewController storyboardIdentifier="homeVC" title="homeVC" id="68M-uS-7lk" customClass="HomePageViewController" customModule="HealthPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oPr-1H-Rcj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-sn-IMH">
+                                <rect key="frame" x="136" y="59" width="142" height="23"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find, track and it healthy food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1t-dY-qmK">
+                                <rect key="frame" x="63.5" y="90" width="287.5" height="18.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DSi-Xa-R3j">
+                                <rect key="frame" x="0.0" y="123.5" width="414" height="183"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fod-vP-BGl">
+                                    <size key="itemSize" width="157" height="179"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="newsVCell" id="ZQQ-dC-CB6" customClass="NewsMainPageCollectionViewCell" customModule="HealthPro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="2" width="157" height="179"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="zjh-c0-QVR">
+                                            <rect key="frame" x="0.0" y="0.0" width="157" height="179"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MAG-hw-p69">
+                                                    <rect key="frame" x="0.0" y="35" width="157" height="144"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RGj-4S-XZC">
+                                                    <rect key="frame" x="50" y="11" width="58" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="15"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.97134924379999998" blue="0.84253776329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="customSize" width="157" height="179"/>
+                                        <connections>
+                                            <outlet property="newsImage" destination="MAG-hw-p69" id="Gu1-Ip-0Hy"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xNI-rq-phO"/>
+                        <color key="backgroundColor" red="0.76263463610000004" green="1" blue="0.87894713339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yh9-sn-IMH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xNI-rq-phO" secondAttribute="leading" constant="15" id="2j4-8n-eKr"/>
+                            <constraint firstItem="DSi-Xa-R3j" firstAttribute="width" secondItem="oPr-1H-Rcj" secondAttribute="width" multiplier="0.903382" id="Bdg-j1-Q8F"/>
+                            <constraint firstItem="Yh9-sn-IMH" firstAttribute="centerX" secondItem="oPr-1H-Rcj" secondAttribute="centerX" id="Enh-uo-6dO"/>
+                            <constraint firstItem="Yh9-sn-IMH" firstAttribute="top" secondItem="xNI-rq-phO" secondAttribute="top" constant="15" id="GoN-mV-XOM"/>
+                            <constraint firstItem="b1t-dY-qmK" firstAttribute="centerX" secondItem="oPr-1H-Rcj" secondAttribute="centerX" id="IKw-lh-5OU"/>
+                            <constraint firstItem="xNI-rq-phO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yh9-sn-IMH" secondAttribute="trailing" constant="15" id="JdJ-ve-hJU"/>
+                            <constraint firstItem="DSi-Xa-R3j" firstAttribute="top" secondItem="b1t-dY-qmK" secondAttribute="bottom" constant="15" id="Ldo-1w-oTs"/>
+                            <constraint firstItem="b1t-dY-qmK" firstAttribute="top" secondItem="Yh9-sn-IMH" secondAttribute="bottom" constant="8" symbolic="YES" id="Wcv-3n-2Ji"/>
+                            <constraint firstItem="DSi-Xa-R3j" firstAttribute="centerX" secondItem="oPr-1H-Rcj" secondAttribute="centerX" id="duf-6N-lQP"/>
+                            <constraint firstItem="DSi-Xa-R3j" firstAttribute="height" secondItem="oPr-1H-Rcj" secondAttribute="height" multiplier="0.204241" id="y16-hY-e1n"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="homepage" selectedImage="homepage" id="sx2-fJ-Cfc"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="newsTableView" destination="DSi-Xa-R3j" id="P39-qS-Wr4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDY-Qv-FL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-107.24637681159422" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homepage" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

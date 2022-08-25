@@ -46,6 +46,7 @@
                                 <constraints>
                                     <constraint firstItem="XsI-05-442" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pb6-FU-rkD" secondAttribute="leading" constant="15" id="BUX-Fo-SBN"/>
                                     <constraint firstItem="XlP-Yl-8XO" firstAttribute="centerX" secondItem="pb6-FU-rkD" secondAttribute="centerX" id="M0x-gn-9Mf"/>
+                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="XsI-05-442" secondAttribute="bottom" constant="335" id="PMN-mH-VzA"/>
                                     <constraint firstItem="XsI-05-442" firstAttribute="centerX" secondItem="pb6-FU-rkD" secondAttribute="centerX" id="Pb6-gy-71R"/>
                                     <constraint firstItem="XlP-Yl-8XO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pb6-FU-rkD" secondAttribute="leading" constant="15" id="VEM-pg-ayE"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XsI-05-442" secondAttribute="trailing" constant="15" id="WZz-6W-QM4"/>
@@ -60,7 +61,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Owh-i2-cHL"/>
-                        <color key="backgroundColor" red="0.76263463610000004" green="1" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.76263463610000004" green="1" blue="0.87894713339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kUB-SZ-uhh" firstAttribute="centerX" secondItem="CGE-k6-v0e" secondAttribute="centerX" id="3pj-zn-VIG"/>
                             <constraint firstItem="pb6-FU-rkD" firstAttribute="height" secondItem="CGE-k6-v0e" secondAttribute="height" multiplier="0.768973" id="6r0-bq-IBy"/>
@@ -71,6 +72,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mainView" destination="pb6-FU-rkD" id="f5l-kR-phF"/>
                         <outlet property="presentView" destination="CGE-k6-v0e" id="thr-HY-6Fs"/>
                         <outlet property="recipeImage" destination="fJn-Co-bCj" id="BX2-Es-f0F"/>
                         <outlet property="recipeTextLabel" destination="XsI-05-442" id="Nsr-wv-UAH"/>

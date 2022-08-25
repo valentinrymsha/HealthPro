@@ -34,13 +34,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKz-ku-3Nh">
-                                <rect key="frame" x="155.5" y="57" width="103" height="43"/>
+                                <rect key="frame" x="155.5" y="57" width="103" height="19"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9tk-Gz-VS8">
-                                <rect key="frame" x="8" y="178" width="397" height="565"/>
+                                <rect key="frame" x="8" y="154" width="397" height="644"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q7H-8v-P3i">
                                     <size key="itemSize" width="128" height="128"/>
@@ -76,7 +76,7 @@
                                 </cells>
                             </collectionView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="10" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5P-WM-dlx">
-                                <rect key="frame" x="0.0" y="178" width="414" height="565"/>
+                                <rect key="frame" x="0.0" y="154" width="414" height="589"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="tintColor" red="1" green="0.97134924379999998" blue="0.84253776329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -120,7 +120,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeS-tg-dP3" customClass="BetterSegmentedControl" customModule="BetterSegmentedControl">
-                                <rect key="frame" x="35" y="115" width="344" height="50"/>
+                                <rect key="frame" x="35" y="91" width="344" height="50"/>
                                 <color key="backgroundColor" red="0.93854732829999998" green="1" blue="0.85197423049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -157,16 +157,16 @@
                         <viewLayoutGuide key="safeArea" id="mmD-HH-yBf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9tk-Gz-VS8" firstAttribute="height" secondItem="4Ok-mj-BgL" secondAttribute="height" multiplier="0.63058" id="0x0-8S-Cdu"/>
                             <constraint firstItem="mmD-HH-yBf" firstAttribute="bottom" secondItem="9vE-WR-Mcc" secondAttribute="bottom" constant="15" id="2Ea-he-pjT"/>
                             <constraint firstItem="ZKz-ku-3Nh" firstAttribute="leading" relation="lessThanOrEqual" secondItem="mmD-HH-yBf" secondAttribute="leading" constant="155.5" id="2gX-vd-N7R"/>
+                            <constraint firstItem="mmD-HH-yBf" firstAttribute="bottom" secondItem="9tk-Gz-VS8" secondAttribute="bottom" constant="15" id="6rn-ey-Lpd"/>
+                            <constraint firstItem="9tk-Gz-VS8" firstAttribute="height" secondItem="4Ok-mj-BgL" secondAttribute="height" multiplier="0.71875" id="72N-x3-xUa"/>
                             <constraint firstItem="TeS-tg-dP3" firstAttribute="centerX" secondItem="4Ok-mj-BgL" secondAttribute="centerX" id="ASH-Ar-2pE"/>
                             <constraint firstItem="TeS-tg-dP3" firstAttribute="top" secondItem="ZKz-ku-3Nh" secondAttribute="bottom" constant="15" id="CPK-WV-IzU"/>
                             <constraint firstItem="mmD-HH-yBf" firstAttribute="trailing" secondItem="x5P-WM-dlx" secondAttribute="trailing" id="DXp-MO-2E6"/>
                             <constraint firstItem="ZKz-ku-3Nh" firstAttribute="top" secondItem="mmD-HH-yBf" secondAttribute="top" constant="13" id="DaP-R2-Xp8"/>
-                            <constraint firstItem="9tk-Gz-VS8" firstAttribute="width" secondItem="4Ok-mj-BgL" secondAttribute="width" multiplier="0.958937" id="Gv1-y1-noz"/>
                             <constraint firstItem="TeS-tg-dP3" firstAttribute="width" secondItem="4Ok-mj-BgL" secondAttribute="width" multiplier="0.830918" id="NJ7-yd-aIW"/>
-                            <constraint firstItem="9vE-WR-Mcc" firstAttribute="top" secondItem="9tk-Gz-VS8" secondAttribute="bottom" constant="15" id="Qe1-ZX-Kpx"/>
+                            <constraint firstItem="9tk-Gz-VS8" firstAttribute="width" secondItem="4Ok-mj-BgL" secondAttribute="width" multiplier="0.958937" id="RMf-c0-igd"/>
                             <constraint firstItem="9tk-Gz-VS8" firstAttribute="top" secondItem="TeS-tg-dP3" secondAttribute="bottom" constant="13" id="Sdv-FI-m52"/>
                             <constraint firstItem="x5P-WM-dlx" firstAttribute="leading" secondItem="mmD-HH-yBf" secondAttribute="leading" id="YqT-MC-Lcs"/>
                             <constraint firstItem="mmD-HH-yBf" firstAttribute="trailing" secondItem="9tk-Gz-VS8" secondAttribute="trailing" constant="9" id="ZeB-cK-9gC"/>

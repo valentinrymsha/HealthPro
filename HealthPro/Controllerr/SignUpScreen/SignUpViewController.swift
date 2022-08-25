@@ -28,6 +28,10 @@ final class SignUpViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    self.view.endEditing(true)
+    }
+
 //    private func forgotPassAlert() {
 //        let alert = UIAlertController(title: "Forgot your password?", message: "Write your login here", preferredStyle: .actionSheet)
 //        alert.addTextField(configurationHandler: .none)
@@ -38,7 +42,7 @@ final class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         submitButton.layer.cornerRadius = 13
     }
     

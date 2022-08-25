@@ -20,13 +20,24 @@
                         <color key="selectedImageTintColor" red="0.5" green="0.81689101460000002" blue="0.58956712479999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="0MF-bY-KAJ" kind="relationship" relationship="viewControllers" id="vfp-aQ-j0g"/>
+                        <segue destination="GPe-hQ-kvZ" kind="relationship" relationship="viewControllers" id="CVZ-5n-zJz"/>
                         <segue destination="JJv-kX-s75" kind="relationship" relationship="viewControllers" id="W0f-zQ-JH2"/>
+                        <segue destination="0MF-bY-KAJ" kind="relationship" relationship="viewControllers" id="vfp-aQ-j0g"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bz1-9A-akW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="935" y="104"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="oLU-tR-ZIa">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="homeVC" storyboardName="Home" id="GPe-hQ-kvZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="z9F-jm-erB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rju-JU-PqB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1565" y="139"/>
         </scene>
         <!--Calculator-->
         <scene sceneID="jfI-G1-Ue5">
@@ -36,7 +47,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0I-NO-nSi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1551" y="228"/>
+            <point key="canvasLocation" x="1551" y="230"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="f0N-9g-AW1">

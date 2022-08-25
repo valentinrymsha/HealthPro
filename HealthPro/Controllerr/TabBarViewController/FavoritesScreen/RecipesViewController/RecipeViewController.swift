@@ -17,6 +17,7 @@ class RecipeViewController: UIViewController {
     @IBOutlet weak var recipeTitleLabel: UILabel!
     @IBOutlet weak var recipeTextLabel: UILabel!
     @IBOutlet weak var recipeImage: UIImageView!
+    @IBOutlet weak var mainView: UIView!
     
     // MARK: Properties
     
@@ -47,15 +48,16 @@ class RecipeViewController: UIViewController {
         recipeTitleLabel.text = text
         recipeTextLabel.text = recipeText
         recipeImage.image = img()
+        mainView.layer.cornerRadius = 13
         recipeImage.layer.cornerRadius = 13
-        presentView.layer.cornerRadius = 50
+        presentView.layer.cornerRadius = 13
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        self.presentView.layer.cornerRadius = 50
+        self.presentView.layer.cornerRadius = 13
 
         self.recipeImage.layer.cornerRadius = 8
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		CE17BCCF28B6A09200DE5B3D /* Food.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17BCCE28B6A09200DE5B3D /* Food.storyboard */; };
 		CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17BCD128B6A09F00DE5B3D /* FoodViewController.swift */; };
+		CE18053828B6E49500BAC5C0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE18053728B6E49500BAC5C0 /* Home.storyboard */; };
+		CE18054328B6E4A600BAC5C0 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18054228B6E4A600BAC5C0 /* HomePageViewController.swift */; };
+		CE18054728B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18054628B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift */; };
 		CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */; };
 		CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */; };
 		CE367D6328B63D2600B615FA /* RecoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE367D6228B63D2600B615FA /* RecoveryViewController.swift */; };
@@ -43,6 +46,9 @@
 		C673CCB482C24BEEEE58DCC8 /* Pods-HealthPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthPro.release.xcconfig"; path = "Target Support Files/Pods-HealthPro/Pods-HealthPro.release.xcconfig"; sourceTree = "<group>"; };
 		CE17BCCE28B6A09200DE5B3D /* Food.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Food.storyboard; sourceTree = "<group>"; };
 		CE17BCD128B6A09F00DE5B3D /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		CE18053728B6E49500BAC5C0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		CE18054228B6E4A600BAC5C0 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		CE18054628B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsMainPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE367D6228B63D2600B615FA /* RecoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +118,16 @@
 			path = FoodViewController;
 			sourceTree = "<group>";
 		};
+		CE18053628B6E47D00BAC5C0 /* HomePageScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE18053728B6E49500BAC5C0 /* Home.storyboard */,
+				CE18054228B6E4A600BAC5C0 /* HomePageViewController.swift */,
+				CE18054628B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift */,
+			);
+			path = HomePageScreen;
+			sourceTree = "<group>";
+		};
 		CE18464928AB9A2D003BCD42 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +195,7 @@
 			children = (
 				CE367D7A28B653D500B615FA /* MainTabBar.storyboard */,
 				CE5650D028A11CBE001E1668 /* MainTabBarViewController.swift */,
+				CE18053628B6E47D00BAC5C0 /* HomePageScreen */,
 				CE18465E28ABCC56003BCD42 /* FavoritesScreen */,
 				CE77F1B528B4F50800F29069 /* CalculatorScreen */,
 			);
@@ -340,6 +357,7 @@
 				CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */,
 				CE8A6B3F289ACF43002F1DD7 /* LaunchScreen.storyboard in Resources */,
 				CE367D7128B64EFB00B615FA /* Favorites.storyboard in Resources */,
+				CE18053828B6E49500BAC5C0 /* Home.storyboard in Resources */,
 				CE8A6B3C289ACF43002F1DD7 /* Assets.xcassets in Resources */,
 				CE367D8428B6576D00B615FA /* Recipe.storyboard in Resources */,
 				CE8A6B4C289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf in Resources */,
@@ -421,6 +439,7 @@
 			files = (
 				CE759121289BD39B00F7098A /* StartViewController.swift in Sources */,
 				CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */,
+				CE18054328B6E4A600BAC5C0 /* HomePageViewController.swift in Sources */,
 				CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */,
 				CE5650D128A11CBE001E1668 /* MainTabBarViewController.swift in Sources */,
 				CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */,
@@ -428,6 +447,7 @@
 				CE367D6328B63D2600B615FA /* RecoveryViewController.swift in Sources */,
 				CEA2B3C028ABF2280027D3D4 /* RecipesTableViewCell.swift in Sources */,
 				CE8A6B5A289ADC11002F1DD7 /* LoginViewController.swift in Sources */,
+				CE18054728B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift in Sources */,
 				CEAFFA1628AE7FDA00011E65 /* Manager.swift in Sources */,
 				CE8A6B5E289ADC24002F1DD7 /* SignUpViewController.swift in Sources */,
 				CE8A6B33289ACF41002F1DD7 /* AppDelegate.swift in Sources */,

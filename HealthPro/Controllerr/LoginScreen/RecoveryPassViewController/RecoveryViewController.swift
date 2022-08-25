@@ -19,6 +19,10 @@ class RecoveryViewController: UIViewController {
     
     var password = String()
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    self.view.endEditing(true)
+    }
+    
     // MARK: Lifecirle
     
     override func viewDidLoad() {

@@ -13,5 +13,6 @@ pod 'AlamofireSwiftyJSON'
 pod 'AlamofireImage'
 pod 'SwiftLint'
 pod 'BetterSegmentedControl', '~> 1.3'
+pod 'IQKeyboardManagerSwift'
 
 end

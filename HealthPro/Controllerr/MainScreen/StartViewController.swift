@@ -20,6 +20,7 @@ class StartViewController: UIViewController {
     @IBOutlet private weak var startCollectionView: UICollectionView!
     
     @IBOutlet private weak var loginButton: UIButton!
+    
     // MARK: Properties
     
     private var images: [UIImage] {
@@ -89,9 +90,10 @@ extension StartViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "startCollectionViewCell", for: indexPath) as? StartCollectionViewCell else { fatalError() }
         collectionView.tintColor = .white
-        cell.startImageView.image = images[indexPath.row]
-        
-        
+        if let image = images[indexPath.row] as? UIImage {
+            let newImage = image.resizeImage(image: image, targetSize: .init(width: 750, height: 750))
+            cell.startImageView.image = newImage
+        }
         return cell
     }
     
@@ -125,30 +127,30 @@ extension StartViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: CollectionDelegate
 
-//extension UIImage {
-//    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
-//          let size = image.size
-//
-//          let widthRatio  = targetSize.width  / size.width
-//          let heightRatio = targetSize.height / size.height
-//
-//          // Figure out what our orientation is, and use that to form the rectangle
-//          var newSize: CGSize
-//          if(widthRatio > heightRatio) {
-//              newSize = CGSize(width: size.width  heightRatio, height: size.height  heightRatio)
-//          } else {
-//              newSize = CGSize(width: size.width  widthRatio, height: size.height  widthRatio)
-//          }
-//
-//          // This is the rect that we've calculated out and this is what is actually used below
-//          let rect = CGRect(origin: .zero, size: newSize)
-//
-//          // Actually do the resizing to the rect using the ImageContext stuff
-//          UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-//          image.draw(in: rect)
-//          let newImage = UIGraphicsGetImageFromCurrentImageContext()
-//          UIGraphicsEndImageContext()
-//
-//          return newImage
-//      }
-//}
+extension UIImage {
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
+          let size = image.size
+
+          let widthRatio  = targetSize.width  / size.width
+          let heightRatio = targetSize.height / size.height
+
+          // Figure out what our orientation is, and use that to form the rectangle
+          var newSize: CGSize
+          if(widthRatio > heightRatio) {
+              newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+          } else {
+              newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
+          }
+
+          // This is the rect that we've calculated out and this is what is actually used below
+          let rect = CGRect(origin: .zero, size: newSize)
+
+          // Actually do the resizing to the rect using the ImageContext stuff
+          UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+          image.draw(in: rect)
+          let newImage = UIGraphicsGetImageFromCurrentImageContext()
+          UIGraphicsEndImageContext()
+
+          return newImage
+      }
+}
