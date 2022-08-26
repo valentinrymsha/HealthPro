@@ -59,7 +59,7 @@ class FavoritesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.recipesTableView.reloadData()
             self.foodsTableView.reloadData()
         }
@@ -77,7 +77,7 @@ class FavoritesViewController: UIViewController {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.recipesTableView.reloadData()
         }
     }
@@ -152,15 +152,21 @@ extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
                 + flowLayout.sectionInset.right
                 + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
             
-            let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
+            let width = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
+            let height = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
             
-            sizeCG = CGSize(width: size, height: size)
+            if indexPath.item % 5 == 0 {
+            sizeCG = CGSize(width: width * 2, height: height)
+            } else {
+                sizeCG = CGSize(width: width, height: height)
+
+            }
         }
-        
+      
         return sizeCG
+            
     }
 }
-
 // MARK: TableDataSource
 
 extension FavoritesViewController: UITableViewDataSource {

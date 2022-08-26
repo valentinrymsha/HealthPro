@@ -20,17 +20,13 @@ final class Manager {
         
         let api = "https://api.spoonacular.com/recipes/random?apiKey=c086eddbb7774da5822b81a9f6f45a22&number=20"
         // Create API URL
-        guard let apiURL = URL(string: api) else {
-            return
-        }
+        guard let apiURL = URL(string: api) else { return }
         // Initiallized session
         // Sent dataTask
         print("input")
         session.dataTask(with: apiURL) { (data, _, error) in
             // Processing of data
-            guard error == nil else {
-                return
-            }
+            guard error == nil else { return }
             if let data = data {
                 let recipe = try? JSONDecoder().decode(Root.self, from: data)
                 if let recipe = recipe {

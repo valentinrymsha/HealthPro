@@ -17,6 +17,8 @@ final class LoginViewController: UIViewController {
     
     // MARK: Properties
     
+    var delegate: UserName?
+    
     private let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     private let mainTabBarStoryboard: UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
     
@@ -35,6 +37,8 @@ final class LoginViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     self.view.endEditing(true)
     }
+    
+   
     
     // MARK: ViewDidLoad
     
@@ -61,6 +65,7 @@ final class LoginViewController: UIViewController {
               else { return self.oopsAlert() }
         if UsersData.userDefault.dictionary(forKey: "\(userNameTextField.text!)") as? Dictionary == ["\(userNameTextField.text!)": "\(passwordTextField.text!)"] {
             if let mainVC = mainTabBarStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController {
+                delegate?.update(text: userNameTextField.text!)
                 present(mainVC, animated: true, completion: nil)
                 
             }

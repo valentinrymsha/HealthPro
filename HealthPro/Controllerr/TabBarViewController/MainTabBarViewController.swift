@@ -9,7 +9,7 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController {
 
-
+    var text = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +18,7 @@ class MainTabBarViewController: UITabBarController {
         // Do any additional setup after loading the view.
     }
     
+   
 
     /*
     // MARK: - Navigation

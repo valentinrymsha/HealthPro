@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE09819528B91C2800AFAFBF /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09819428B91C2800AFAFBF /* Protocols.swift */; };
 		CE17BCCF28B6A09200DE5B3D /* Food.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17BCCE28B6A09200DE5B3D /* Food.storyboard */; };
 		CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17BCD128B6A09F00DE5B3D /* FoodViewController.swift */; };
 		CE18053828B6E49500BAC5C0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE18053728B6E49500BAC5C0 /* Home.storyboard */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		0A204F500672533D41DC8477 /* Pods-HealthPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthPro.debug.xcconfig"; path = "Target Support Files/Pods-HealthPro/Pods-HealthPro.debug.xcconfig"; sourceTree = "<group>"; };
 		C673CCB482C24BEEEE58DCC8 /* Pods-HealthPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthPro.release.xcconfig"; path = "Target Support Files/Pods-HealthPro/Pods-HealthPro.release.xcconfig"; sourceTree = "<group>"; };
+		CE09819428B91C2800AFAFBF /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CE17BCCE28B6A09200DE5B3D /* Food.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Food.storyboard; sourceTree = "<group>"; };
 		CE17BCD128B6A09F00DE5B3D /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		CE18053728B6E49500BAC5C0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				CE8A6B34289ACF41002F1DD7 /* SceneDelegate.swift */,
 				CE8A6B3D289ACF43002F1DD7 /* LaunchScreen.storyboard */,
 				CE8A6B3B289ACF43002F1DD7 /* Assets.xcassets */,
+				CE09819428B91C2800AFAFBF /* Protocols.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				CE8A6B5E289ADC24002F1DD7 /* SignUpViewController.swift in Sources */,
 				CE8A6B33289ACF41002F1DD7 /* AppDelegate.swift in Sources */,
 				CE77F1C328B506E900F29069 /* BMRViewController.swift in Sources */,
+				CE09819528B91C2800AFAFBF /* Protocols.swift in Sources */,
 				CE77F1BD28B4F55300F29069 /* CalculatorViewController.swift in Sources */,
 				CEB9562B28AD2AFC0021D261 /* UsersData.swift in Sources */,
 				CE8A6B35289ACF41002F1DD7 /* SceneDelegate.swift in Sources */,
