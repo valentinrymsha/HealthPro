@@ -95,7 +95,8 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-    @IBAction func didTouchCalculateButton(_ sender: Any) {
-       
+    @IBAction func logoutButton(_ sender: Any) {
+        guard let startVC = mainStoryBoard.instantiateViewController(identifier: "StartVC") as? StartViewController else { return }
+            present(startVC, animated: false, completion: nil)
     }
 }

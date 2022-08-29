@@ -39,8 +39,7 @@ class HomePageViewController: UIViewController {
     private var countSteps = String()
     private var distance = String()
     private var floors = String()
-    private let mainStoryboard: UIStoryboard = UIStoryboard(name: "Registration", bundle: nil)
-    private let realm = try! Realm()
+    private let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     private func getPedometrInfo() -> String {
         if (!CMPedometer.isStepCountingAvailable()) {
@@ -78,7 +77,7 @@ class HomePageViewController: UIViewController {
         
         stepsCountLabel.text = getPedometrInfo() + " steps!"
         
-        greetingLabel.text = "Hello, " + userName
+        greetingLabel.text = "Hello, " + (UsersData.userDefault.string(forKey: "currentUser") ?? "User" )
         
         floorsCountLabel.text = floors + " floors"
     }
@@ -95,6 +94,18 @@ class HomePageViewController: UIViewController {
         floorsCountLabel.text = floors + " floors"
 
     }
+    
+    // MARK: Actions
+    
+    @IBAction func logoutButton(_ sender: UIButton) {
+        guard let startVC = mainStoryboard.instantiateViewController(identifier: "StartVC") as? StartViewController else { return }
+        
+        UsersData.userDefault.set(false, forKey: "isLoggedIn")
+        UsersData.userDefault.synchronize()
+        
+        present(startVC, animated: false, completion: nil)
+    }
+    
     
 }
 

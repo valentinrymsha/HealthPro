@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vE-WR-Mcc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vE-WR-Mcc">
                                 <rect key="frame" x="41.5" y="758" width="331" height="40"/>
                                 <color key="backgroundColor" red="0.67652475830000003" green="0.86754846569999999" blue="0.77025657889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9tk-Gz-VS8">
-                                <rect key="frame" x="8" y="154" width="397" height="644"/>
+                                <rect key="frame" x="8" y="154" width="397" height="589"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q7H-8v-P3i">
                                     <size key="itemSize" width="128" height="128"/>
@@ -157,10 +157,9 @@
                         <viewLayoutGuide key="safeArea" id="mmD-HH-yBf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="9tk-Gz-VS8" firstAttribute="height" secondItem="4Ok-mj-BgL" secondAttribute="height" multiplier="0.657366" id="01q-gr-ZAi"/>
                             <constraint firstItem="mmD-HH-yBf" firstAttribute="bottom" secondItem="9vE-WR-Mcc" secondAttribute="bottom" constant="15" id="2Ea-he-pjT"/>
                             <constraint firstItem="ZKz-ku-3Nh" firstAttribute="leading" relation="lessThanOrEqual" secondItem="mmD-HH-yBf" secondAttribute="leading" constant="155.5" id="2gX-vd-N7R"/>
-                            <constraint firstItem="mmD-HH-yBf" firstAttribute="bottom" secondItem="9tk-Gz-VS8" secondAttribute="bottom" constant="15" id="6rn-ey-Lpd"/>
-                            <constraint firstItem="9tk-Gz-VS8" firstAttribute="height" secondItem="4Ok-mj-BgL" secondAttribute="height" multiplier="0.71875" id="72N-x3-xUa"/>
                             <constraint firstItem="TeS-tg-dP3" firstAttribute="centerX" secondItem="4Ok-mj-BgL" secondAttribute="centerX" id="ASH-Ar-2pE"/>
                             <constraint firstItem="TeS-tg-dP3" firstAttribute="top" secondItem="ZKz-ku-3Nh" secondAttribute="bottom" constant="15" id="CPK-WV-IzU"/>
                             <constraint firstItem="mmD-HH-yBf" firstAttribute="trailing" secondItem="x5P-WM-dlx" secondAttribute="trailing" id="DXp-MO-2E6"/>
@@ -171,8 +170,9 @@
                             <constraint firstItem="x5P-WM-dlx" firstAttribute="leading" secondItem="mmD-HH-yBf" secondAttribute="leading" id="YqT-MC-Lcs"/>
                             <constraint firstItem="mmD-HH-yBf" firstAttribute="trailing" secondItem="9tk-Gz-VS8" secondAttribute="trailing" constant="9" id="ZeB-cK-9gC"/>
                             <constraint firstItem="ZKz-ku-3Nh" firstAttribute="centerX" secondItem="4Ok-mj-BgL" secondAttribute="centerX" id="f4m-1W-VP8"/>
-                            <constraint firstItem="mmD-HH-yBf" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ZKz-ku-3Nh" secondAttribute="trailing" constant="155.5" id="hI5-Lv-TVX"/>
+                            <constraint firstItem="mmD-HH-yBf" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ZKz-ku-3Nh" secondAttribute="trailing" constant="155.5" id="gSF-mB-kDP"/>
                             <constraint firstItem="9vE-WR-Mcc" firstAttribute="centerX" secondItem="4Ok-mj-BgL" secondAttribute="centerX" id="lRy-f7-rtm"/>
+                            <constraint firstItem="9vE-WR-Mcc" firstAttribute="top" secondItem="9tk-Gz-VS8" secondAttribute="bottom" constant="15" id="lyt-oa-2m4"/>
                             <constraint firstItem="x5P-WM-dlx" firstAttribute="top" secondItem="TeS-tg-dP3" secondAttribute="bottom" constant="13" id="nhl-1q-pju"/>
                             <constraint firstItem="9vE-WR-Mcc" firstAttribute="top" secondItem="x5P-WM-dlx" secondAttribute="bottom" constant="15" id="uqf-Go-ILq"/>
                             <constraint firstItem="9vE-WR-Mcc" firstAttribute="width" secondItem="4Ok-mj-BgL" secondAttribute="width" multiplier="0.8" id="x4m-3s-4Bv"/>
@@ -189,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEh-pc-Mvd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1822" y="485"/>
+            <point key="canvasLocation" x="1821.7391304347827" y="484.82142857142856"/>
         </scene>
     </scenes>
     <resources>

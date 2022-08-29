@@ -45,11 +45,32 @@ final class SignUpViewController: UIViewController {
 //        alert.addAction(UIAlertAction(title: "Represent password", style: .default, handler: nil))
 //    }
     
+    func setTextFieldsProperies() {
+        
+        userNameTextField.delegate = self
+        passwordTextField.delegate = self
+        repeatedPasswordTextField.delegate = self
+        
+        userNameTextField.layer.borderWidth = 0.5
+        passwordTextField.layer.borderWidth = 0.5
+        repeatedPasswordTextField.layer.borderWidth = 0.5
+        
+        userNameTextField.layer.cornerRadius = 5
+        passwordTextField.layer.cornerRadius = 5
+        repeatedPasswordImage.layer.cornerRadius = 5
+        
+        userNameTextField.layer.borderColor = #colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)
+        passwordTextField.layer.borderColor = #colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)
+        repeatedPasswordTextField.layer.borderColor = #colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)
+        
+    }
     
     // MARK: ViewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setTextFieldsProperies()
         
         submitButton.layer.cornerRadius = 13
     }
@@ -83,15 +104,26 @@ final class SignUpViewController: UIViewController {
             if let homeVC = mainVC.viewControllers?.first as? HomePageViewController {
                 homeVC.userName = userNameTextField.text!
             }
+            
+            UsersData.userDefault.set("\(userNameTextField.text ?? "User")", forKey: "currentUser")
+            UsersData.userDefault.synchronize()
+            
+            UsersData.userDefault.set(true, forKey: "isLoggedIn")
+            UsersData.userDefault.synchronize()
+            
             present(mainVC, animated: true, completion: nil)
             
         }
     }
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderColor = #colorLiteral(red: 0.5589081985, green: 0.7141136811, blue: 0.9897997975, alpha: 1)
+    }
     
-    
-    // MARK: Logic
-    
-    
-    
-    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.borderColor = #colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)
+
+    }
 }

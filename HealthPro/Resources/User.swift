@@ -13,5 +13,7 @@ final class User: Object {
         
     @objc dynamic var userName: String?
     @objc dynamic var userPassword: String?
+    @objc dynamic var userPhoto: Data?
+
     
 }

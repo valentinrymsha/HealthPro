@@ -99,7 +99,6 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="forgotPassword:" destination="wXq-b5-KaP" eventType="touchUpInside" id="n9s-8c-Emk"/>
                                     <segue destination="rsK-AK-421" kind="presentation" identifier="showRecovery" id="T5d-Lw-ENO"/>
                                 </connections>
                             </button>

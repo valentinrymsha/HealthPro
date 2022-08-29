@@ -32,6 +32,7 @@ class FavoritesViewController: UIViewController {
         Array(0...2).compactMap { UIImage(named: "png\($0)") }
     }
     
+    private let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     // MARK: Lifecircle
     
@@ -79,6 +80,7 @@ class FavoritesViewController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.recipesTableView.reloadData()
+            self.foodsTableView.reloadData()
         }
     }
     
@@ -86,14 +88,13 @@ class FavoritesViewController: UIViewController {
         switch favoriteSegmentedControl.index {
         case 1:
             foodsTableView.isHidden = true
-            searchButton.isHidden = false
             recipesTableView.isHidden = false
         default:
             foodsTableView.isHidden = false
-            searchButton.isHidden = true
             recipesTableView.isHidden = true
         }
     }
+    
 }
 
 // MARK: CollectionDataSource

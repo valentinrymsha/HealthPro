@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE00FC5628BD2F0D007BC9EC /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE00FC5528BD2F0D007BC9EC /* Account.storyboard */; };
+		CE00FC5928BD2F2A007BC9EC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE00FC5828BD2F2A007BC9EC /* AccountViewController.swift */; };
 		CE09819528B91C2800AFAFBF /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09819428B91C2800AFAFBF /* Protocols.swift */; };
 		CE17BCCF28B6A09200DE5B3D /* Food.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17BCCE28B6A09200DE5B3D /* Food.storyboard */; };
 		CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17BCD128B6A09F00DE5B3D /* FoodViewController.swift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		0A204F500672533D41DC8477 /* Pods-HealthPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthPro.debug.xcconfig"; path = "Target Support Files/Pods-HealthPro/Pods-HealthPro.debug.xcconfig"; sourceTree = "<group>"; };
 		C673CCB482C24BEEEE58DCC8 /* Pods-HealthPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthPro.release.xcconfig"; path = "Target Support Files/Pods-HealthPro/Pods-HealthPro.release.xcconfig"; sourceTree = "<group>"; };
+		CE00FC5528BD2F0D007BC9EC /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		CE00FC5828BD2F2A007BC9EC /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		CE09819428B91C2800AFAFBF /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CE17BCCE28B6A09200DE5B3D /* Food.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Food.storyboard; sourceTree = "<group>"; };
 		CE17BCD128B6A09F00DE5B3D /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,15 @@
 				E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE00FC5428BD2EF2007BC9EC /* AccountScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE00FC5528BD2F0D007BC9EC /* Account.storyboard */,
+				CE00FC5828BD2F2A007BC9EC /* AccountViewController.swift */,
+			);
+			path = AccountScreen;
 			sourceTree = "<group>";
 		};
 		CE17BCCD28B6A07E00DE5B3D /* FoodViewController */ = {
@@ -213,11 +226,12 @@
 		CE367D6C28B648D100B615FA /* TabBarViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CE367D7A28B653D500B615FA /* MainTabBar.storyboard */,
 				CE5650D028A11CBE001E1668 /* MainTabBarViewController.swift */,
+				CE367D7A28B653D500B615FA /* MainTabBar.storyboard */,
 				CE18053628B6E47D00BAC5C0 /* HomePageScreen */,
 				CE18465E28ABCC56003BCD42 /* FavoritesScreen */,
 				CE77F1B528B4F50800F29069 /* CalculatorScreen */,
+				CE00FC5428BD2EF2007BC9EC /* AccountScreen */,
 			);
 			path = TabBarViewController;
 			sourceTree = "<group>";
@@ -380,6 +394,7 @@
 				CE367D7128B64EFB00B615FA /* Favorites.storyboard in Resources */,
 				CE18053828B6E49500BAC5C0 /* Home.storyboard in Resources */,
 				CE8A6B3C289ACF43002F1DD7 /* Assets.xcassets in Resources */,
+				CE00FC5628BD2F0D007BC9EC /* Account.storyboard in Resources */,
 				CE367D8428B6576D00B615FA /* Recipe.storyboard in Resources */,
 				CE8A6B4C289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf in Resources */,
 				CE367D7B28B653D500B615FA /* MainTabBar.storyboard in Resources */,
@@ -474,6 +489,7 @@
 				CEAFFA1628AE7FDA00011E65 /* Manager.swift in Sources */,
 				CE8A6B5E289ADC24002F1DD7 /* SignUpViewController.swift in Sources */,
 				CE8A6B33289ACF41002F1DD7 /* AppDelegate.swift in Sources */,
+				CE00FC5928BD2F2A007BC9EC /* AccountViewController.swift in Sources */,
 				CE77F1C328B506E900F29069 /* BMRViewController.swift in Sources */,
 				CE09819528B91C2800AFAFBF /* Protocols.swift in Sources */,
 				CE77F1BD28B4F55300F29069 /* CalculatorViewController.swift in Sources */,

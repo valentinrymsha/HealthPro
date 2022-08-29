@@ -187,7 +187,6 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTouchCalculateButton:" destination="7kT-bh-4DO" eventType="touchUpInside" id="0Id-cf-ges"/>
                                     <segue destination="EqS-4j-E5X" kind="presentation" identifier="showBMR" id="A9M-Bt-gJG"/>
                                 </connections>
                             </button>

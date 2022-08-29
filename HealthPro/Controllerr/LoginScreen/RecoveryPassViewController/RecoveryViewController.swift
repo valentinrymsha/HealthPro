@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecoveryViewController: UIViewController {
+final class RecoveryViewController: UIViewController {
 
     // MARK: Outlets
     
@@ -23,11 +23,25 @@ class RecoveryViewController: UIViewController {
     self.view.endEditing(true)
     }
     
+    func setTextFieldsProperies() {
+        
+        loginTextField.delegate = self
+
+        loginTextField.layer.borderWidth = 0.5
+
+        loginTextField.layer.cornerRadius = 5
+        
+        loginTextField.layer.borderColor = #colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)
+        
+    }
+    
     // MARK: Lifecirle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setTextFieldsProperies()
+        
         showPasswordButton.layer.cornerRadius = 13
     }
     
@@ -43,4 +57,15 @@ class RecoveryViewController: UIViewController {
         loginTextField.text = ""
     }
     
+}
+
+extension RecoveryViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderColor = #colorLiteral(red: 0.5589081985, green: 0.7141136811, blue: 0.9897997975, alpha: 1)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.borderColor = #colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)
+
+    }
 }
