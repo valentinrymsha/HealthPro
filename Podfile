@@ -12,6 +12,8 @@ pod 'SwiftyJSON', '~> 4.0'
 pod 'AlamofireSwiftyJSON'
 pod 'AlamofireImage'
 pod 'SwiftLint'
+pod 'RealmSwift','10.25.1'
+pod 'Realm','10.25.1'
 pod 'BetterSegmentedControl', '~> 1.3'
 pod 'IQKeyboardManagerSwift'
 

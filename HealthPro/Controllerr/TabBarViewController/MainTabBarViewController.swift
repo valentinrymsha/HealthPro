@@ -9,7 +9,7 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController {
 
-    var text = String()
+    var userName = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()

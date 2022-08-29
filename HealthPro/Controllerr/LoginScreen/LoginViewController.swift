@@ -4,10 +4,12 @@
 //
 //  Created by User on 8/3/22.
 //
-
+import RealmSwift
 import UIKit
 
 final class LoginViewController: UIViewController {
+    
+    // swiftlint:disable force_try
     
     // MARK: Outlets
     
@@ -16,11 +18,10 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var loginButton: UIButton!
     
     // MARK: Properties
-    
-    var delegate: UserName?
-    
+        
     private let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     private let mainTabBarStoryboard: UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
+    private let homeStoryboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
     
     private func oopsAlert() {
         let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Try to input data againg!", preferredStyle: .alert)
@@ -37,8 +38,6 @@ final class LoginViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     self.view.endEditing(true)
     }
-    
-   
     
     // MARK: ViewDidLoad
     
@@ -63,15 +62,19 @@ final class LoginViewController: UIViewController {
               passwordTextField.text?.contains("#@$^&*()?!§±№;%><=+") == false
               
               else { return self.oopsAlert() }
+        
         if UsersData.userDefault.dictionary(forKey: "\(userNameTextField.text!)") as? Dictionary == ["\(userNameTextField.text!)": "\(passwordTextField.text!)"] {
             if let mainVC = mainTabBarStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController {
-                delegate?.update(text: userNameTextField.text!)
+                if let homeVC = mainVC.viewControllers?.first as? HomePageViewController {
+                    homeVC.userName = userNameTextField.text!
+                }
                 present(mainVC, animated: true, completion: nil)
-                
-            }
+
+
+            } else {
+                invalidLoginDataAlert()
             
-        } else {
-            invalidLoginDataAlert()
+            }
         }
     }
     

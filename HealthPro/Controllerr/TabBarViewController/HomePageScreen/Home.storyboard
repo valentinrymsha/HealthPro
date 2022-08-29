@@ -73,8 +73,8 @@
                             </collectionView>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6UC-U0-1BT">
                                 <rect key="frame" x="146" y="361" width="122" height="28"/>
-                                <color key="pageIndicatorTintColor" red="0.99147368189999996" green="0.57474568319999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="0.7678455662" green="0.44511108319999998" blue="0.77444876269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="pageIndicatorTintColor" red="0.78154430649999995" green="1" blue="0.72386023119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemGreenColor"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLM-Iy-CFC">
                                 <rect key="frame" x="20" y="397" width="374" height="94"/>
@@ -95,7 +95,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.78431372549019607" green="0.76054152397260277" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.88056331070000005" green="1" blue="0.9065428445" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="GdJ-4O-t8c" firstAttribute="centerX" secondItem="KLM-Iy-CFC" secondAttribute="centerX" id="50C-Cg-Sne"/>
                                     <constraint firstItem="X6k-tA-Eok" firstAttribute="centerX" secondItem="KLM-Iy-CFC" secondAttribute="centerX" id="6Pa-Qm-j6V"/>
@@ -129,7 +129,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.78431372549019607" green="0.76054152397260277" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.88056331070000005" green="1" blue="0.9065428445" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="eL9-Q1-bJZ" firstAttribute="centerX" secondItem="K4m-VF-3PJ" secondAttribute="centerX" id="6by-id-S9U"/>
                                     <constraint firstItem="yd9-wg-BOF" firstAttribute="centerX" secondItem="K4m-VF-3PJ" secondAttribute="centerX" id="Aeq-a9-aaP"/>
@@ -160,7 +160,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.78431372549019607" green="0.76054152397260277" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.92580668789999998" green="1" blue="0.92527576909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="oKK-FC-0p3" firstAttribute="top" secondItem="NZN-Qc-Z3K" secondAttribute="top" constant="8" id="0pv-YI-bbY"/>
                                     <constraint firstItem="oKK-FC-0p3" firstAttribute="width" secondItem="NZN-Qc-Z3K" secondAttribute="width" multiplier="0.171123" id="8PQ-R2-KtE"/>
@@ -172,11 +172,20 @@
                                     <constraint firstItem="kAM-H5-deo" firstAttribute="centerX" secondItem="NZN-Qc-Z3K" secondAttribute="centerX" id="q7D-pX-9LK"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSa-eR-AAq">
+                                <rect key="frame" x="20" y="707" width="374" height="48"/>
+                                <color key="backgroundColor" red="0.92580668789999998" green="1" blue="0.92527576909999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
+                                <state key="normal" title="Show all medical data">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xNI-rq-phO"/>
-                        <color key="backgroundColor" red="0.84074486246209368" green="1" blue="0.90387147027911863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Yh9-sn-IMH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xNI-rq-phO" secondAttribute="leading" constant="15" id="2j4-8n-eKr"/>
+                            <constraint firstItem="NSa-eR-AAq" firstAttribute="height" secondItem="oPr-1H-Rcj" secondAttribute="height" multiplier="0.0535714" id="3hn-Ql-z4g"/>
                             <constraint firstItem="NZN-Qc-Z3K" firstAttribute="height" secondItem="oPr-1H-Rcj" secondAttribute="height" multiplier="0.107143" id="4cr-Ds-L7c"/>
                             <constraint firstItem="DSi-Xa-R3j" firstAttribute="width" secondItem="oPr-1H-Rcj" secondAttribute="width" multiplier="0.903382" id="Bdg-j1-Q8F"/>
                             <constraint firstItem="NZN-Qc-Z3K" firstAttribute="top" secondItem="K4m-VF-3PJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Bvc-lG-N0V"/>
@@ -189,7 +198,9 @@
                             <constraint firstItem="K4m-VF-3PJ" firstAttribute="height" secondItem="oPr-1H-Rcj" secondAttribute="height" multiplier="0.107143" id="KHI-bm-cN7"/>
                             <constraint firstItem="K4m-VF-3PJ" firstAttribute="width" secondItem="oPr-1H-Rcj" secondAttribute="width" multiplier="0.903382" id="KKl-Dq-Y2A"/>
                             <constraint firstItem="DSi-Xa-R3j" firstAttribute="top" secondItem="b1t-dY-qmK" secondAttribute="bottom" constant="15" id="Ldo-1w-oTs"/>
+                            <constraint firstItem="NSa-eR-AAq" firstAttribute="width" secondItem="oPr-1H-Rcj" secondAttribute="width" multiplier="0.903382" id="Nq4-OW-wgd"/>
                             <constraint firstItem="KLM-Iy-CFC" firstAttribute="width" secondItem="oPr-1H-Rcj" secondAttribute="width" multiplier="0.903382" id="U8T-5q-xF7"/>
+                            <constraint firstItem="NSa-eR-AAq" firstAttribute="centerX" secondItem="oPr-1H-Rcj" secondAttribute="centerX" id="Vr6-Ln-bZ4"/>
                             <constraint firstItem="b1t-dY-qmK" firstAttribute="top" secondItem="Yh9-sn-IMH" secondAttribute="bottom" constant="8" symbolic="YES" id="Wcv-3n-2Ji"/>
                             <constraint firstItem="xNI-rq-phO" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="6UC-U0-1BT" secondAttribute="trailing" constant="146" id="bIw-NW-QjW"/>
                             <constraint firstItem="KLM-Iy-CFC" firstAttribute="height" secondItem="oPr-1H-Rcj" secondAttribute="height" multiplier="0.104911" id="bKn-ne-6tg"/>
@@ -198,6 +209,7 @@
                             <constraint firstItem="K4m-VF-3PJ" firstAttribute="top" secondItem="KLM-Iy-CFC" secondAttribute="bottom" constant="8" symbolic="YES" id="g1z-jb-Bac"/>
                             <constraint firstItem="6UC-U0-1BT" firstAttribute="leading" relation="lessThanOrEqual" secondItem="xNI-rq-phO" secondAttribute="leading" constant="146" id="hAk-Yg-5aZ"/>
                             <constraint firstItem="6UC-U0-1BT" firstAttribute="top" secondItem="DSi-Xa-R3j" secondAttribute="bottom" constant="7.5" id="kBs-vv-aWR"/>
+                            <constraint firstItem="NSa-eR-AAq" firstAttribute="top" secondItem="NZN-Qc-Z3K" secondAttribute="bottom" constant="8" symbolic="YES" id="lCU-6m-0pp"/>
                             <constraint firstItem="DSi-Xa-R3j" firstAttribute="height" secondItem="oPr-1H-Rcj" secondAttribute="height" multiplier="0.256696" id="o2x-vF-CfL"/>
                             <constraint firstItem="NZN-Qc-Z3K" firstAttribute="centerX" secondItem="oPr-1H-Rcj" secondAttribute="centerX" id="pfZ-vu-YSB"/>
                             <constraint firstItem="KLM-Iy-CFC" firstAttribute="top" secondItem="6UC-U0-1BT" secondAttribute="bottom" constant="8" symbolic="YES" id="w1F-yw-Ufe"/>
@@ -231,6 +243,9 @@
         <image name="stairs" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

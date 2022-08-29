@@ -7,41 +7,45 @@
 
 import UIKit
 import CoreMotion
+import RealmSwift
 
 class HomePageViewController: UIViewController {
 
+    
+    // swiftlint:disable force_try
+
     // MARK: Outlets
     
-    @IBOutlet weak var greetingLabel: UILabel!
-    @IBOutlet weak var newsTableView: UICollectionView!
-    @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var stepsView: UIView!
-    @IBOutlet weak var stepsIconImage: UIImageView!
-    @IBOutlet weak var stepsCountLabel: UILabel!
-    @IBOutlet weak var distanceCountLabel: UILabel!
-    @IBOutlet weak var floorsCountLabel: UILabel!
-    @IBOutlet weak var distanceView: UIView!
-    @IBOutlet weak var floorsView: UIView!
+    @IBOutlet private weak var greetingLabel: UILabel!
+    @IBOutlet private weak var newsTableView: UICollectionView!
+    @IBOutlet private weak var pageControl: UIPageControl!
+    @IBOutlet private weak var stepsView: UIView!
+    @IBOutlet private weak var stepsIconImage: UIImageView!
+    @IBOutlet private weak var stepsCountLabel: UILabel!
+    @IBOutlet private weak var distanceCountLabel: UILabel!
+    @IBOutlet private weak var floorsCountLabel: UILabel!
+    @IBOutlet private weak var distanceView: UIView!
+    @IBOutlet private weak var floorsView: UIView!
     
     // MARK: Properties
     
-    var nameOfUser = String()
+    var userName = String()
     
     private var images: [UIImage] {
         Array(1...3).compactMap { UIImage(named: "home\($0)")  }
     }
         
-    var pedometer = CMPedometer()
-    var countSteps = String()
-    var distance = String()
-    var floors = String()
+    private var pedometer = CMPedometer()
+    private var countSteps = String()
+    private var distance = String()
+    private var floors = String()
+    private let mainStoryboard: UIStoryboard = UIStoryboard(name: "Registration", bundle: nil)
+    private let realm = try! Realm()
     
-    private func getCountOfSteps() -> String {
+    private func getPedometrInfo() -> String {
         if (!CMPedometer.isStepCountingAvailable()) {
             print("cant counting")
         }
-        let from = Date(timeIntervalSinceNow: -10000)
-        let to = Date()
         let calendar = Calendar(identifier: .gregorian)
         DispatchQueue.main.async {
             self.pedometer.queryPedometerData(from: calendar.startOfDay(for: Date()), to: Date(), withHandler: {(pedometerData, error) in
@@ -52,12 +56,7 @@ class HomePageViewController: UIViewController {
         }
         return self.countSteps
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let destination = segue.destination as? LoginViewController else { return }
-            destination.delegate = self
-        }
-    
+
     // MARK: Lifecirle
     
     override func viewDidLoad() {
@@ -70,32 +69,28 @@ class HomePageViewController: UIViewController {
         
         pageControl.numberOfPages = images.count
         pageControl.hidesForSinglePage = true
-        
-        greetingLabel.text = nameOfUser
-        
+                
         newsTableView.layer.cornerRadius = 13
         
         stepsView.layer.cornerRadius = 13
         distanceView.layer.cornerRadius = 13
         floorsView.layer.cornerRadius = 13
         
-        stepsCountLabel.text = getCountOfSteps() + " steps!"
-        distanceCountLabel.text = distance
+        stepsCountLabel.text = getPedometrInfo() + " steps!"
+        
+        greetingLabel.text = "Hello, " + userName
+        
         floorsCountLabel.text = floors + " floors"
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        greetingLabel.text = nameOfUser
-
-        stepsCountLabel.text = getCountOfSteps() + " steps"
+        stepsCountLabel.text = getPedometrInfo() + " steps"
         distanceCountLabel.text = distance + " meters"
         floorsCountLabel.text = floors + " floors"
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        greetingLabel.text = nameOfUser
-
-        stepsCountLabel.text = getCountOfSteps() + " steps"
+        stepsCountLabel.text = getPedometrInfo() + " steps"
         distanceCountLabel.text = distance + " meters"
         floorsCountLabel.text = floors + " floors"
 
@@ -150,10 +145,4 @@ extension HomePageViewController: UICollectionViewDelegateFlowLayout {
     
     
     
-}
-
-extension HomePageViewController: UserName {
-    func update(text: String) {
-        nameOfUser = "Hello " + text
-    }
 }

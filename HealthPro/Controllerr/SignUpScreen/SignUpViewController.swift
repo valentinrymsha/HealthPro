@@ -5,7 +5,9 @@
 //  Created by User on 8/3/22.
 //
 
+import RealmSwift
 import UIKit
+
 
 final class SignUpViewController: UIViewController {
 
@@ -23,12 +25,16 @@ final class SignUpViewController: UIViewController {
     private let mainTabBarStoryboard: UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
     private let homeStoryboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
     
+    // swiftlint:disable force_try
+    
+    let realm = try! Realm()
+    
     private func oopsAlert() {
         let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Try to input data againg!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-    
+        
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     self.view.endEditing(true)
     }
@@ -39,12 +45,17 @@ final class SignUpViewController: UIViewController {
 //        alert.addAction(UIAlertAction(title: "Represent password", style: .default, handler: nil))
 //    }
     
+    
     // MARK: ViewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         submitButton.layer.cornerRadius = 13
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
     }
     
     // MARK: Actions
@@ -69,7 +80,9 @@ final class SignUpViewController: UIViewController {
                   repeatedPasswordTextField.text == passwordTextField.text
             else { return oopsAlert() }
             UsersData.userDefault.setValue(["\(userNameTextField.text!)": "\(passwordTextField.text!)"], forKey: "\(userNameTextField.text!)")
-                    
+            if let homeVC = mainVC.viewControllers?.first as? HomePageViewController {
+                homeVC.userName = userNameTextField.text!
+            }
             present(mainVC, animated: true, completion: nil)
             
         }
