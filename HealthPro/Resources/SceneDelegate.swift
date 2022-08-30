@@ -11,9 +11,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    // swiftlint:disable force_cast
-
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let winScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: winScene)
@@ -21,12 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if isUserLoggedIn {
             let mainStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
-            let tabBarVC = mainStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as! MainTabBarViewController
+            let tabBarVC = mainStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController ?? UIViewController()
             window!.rootViewController = tabBarVC
             window!.makeKeyAndVisible()
         } else {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let startVC = mainStoryboard.instantiateViewController(withIdentifier: "StartVC") as! StartViewController
+            let startVC = mainStoryboard.instantiateViewController(withIdentifier: "StartVC") as? StartViewController ?? UIViewController()
             window!.rootViewController = startVC
             window!.makeKeyAndVisible()
         }

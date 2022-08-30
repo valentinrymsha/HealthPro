@@ -4,7 +4,6 @@
 //
 //  Created by User on 8/3/22.
 //
-import RealmSwift
 import UIKit
 
 final class LoginViewController: UIViewController {
@@ -26,12 +25,24 @@ final class LoginViewController: UIViewController {
     private func oopsAlert() {
         let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Try to input data againg!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
+        
+        clearBackgroundColor(of: alert.view)
+        
+        alert.view.layer.backgroundColor =  #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.7).cgColor
+        alert.view.layer.cornerRadius = 10
+        
         present(alert, animated: true, completion: nil)
     }
     
     private func invalidLoginDataAlert() {
         let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Invalid login or password!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
+        
+        clearBackgroundColor(of: alert.view)
+        
+        alert.view.layer.backgroundColor =  #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.7).cgColor
+        alert.view.layer.cornerRadius = 10
+        
         present(alert, animated: true, completion: nil)
     }
     
@@ -53,6 +64,18 @@ final class LoginViewController: UIViewController {
         userNameTextField.layer.borderColor = #colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)
         passwordTextField.layer.borderColor = #colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)
         
+    }
+    
+    func clearBackgroundColor(of view: UIView) {
+        if let effectsView = view as? UIVisualEffectView {
+            effectsView.removeFromSuperview()
+            return
+        }
+
+        view.backgroundColor = .clear
+        view.subviews.forEach { (subview) in
+            clearBackgroundColor(of: subview)
+        }
     }
     
     // MARK: ViewDidLoad

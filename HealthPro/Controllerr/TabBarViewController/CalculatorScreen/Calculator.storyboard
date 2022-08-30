@@ -21,8 +21,8 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKW-Ov-6wL">
-                                <rect key="frame" x="149.5" y="59" width="115" height="19"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
+                                <rect key="frame" x="151" y="59" width="112" height="19"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -31,7 +31,7 @@
                                 <subviews>
                                     <stepper opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minimumValue="15" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lcG-iQ-Dbn">
                                         <rect key="frame" x="45" y="110" width="95" height="32"/>
-                                        <color key="backgroundColor" red="0.76263463610000004" green="1" blue="0.87894713339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.73267893270493301" green="0.94390466370558379" blue="0.84247831422110941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <connections>
                                             <action selector="didTouchAgeStep:" destination="7kT-bh-4DO" eventType="valueChanged" id="Rv9-7l-Sjk"/>
@@ -69,7 +69,7 @@
                                 <subviews>
                                     <stepper opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minimumValue="35" maximumValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="N5i-Td-e2M">
                                         <rect key="frame" x="45" y="110" width="95" height="32"/>
-                                        <color key="backgroundColor" red="0.76263463610000004" green="1" blue="0.87894713339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.73267893270493301" green="0.94390466370558379" blue="0.84247831422110941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.8835028076" green="0.98411099459999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="didTouchWeightStep:" destination="7kT-bh-4DO" eventType="valueChanged" id="3pv-Eo-ckJ"/>
@@ -107,9 +107,9 @@
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.75" minValue="1" maxValue="2.5" translatesAutoresizingMaskIntoConstraints="NO" id="7EG-IL-vv1">
                                         <rect key="frame" x="6" y="113" width="362" height="31"/>
-                                        <color key="tintColor" red="0.76263463610000004" green="1" blue="0.87894713339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.70337362237007606" green="0.90615085659898476" blue="0.80878130541332427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="maximumTrackTintColor" red="0.8835028076" green="0.98411099459999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="thumbTintColor" red="0.76263463610000004" green="1" blue="0.87894713339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="thumbTintColor" red="0.73267893270493301" green="0.94390466370558379" blue="0.84247831422110941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="didTouchHeightSlider:" destination="7kT-bh-4DO" eventType="valueChanged" id="exj-AW-yIM"/>
                                         </connections>
@@ -181,7 +181,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4Q-SF-9Jd">
                                 <rect key="frame" x="104" y="651" width="206" height="58"/>
-                                <color key="backgroundColor" red="0.76263463610000004" green="1" blue="0.87894713339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.73267893270493301" green="0.94390466370558379" blue="0.84247831422110941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
                                 <state key="normal" title="Calculate">
                                     <color key="titleColor" systemColor="labelColor"/>

@@ -9,16 +9,13 @@ import UIKit
 
 // swiftlint:disable line_length
 
-class StartViewController: UIViewController {
+final class StartViewController: UIViewController {
     
     // MARK: Outlets
     
     @IBOutlet private weak var startPageControl: UIPageControl!
-    
     @IBOutlet private weak var getStartedButton: UIButton!
-    
     @IBOutlet private weak var startCollectionView: UICollectionView!
-    
     @IBOutlet private weak var loginButton: UIButton!
     
     // MARK: Properties
@@ -32,7 +29,6 @@ class StartViewController: UIViewController {
     }
     
     private let registrationStoryBoard: UIStoryboard = UIStoryboard(name: "Registration", bundle: nil)
-    
     private let loginStoryBoard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
     
     private func isGetStartedButtonEnabled(_ isEnabled: Bool = true) {

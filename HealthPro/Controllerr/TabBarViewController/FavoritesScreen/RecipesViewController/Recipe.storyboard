@@ -46,7 +46,7 @@
                                 <constraints>
                                     <constraint firstItem="XsI-05-442" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pb6-FU-rkD" secondAttribute="leading" constant="15" id="BUX-Fo-SBN"/>
                                     <constraint firstItem="XlP-Yl-8XO" firstAttribute="centerX" secondItem="pb6-FU-rkD" secondAttribute="centerX" id="M0x-gn-9Mf"/>
-                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="XsI-05-442" secondAttribute="bottom" constant="335" id="PMN-mH-VzA"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XsI-05-442" secondAttribute="bottom" constant="15" id="PMN-mH-VzA"/>
                                     <constraint firstItem="XsI-05-442" firstAttribute="centerX" secondItem="pb6-FU-rkD" secondAttribute="centerX" id="Pb6-gy-71R"/>
                                     <constraint firstItem="XlP-Yl-8XO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pb6-FU-rkD" secondAttribute="leading" constant="15" id="VEM-pg-ayE"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XsI-05-442" secondAttribute="trailing" constant="15" id="WZz-6W-QM4"/>

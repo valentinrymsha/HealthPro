@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class AccountViewController: UIViewController {
 
@@ -16,29 +15,51 @@ class AccountViewController: UIViewController {
     
     @IBOutlet weak var accountImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var changeUserNameButton: UIButton!
+    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var faqButton: UIButton!
     
     // MARK: Properties
+
+    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
-    
+    private func buttonConfig(_ button: UIButton) {
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        button.layer.cornerRadius = 10
+        button.backgroundColor = #colorLiteral(red: 0.6765247583, green: 0.8675484657, blue: 0.7702565789, alpha: 1).withAlphaComponent(0.6)
+        button.isUserInteractionEnabled = true
+        button.isEnabled = true
+    }
     
     // MARK: Lifecirlce
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        buttonConfig(changeUserNameButton)
+        buttonConfig(logoutButton)
+        buttonConfig(faqButton)
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
             accountImageView.isUserInteractionEnabled = true
             accountImageView.addGestureRecognizer(tapGestureRecognizer)
         
-        accountImageView.image =  UIImage(data: UsersData.userDefault.data(forKey: UsersData.userDefault.string(forKey: "currentUser")! + " user") ?? Data())
+        if UIImage(data: UsersData.userDefault.data(forKey: UsersData.userDefault.string(forKey: "currentUser")! + " user") ?? Data()) == UIImage(data: Data()) {
+            accountImageView.image = UIImage(named: "user-4")
+        } else {
+        accountImageView.image =  UIImage(data: UsersData.userDefault.data(forKey: UsersData.userDefault.string(forKey: "currentUser")! + " user") ?? Data() )
+        }
         
         accountImageView.layer.cornerRadius = accountImageView.frame.width / 2
         userNameLabel.text = UsersData.userDefault.string(forKey: "currentUser") ?? "User"
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        accountImageView.image =  UIImage(data: UsersData.userDefault.data(forKey: UsersData.userDefault.string(forKey: "currentUser")! + " user") ?? Data())
+        if UIImage(data: UsersData.userDefault.data(forKey: UsersData.userDefault.string(forKey: "currentUser")! + " user") ?? Data()) == UIImage(data: Data()) {
+            accountImageView.image = UIImage(named: "user-4")
+        } else {
+        accountImageView.image =  UIImage(data: UsersData.userDefault.data(forKey: UsersData.userDefault.string(forKey: "currentUser")! + " user") ?? Data() )
+        }
 
     }
     
@@ -46,15 +67,71 @@ class AccountViewController: UIViewController {
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
 
-        let imageVC = UIImagePickerController()
-        imageVC.sourceType = .photoLibrary
-        imageVC.delegate = self
-        imageVC.allowsEditing = true
+        // Create the AlertController
+        let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+
+        // Create and add the Cancel action
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
+            actionSheetController.dismiss(animated: true, completion: nil)  }
+        actionSheetController.addAction(cancelAction)
+
+        // Create and add first option action
+        let setPictureAction = UIAlertAction(title: "Set photo from gallery", style: .default) { action -> Void in
+            let imageVC = UIImagePickerController()
+            imageVC.sourceType = .photoLibrary
+            imageVC.delegate = self
+            imageVC.allowsEditing = true
+            
+            self.present(imageVC, animated: true)
+        }
+        actionSheetController.addAction(setPictureAction)
+
+        let setPictureFromCameraAction = UIAlertAction(title: "Set photo from camera", style: .default) { action -> Void in
+            let imageVC = UIImagePickerController()
+            
+            imageVC.sourceType = .camera
+            
+            imageVC.delegate = self
+            imageVC.allowsEditing = true
+            
+            self.present(imageVC, animated: true)
+        }
+        actionSheetController.addAction(setPictureFromCameraAction)
         
-        present(imageVC, animated: true)
-        // Your action
+        let deletePhotoAction = UIAlertAction(title: "Delete current photo", style: .default) { action -> Void in
+            let defaultImage = UIImage(named: "user-4")
+            let defaultImageData = defaultImage?.pngData()
+            UsersData.userDefault.set(defaultImageData, forKey: UsersData.userDefault.string(forKey: "currentUser")! + " user")
+            UsersData.userDefault.synchronize()
+            self.accountImageView.image = defaultImage
+            self.accountImageView.contentMode = .center
+        }
+        actionSheetController.addAction(deletePhotoAction)
+        
+        
+        self.present(actionSheetController, animated: true, completion: nil)
+
     }
+    
+    @IBAction func didTappedChangeUsernameButton(_ sender: UIButton) {
+        sender.isSelected.toggle()
+    }
+    
+    @IBAction func didTappedLogoutButton(_ sender: UIButton) {
+        
+        guard let startVC = mainStoryboard.instantiateViewController(identifier: "StartVC") as? StartViewController else { return }
+        
+        UsersData.userDefault.set(false, forKey: "isLoggedIn")
+        UsersData.userDefault.synchronize()
+        
+        present(startVC, animated: false, completion: nil)
+        
+    }
+    
+    
 }
+
+// MARK: ImagePickerViewDelegate, NavigationDelegate
 
 extension AccountViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -63,6 +140,7 @@ extension AccountViewController: UIImagePickerControllerDelegate, UINavigationCo
             
             let data = image.pngData()
             UsersData.userDefault.set(data, forKey: UsersData.userDefault.string(forKey: "currentUser")! + " user")
+            UsersData.userDefault.synchronize()
             
             accountImageView.image = image
             accountImageView.contentMode = .scaleAspectFill

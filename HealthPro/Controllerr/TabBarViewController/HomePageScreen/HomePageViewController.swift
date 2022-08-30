@@ -7,7 +7,6 @@
 
 import UIKit
 import CoreMotion
-import RealmSwift
 
 class HomePageViewController: UIViewController {
 
@@ -96,15 +95,7 @@ class HomePageViewController: UIViewController {
     }
     
     // MARK: Actions
-    
-    @IBAction func logoutButton(_ sender: UIButton) {
-        guard let startVC = mainStoryboard.instantiateViewController(identifier: "StartVC") as? StartViewController else { return }
-        
-        UsersData.userDefault.set(false, forKey: "isLoggedIn")
-        UsersData.userDefault.synchronize()
-        
-        present(startVC, animated: false, completion: nil)
-    }
+  
     
     
 }

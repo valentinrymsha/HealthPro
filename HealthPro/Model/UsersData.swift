@@ -7,6 +7,6 @@
 
 import Foundation
 
-class UsersData {
+final class UsersData {
     static let userDefault = UserDefaults.standard
 }

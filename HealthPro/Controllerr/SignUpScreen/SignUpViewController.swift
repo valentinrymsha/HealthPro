@@ -5,7 +5,6 @@
 //  Created by User on 8/3/22.
 //
 
-import RealmSwift
 import UIKit
 
 
@@ -26,26 +25,48 @@ final class SignUpViewController: UIViewController {
     private let homeStoryboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
     
     // swiftlint:disable force_try
-    
-    let realm = try! Realm()
+        
+    func clearBackgroundColor(of view: UIView) {
+        if let effectsView = view as? UIVisualEffectView {
+            effectsView.removeFromSuperview()
+            return
+        }
+
+        view.backgroundColor = .clear
+        view.subviews.forEach { (subview) in
+            clearBackgroundColor(of: subview)
+        }
+    }
     
     private func oopsAlert() {
         let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Try to input data againg!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
+        
+        clearBackgroundColor(of: alert.view)
+        
+        alert.view.layer.backgroundColor =  #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.7).cgColor
+        alert.view.layer.cornerRadius = 10
+        
         present(alert, animated: true, completion: nil)
     }
+    
+    private func duplicateAccountAlert() {
+        let alert = UIAlertController(title: "Account with this nickname already exist!", message: "Choose another nickname!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         
+        clearBackgroundColor(of: alert.view)
+        
+        alert.view.layer.backgroundColor =  #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.7).cgColor
+        alert.view.layer.cornerRadius = 10
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     self.view.endEditing(true)
     }
-
-//    private func forgotPassAlert() {
-//        let alert = UIAlertController(title: "Forgot your password?", message: "Write your login here", preferredStyle: .actionSheet)
-//        alert.addTextField(configurationHandler: .none)
-//        alert.addAction(UIAlertAction(title: "Represent password", style: .default, handler: nil))
-//    }
     
-    func setTextFieldsProperies() {
+    private func setTextFieldsProperies() {
         
         userNameTextField.delegate = self
         passwordTextField.delegate = self
@@ -88,22 +109,42 @@ final class SignUpViewController: UIViewController {
     }
     
     @IBAction private func submitButton(_ sender: Any) {
-        if !self.userNameTextField.hasText || self.userNameTextField.text?.count ?? 0 >= 10 ||
-            self.userNameTextField.text?.count ?? 0 < 3 {
-            oopsAlert()
-        } else if !self.passwordTextField.hasText || self.passwordTextField.text?.count ?? 0 >= 15 ||
-            self.passwordTextField.text?.count ?? 0 < 5
-        {
-            oopsAlert()
-        } else if let mainVC = mainTabBarStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController {
+        guard userNameTextField.hasText,
+              passwordTextField.hasText,
+              repeatedPasswordTextField.hasText
+        else { return oopsAlert() }
+        
+        guard userNameTextField.text!.count <= 10,
+              userNameTextField.text!.count >= 3,
+              passwordTextField.text!.count <= 12,
+              passwordTextField.text!.count >= 5,
+              repeatedPasswordTextField.text!.count <= 12,
+              repeatedPasswordTextField.text!.count >= 5
+        else { return oopsAlert() }
+        
+        userNameTextField.text!.forEach{
+            if "#@$^&*()?!§±№;%><=+".contains($0) {
+                oopsAlert()
+            }
+        }
+        passwordTextField.text!.forEach{
+            if "#@$^&*()?!§±№;%><=+".contains($0) {
+                oopsAlert()
+            }
+        }
+    
+        if let mainVC = mainTabBarStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController {
+            guard userNameTextField.text! != UsersData.userDefault.dictionary(forKey: "\(userNameTextField.text!)")?.keys.first else { return duplicateAccountAlert() }
             
-            guard userNameTextField.hasText,        passwordTextField.hasText,
-                  repeatedPasswordTextField.text == passwordTextField.text
-            else { return oopsAlert() }
-            UsersData.userDefault.setValue(["\(userNameTextField.text!)": "\(passwordTextField.text!)"], forKey: "\(userNameTextField.text!)")
+            if passwordTextField.text == repeatedPasswordTextField.text {
+                UsersData.userDefault.setValue(["\(userNameTextField.text!)": "\(passwordTextField.text!)"], forKey: "\(userNameTextField.text!)")
+            } else {
+                oopsAlert()
+            }
             if let homeVC = mainVC.viewControllers?.first as? HomePageViewController {
                 homeVC.userName = userNameTextField.text!
             }
+            
             
             UsersData.userDefault.set("\(userNameTextField.text ?? "User")", forKey: "currentUser")
             UsersData.userDefault.synchronize()

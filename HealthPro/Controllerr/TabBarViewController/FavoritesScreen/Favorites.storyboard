@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YNr-Jb-G2i">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -15,12 +15,12 @@
             <objects>
                 <viewController storyboardIdentifier="favoritesVC" title="favoritesVC" modalPresentationStyle="fullScreen" id="YNr-Jb-G2i" customClass="FavoritesViewController" customModule="HealthPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Ok-mj-BgL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vE-WR-Mcc">
-                                <rect key="frame" x="41.5" y="758" width="331" height="40"/>
-                                <color key="backgroundColor" red="0.67652475830000003" green="0.86754846569999999" blue="0.77025657889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="37.5" y="563" width="300" height="40"/>
+                                <color key="backgroundColor" red="0.67843137254901964" green="0.86754846569999999" blue="0.77025657889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Nvm-Qg-l1h"/>
                                 </constraints>
@@ -34,13 +34,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKz-ku-3Nh">
-                                <rect key="frame" x="155.5" y="57" width="103" height="19"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
+                                <rect key="frame" x="141" y="15" width="93" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9tk-Gz-VS8">
-                                <rect key="frame" x="8" y="154" width="397" height="589"/>
+                                <rect key="frame" x="6.5" y="109.5" width="359.5" height="438.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q7H-8v-P3i">
                                     <size key="itemSize" width="128" height="128"/>
@@ -76,19 +76,19 @@
                                 </cells>
                             </collectionView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="10" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5P-WM-dlx">
-                                <rect key="frame" x="0.0" y="154" width="414" height="589"/>
+                                <rect key="frame" x="0.0" y="109.5" width="375" height="438.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="tintColor" red="1" green="0.97134924379999998" blue="0.84253776329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recipesTableViewCell" rowHeight="120" id="zz6-Rn-ycl" customClass="RecipesTableViewCell" customModule="HealthPro" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zz6-Rn-ycl" id="gat-ac-xfH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title " lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5W-u9-N75">
-                                                    <rect key="frame" x="118" y="10" width="283" height="100"/>
+                                                    <rect key="frame" x="118" y="10" width="244" height="100"/>
                                                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="16"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -120,7 +120,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeS-tg-dP3" customClass="BetterSegmentedControl" customModule="BetterSegmentedControl">
-                                <rect key="frame" x="35" y="91" width="344" height="50"/>
+                                <rect key="frame" x="31.5" y="46.5" width="312" height="50"/>
                                 <color key="backgroundColor" red="0.93854732829999998" green="1" blue="0.85197423049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -163,7 +163,7 @@
                             <constraint firstItem="TeS-tg-dP3" firstAttribute="centerX" secondItem="4Ok-mj-BgL" secondAttribute="centerX" id="ASH-Ar-2pE"/>
                             <constraint firstItem="TeS-tg-dP3" firstAttribute="top" secondItem="ZKz-ku-3Nh" secondAttribute="bottom" constant="15" id="CPK-WV-IzU"/>
                             <constraint firstItem="mmD-HH-yBf" firstAttribute="trailing" secondItem="x5P-WM-dlx" secondAttribute="trailing" id="DXp-MO-2E6"/>
-                            <constraint firstItem="ZKz-ku-3Nh" firstAttribute="top" secondItem="mmD-HH-yBf" secondAttribute="top" constant="13" id="DaP-R2-Xp8"/>
+                            <constraint firstItem="ZKz-ku-3Nh" firstAttribute="top" secondItem="mmD-HH-yBf" secondAttribute="top" constant="15" id="DaP-R2-Xp8"/>
                             <constraint firstItem="TeS-tg-dP3" firstAttribute="width" secondItem="4Ok-mj-BgL" secondAttribute="width" multiplier="0.830918" id="NJ7-yd-aIW"/>
                             <constraint firstItem="9tk-Gz-VS8" firstAttribute="width" secondItem="4Ok-mj-BgL" secondAttribute="width" multiplier="0.958937" id="RMf-c0-igd"/>
                             <constraint firstItem="9tk-Gz-VS8" firstAttribute="top" secondItem="TeS-tg-dP3" secondAttribute="bottom" constant="13" id="Sdv-FI-m52"/>

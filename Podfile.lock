@@ -7,11 +7,6 @@ PODS:
     - SwiftyJSON (~> 4.0)
   - BetterSegmentedControl (1.3.0)
   - IQKeyboardManagerSwift (6.5.10)
-  - Realm (10.25.1):
-    - Realm/Headers (= 10.25.1)
-  - Realm/Headers (10.25.1)
-  - RealmSwift (10.25.1):
-    - Realm (= 10.25.1)
   - SwiftLint (0.48.0)
   - SwiftyJSON (4.3.0)
 
@@ -21,8 +16,6 @@ DEPENDENCIES:
   - AlamofireSwiftyJSON
   - BetterSegmentedControl (~> 1.3)
   - IQKeyboardManagerSwift
-  - Realm (= 10.25.1)
-  - RealmSwift (= 10.25.1)
   - SwiftLint
   - SwiftyJSON (~> 4.0)
 
@@ -33,8 +26,6 @@ SPEC REPOS:
     - AlamofireSwiftyJSON
     - BetterSegmentedControl
     - IQKeyboardManagerSwift
-    - Realm
-    - RealmSwift
     - SwiftLint
     - SwiftyJSON
 
@@ -44,11 +35,9 @@ SPEC CHECKSUMS:
   AlamofireSwiftyJSON: 74ee3804bed06d07857daf1eeb1615c85dba3997
   BetterSegmentedControl: 85d1b0343a09603b098884d527f550dfc8e6cdd9
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
-  Realm: 1a6e9b4f6983711655d8c0bcb6d2d29c3afbb1f3
-  RealmSwift: e72669550d27082aa4fad5d176f5076cfe806245
   SwiftLint: 284cea64b6187c5d6bd83e9a548a64104d546447
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 15bb30c40fd8f1b51982044d87ce1eaff1262842
+PODFILE CHECKSUM: f8a5bfe127a05c2c64b0282a4ab4f880f1383e48
 
 COCOAPODS: 1.11.3

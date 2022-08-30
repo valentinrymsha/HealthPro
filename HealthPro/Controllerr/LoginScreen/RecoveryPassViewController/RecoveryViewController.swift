@@ -11,9 +11,9 @@ final class RecoveryViewController: UIViewController {
 
     // MARK: Outlets
     
-    @IBOutlet weak var loginTextField: UITextField!
-    @IBOutlet weak var yourPasswordLabel: UILabel!
-    @IBOutlet weak var showPasswordButton: UIButton!
+    @IBOutlet private weak var loginTextField: UITextField!
+    @IBOutlet private weak var yourPasswordLabel: UILabel!
+    @IBOutlet private weak var showPasswordButton: UIButton!
     
     // MARK: Properties
     
@@ -23,7 +23,7 @@ final class RecoveryViewController: UIViewController {
     self.view.endEditing(true)
     }
     
-    func setTextFieldsProperies() {
+    private func setTextFieldsProperies() {
         
         loginTextField.delegate = self
 
@@ -48,7 +48,7 @@ final class RecoveryViewController: UIViewController {
     // MARK: Actions
     
     
-    @IBAction func showPasswordButton(_ sender: UIButton) {
+    @IBAction private func showPasswordButton(_ sender: UIButton) {
         if let text = UsersData.userDefault.dictionary(forKey: "\(loginTextField.text!)")?.values.first as? String {
             yourPasswordLabel.text = "Your password is:\n" + "'\(text)'"
         } else {

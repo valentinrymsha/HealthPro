@@ -13,17 +13,17 @@ import Foundation
 final class Manager {
     
     static func checkUserOnServer(complition: @escaping (Root?) -> Void) {
+        
         let session = URLSession.shared
-        // Get API
+       
+        // Keys if >150 requests
+        
         let key1 = "9f40dbb7b8a54e3b9d76a431a5c55615"
         let key2 = "64e3c271154342c2b257b67ffa540bbc"
         
         let api = "https://api.spoonacular.com/recipes/random?apiKey=c086eddbb7774da5822b81a9f6f45a22&number=20"
-        // Create API URL
         guard let apiURL = URL(string: api) else { return }
-        // Initiallized session
-        // Sent dataTask
-        print("input")
+      
         session.dataTask(with: apiURL) { (data, _, error) in
             // Processing of data
             guard error == nil else { return }

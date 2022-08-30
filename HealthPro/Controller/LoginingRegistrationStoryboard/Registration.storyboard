@@ -36,7 +36,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.83485470129999995" green="0.97852505249999999" blue="0.83705809109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.56862745098039214" green="0.78151768450000003" blue="0.53913027049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Zn1-AI-07z" firstAttribute="centerY" secondItem="27w-iG-DdX" secondAttribute="centerY" id="FOb-Fb-kgz"/>
                                     <constraint firstAttribute="height" constant="60" id="fjC-dx-gFd"/>
@@ -69,9 +69,9 @@
                                     <constraint firstAttribute="height" constant="33" id="nBo-Tq-7A7"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEu-9C-eFs">
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEu-9C-eFs">
                                 <rect key="frame" x="37.5" y="543" width="300" height="40"/>
-                                <color key="backgroundColor" red="0.88585853719999996" green="1" blue="0.90857280060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.56862745098039214" green="0.78151768450000003" blue="0.53913027049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="jfW-SF-1Tf"/>
                                     <constraint firstAttribute="height" constant="40" id="qsE-vc-pNW"/>
