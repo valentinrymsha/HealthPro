@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController {
+final class MapViewController: UIViewController {
 
     // swiftlint:disable force_cast
 
@@ -20,9 +20,9 @@ class MapViewController: UIViewController {
     // MARK: Properties
 
     
-    let shops = [Shop("Emirates Stadium", coordinate: CLLocationCoordinate2D(latitude: 53.893009,  longitude: 27.567444)),
-                 Shop("Emirates sss", coordinate: CLLocationCoordinate2D(latitude: 53.853009,  longitude: 27.547444)),
-                 Shop("Emirates Stadium", coordinate: CLLocationCoordinate2D(latitude: 53.813009,  longitude: 27.587444))]
+    let shops = [Shop("Emirates Stadium", coordinate: CLLocationCoordinate2D(latitude: 53.893009, longitude: 27.567444)),
+                 Shop("Emirates sss", coordinate: CLLocationCoordinate2D(latitude: 53.853009, longitude: 27.547444)),
+                 Shop("Emirates Stadium", coordinate: CLLocationCoordinate2D(latitude: 53.813009, longitude: 27.587444))]
     
     lazy var locationManager: CLLocationManager = {
             var manager = CLLocationManager()
@@ -101,10 +101,10 @@ extension MapViewController: CLLocationManagerDelegate {
         request.requestsAlternateRoutes = true
         
         let directions = MKDirections(request: request)
-        directions.calculate {(response,error) in
+        directions.calculate {(response, error) in
             guard let response = response else {
                 if let error = error {
-                    print("somthing wrong")
+                    print("somthing wrong: \(error.localizedDescription)")
                 }
                 return
             }

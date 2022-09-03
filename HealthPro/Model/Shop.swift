@@ -9,7 +9,7 @@ import Foundation
 import MapKit
 import UIKit
 
-class Shop: NSObject, MKAnnotation {
+final class Shop: NSObject, MKAnnotation {
     
     var name: String
     

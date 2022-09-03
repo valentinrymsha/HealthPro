@@ -8,10 +8,10 @@
 import UIKit
 import UserNotifications
 
-class PushNotification: NSObject {
+final class PushNotification: NSObject {
     let userNotificationCenter = UNUserNotificationCenter.current()
     
-    static func pushNote(_ message: String,_ timeinterval: Double) {
+    static func pushNote(_ message: String, _ timeinterval: Double) {
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
@@ -42,7 +42,7 @@ extension PushNotification: UNUserNotificationCenterDelegate {
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert, .badge, .sound])
+        completionHandler([.banner, .badge, .sound])
     }
     
    

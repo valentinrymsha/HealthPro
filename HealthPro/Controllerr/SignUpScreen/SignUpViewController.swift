@@ -20,7 +20,7 @@ final class SignUpViewController: UIViewController {
     
     // MARK: Properties
     
-    let userNotificationCenter = UNUserNotificationCenter.current()
+    private let userNotificationCenter = UNUserNotificationCenter.current()
     
     private let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     private let mainTabBarStoryboard: UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
@@ -126,12 +126,12 @@ final class SignUpViewController: UIViewController {
               repeatedPasswordTextField.text!.count >= 5
         else { return oopsAlert() }
         
-        userNameTextField.text!.forEach{
+        userNameTextField.text!.forEach {
             if "#@$^&*()?!§±№;%><=+".contains($0) {
                 oopsAlert()
             }
         }
-        passwordTextField.text!.forEach{
+        passwordTextField.text!.forEach {
             if "#@$^&*()?!§±№;%><=+".contains($0) {
                 oopsAlert()
             }

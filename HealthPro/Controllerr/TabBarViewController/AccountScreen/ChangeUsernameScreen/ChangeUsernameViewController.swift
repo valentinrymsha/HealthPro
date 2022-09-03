@@ -11,14 +11,14 @@ class ChangeUsernameViewController: UIViewController {
 
     // MARK: Outlets
     
-    @IBOutlet weak var changeUsernameTextField: UITextField!
+    @IBOutlet private  weak var changeUsernameTextField: UITextField!
     
     // MARK: Properties
     
     private let mainTabBarStoryboard: UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
-    private var dict: [String:Any]?
+    private var dict: [String: Any]?
     
-    func clearBackgroundColor(of view: UIView) {
+    private func clearBackgroundColor(of view: UIView) {
         if let effectsView = view as? UIVisualEffectView {
             effectsView.removeFromSuperview()
             return

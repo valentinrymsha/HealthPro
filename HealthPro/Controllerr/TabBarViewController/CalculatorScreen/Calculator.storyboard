@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7kT-bh-4DO">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,23 +13,23 @@
             <objects>
                 <viewController storyboardIdentifier="calculatorVC" title="calculatorVC" modalPresentationStyle="fullScreen" id="7kT-bh-4DO" customClass="CalculatorViewController" customModule="HealthPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HcW-wG-BFI">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="GEH-tt-Jyk">
-                                <rect key="frame" x="0.0" y="44" width="428" height="799"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKW-Ov-6wL">
-                                <rect key="frame" x="155" y="59" width="118" height="32"/>
+                                <rect key="frame" x="139" y="58.999999999999993" width="112" height="19.666666666666664"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="mu4-6O-inN">
-                                <rect key="frame" x="20" y="118" width="192.66666666666666" height="155"/>
+                                <rect key="frame" x="20" y="105.66666666666667" width="171.66666666666666" height="141.33333333333331"/>
                                 <subviews>
                                     <stepper opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minimumValue="15" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lcG-iQ-Dbn">
-                                        <rect key="frame" x="45.000000000000007" y="115" width="102.66666666666669" height="32"/>
+                                        <rect key="frame" x="39" y="101.33333333333333" width="94" height="31.999999999999986"/>
                                         <color key="backgroundColor" red="0.73267893270493301" green="0.94390466370558379" blue="0.84247831422110941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <connections>
@@ -38,13 +37,13 @@
                                         </connections>
                                     </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Vi-Rd-cyJ">
-                                        <rect key="frame" x="81" y="8" width="31" height="17"/>
+                                        <rect key="frame" x="70.333333333333329" y="8" width="31" height="17"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnH-be-Nce">
-                                        <rect key="frame" x="58.333333333333329" y="50.666666666666657" width="75.999999999999986" height="53.666666666666657"/>
+                                        <rect key="frame" x="52.000000000000007" y="45.999999999999986" width="67.666666666666686" height="49"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="44"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -65,10 +64,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRK-W5-CPs">
-                                <rect key="frame" x="216.66666666666663" y="118" width="191.33333333333337" height="155"/>
+                                <rect key="frame" x="195.66666666666663" y="105.66666666666667" width="174.33333333333337" height="141.33333333333331"/>
                                 <subviews>
                                     <stepper opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minimumValue="35" maximumValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="N5i-Td-e2M">
-                                        <rect key="frame" x="45.000000000000021" y="115" width="101.33333333333331" height="32"/>
+                                        <rect key="frame" x="40.333333333333343" y="101.33333333333333" width="94" height="31.999999999999986"/>
                                         <color key="backgroundColor" red="0.73267893270493301" green="0.94390466370558379" blue="0.84247831422110941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.8835028076" green="0.98411099459999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
@@ -76,13 +75,13 @@
                                         </connections>
                                     </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97V-g6-mtf">
-                                        <rect key="frame" x="64.666666666666657" y="8" width="62" height="17"/>
+                                        <rect key="frame" x="56.333333333333343" y="8" width="62" height="17"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0N6-6t-tem">
-                                        <rect key="frame" x="58.000000000000021" y="50.666666666666657" width="75.333333333333314" height="53.666666666666657"/>
+                                        <rect key="frame" x="52.666666666666686" y="45.999999999999986" width="69" height="49"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="44"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -103,10 +102,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="931-1R-SUV">
-                                <rect key="frame" x="20" y="288" width="388" height="155"/>
+                                <rect key="frame" x="20" y="262" width="350" height="141.33333333333337"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.75" minValue="1" maxValue="2.5" translatesAutoresizingMaskIntoConstraints="NO" id="7EG-IL-vv1">
-                                        <rect key="frame" x="6.3333333333333428" y="117" width="375.33333333333326" height="32"/>
+                                        <rect key="frame" x="5.3333333333333428" y="106" width="339.33333333333326" height="29.333333333333343"/>
                                         <color key="tintColor" red="0.70337362237007606" green="0.90615085659898476" blue="0.80878130541332427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="maximumTrackTintColor" red="0.8835028076" green="0.98411099459999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="thumbTintColor" red="0.73267893270493301" green="0.94390466370558379" blue="0.84247831422110941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -115,13 +114,13 @@
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height(m)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6G-wv-sRH">
-                                        <rect key="frame" x="148" y="8" width="92" height="17"/>
+                                        <rect key="frame" x="129" y="8" width="92" height="17"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKg-WC-DBB">
-                                        <rect key="frame" x="122" y="50" width="144" height="55.333333333333343"/>
+                                        <rect key="frame" x="110" y="45.333333333333314" width="130" height="50.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="44"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -143,10 +142,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2r-in-7EU">
-                                <rect key="frame" x="20" y="458" width="388" height="155"/>
+                                <rect key="frame" x="20" y="418.33333333333331" width="350" height="141.33333333333331"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tcl-0u-ZKt">
-                                        <rect key="frame" x="169.66666666666666" y="62" width="51" height="31"/>
+                                        <rect key="frame" x="150.66666666666666" y="55" width="51" height="31"/>
                                         <color key="tintColor" red="0.95004559759999996" green="0.68002474800000001" blue="0.98979979750000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="onTintColor" red="0.91212741580000001" green="0.79321106480000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -155,13 +154,13 @@
                                         </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Female" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fB-pE-BMI">
-                                        <rect key="frame" x="263.66666666666669" y="69" width="79.333333333333314" height="17"/>
+                                        <rect key="frame" x="244.66666666666671" y="62" width="61.333333333333343" height="17"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXW-nh-Ank">
-                                        <rect key="frame" x="75" y="69" width="49.666666666666657" height="17"/>
+                                        <rect key="frame" x="64.666666666666671" y="62" width="41" height="17"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -180,7 +179,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4Q-SF-9Jd">
-                                <rect key="frame" x="107.66666666666667" y="679" width="212.66666666666663" height="60"/>
+                                <rect key="frame" x="98" y="625.66666666666663" width="194" height="54.666666666666629"/>
                                 <color key="backgroundColor" red="0.73267893270493301" green="0.94390466370558379" blue="0.84247831422110941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
                                 <state key="normal" title="Calculate">
@@ -250,48 +249,71 @@
             <objects>
                 <viewController storyboardIdentifier="BMRVC" title="BMRVC" id="EqS-4j-E5X" customClass="BMRViewController" customModule="HealthPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bud-Xv-K0H">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="70m-yr-LFR">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="920"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Female" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcz-nF-ez4">
-                                <rect key="frame" x="170.66666666666666" y="20" width="86.999999999999972" height="20"/>
+                                <rect key="frame" x="159" y="20" width="72.333333333333314" height="20"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7N-BZ-gVI">
-                                <rect key="frame" x="20.666666666666657" y="217.33333333333334" width="386.66666666666674" height="437.33333333333326"/>
+                                <rect key="frame" x="19" y="140" width="352" height="478"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your BMR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMN-Za-2xK">
-                                        <rect key="frame" x="102" y="29" width="183" height="38"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="38"/>
+                                        <rect key="frame" x="99.333333333333329" y="29" width="153.66666666666669" height="32"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 Calories/Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyz-Nc-Xtn">
-                                        <rect key="frame" x="65.333333333333314" y="206.33333333333334" width="256" height="25"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slim, Normal, Gain:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bo6-yX-SVv">
+                                        <rect key="frame" x="76.333333333333329" y="69" width="199.33333333333337" height="17"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Normal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bo6-yX-SVv">
-                                        <rect key="frame" x="83.999999999999986" y="74.999999999999972" width="218.66666666666663" height="25"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="n2r-KO-yyn">
+                                        <rect key="frame" x="48.333333333333329" y="142" width="255.33333333333337" height="221"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 Calories/Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTy-TN-xb5">
+                                                <rect key="frame" x="0.0" y="0.0" width="255.33333333333334" height="44.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 Calories/Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyz-Nc-Xtn">
+                                                <rect key="frame" x="0.0" y="104.33333333333331" width="255.33333333333334" height="28.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 Calories/Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhB-Rc-p4U">
+                                                <rect key="frame" x="0.0" y="192.66666666666669" width="255.33333333333334" height="28.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="rTy-TN-xb5" firstAttribute="height" secondItem="n2r-KO-yyn" secondAttribute="height" multiplier="0.128205" id="GcL-3s-LFQ"/>
+                                            <constraint firstItem="dhB-Rc-p4U" firstAttribute="height" secondItem="n2r-KO-yyn" secondAttribute="height" multiplier="0.128205" id="knb-Pb-V7b"/>
+                                            <constraint firstItem="Kyz-Nc-Xtn" firstAttribute="height" secondItem="n2r-KO-yyn" secondAttribute="height" multiplier="0.128205" id="qP1-Ed-Uot"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="Kyz-Nc-Xtn" firstAttribute="centerX" secondItem="I7N-BZ-gVI" secondAttribute="centerX" id="6D2-TE-lBj"/>
                                     <constraint firstItem="Bo6-yX-SVv" firstAttribute="centerX" secondItem="I7N-BZ-gVI" secondAttribute="centerX" id="8Dw-Ak-BuK"/>
+                                    <constraint firstItem="n2r-KO-yyn" firstAttribute="top" secondItem="Bo6-yX-SVv" secondAttribute="bottom" constant="56.000000000000028" id="FkR-M1-Gbh"/>
                                     <constraint firstItem="PMN-Za-2xK" firstAttribute="top" secondItem="I7N-BZ-gVI" secondAttribute="top" constant="29" id="G2X-y5-g8U"/>
+                                    <constraint firstItem="n2r-KO-yyn" firstAttribute="height" secondItem="I7N-BZ-gVI" secondAttribute="height" multiplier="0.462085" id="GaM-Af-AaI"/>
+                                    <constraint firstItem="n2r-KO-yyn" firstAttribute="centerX" secondItem="I7N-BZ-gVI" secondAttribute="centerX" id="NSu-qN-gOF"/>
                                     <constraint firstItem="Bo6-yX-SVv" firstAttribute="top" secondItem="PMN-Za-2xK" secondAttribute="bottom" constant="8" symbolic="YES" id="NnW-lL-YDx"/>
                                     <constraint firstItem="Bo6-yX-SVv" firstAttribute="width" secondItem="I7N-BZ-gVI" secondAttribute="width" multiplier="0.566372" id="OJb-X4-fn7"/>
-                                    <constraint firstItem="Kyz-Nc-Xtn" firstAttribute="centerY" secondItem="I7N-BZ-gVI" secondAttribute="centerY" id="krB-x4-3PL"/>
                                     <constraint firstItem="PMN-Za-2xK" firstAttribute="centerX" secondItem="I7N-BZ-gVI" secondAttribute="centerX" id="uqh-MV-TBo"/>
                                 </constraints>
                             </view>
@@ -303,10 +325,10 @@
                             <constraint firstItem="PUU-ux-xr9" firstAttribute="trailing" secondItem="70m-yr-LFR" secondAttribute="trailing" id="8iI-Ok-HmE"/>
                             <constraint firstItem="70m-yr-LFR" firstAttribute="leading" secondItem="PUU-ux-xr9" secondAttribute="leading" id="LHR-PJ-qTP"/>
                             <constraint firstItem="I7N-BZ-gVI" firstAttribute="centerX" secondItem="Bud-Xv-K0H" secondAttribute="centerX" id="Lpv-xa-QmB"/>
-                            <constraint firstItem="I7N-BZ-gVI" firstAttribute="centerY" secondItem="Bud-Xv-K0H" secondAttribute="centerY" id="N4s-Lp-EUc"/>
                             <constraint firstItem="I7N-BZ-gVI" firstAttribute="width" secondItem="Bud-Xv-K0H" secondAttribute="width" multiplier="0.903382" id="Y0o-7e-iZE"/>
                             <constraint firstItem="70m-yr-LFR" firstAttribute="top" secondItem="PUU-ux-xr9" secondAttribute="top" id="Ylc-3c-5se"/>
                             <constraint firstItem="PUU-ux-xr9" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Zcz-nF-ez4" secondAttribute="trailing" constant="170.5" id="prr-Qs-ZNk"/>
+                            <constraint firstItem="I7N-BZ-gVI" firstAttribute="top" secondItem="Zcz-nF-ez4" secondAttribute="bottom" constant="100" id="qYv-iL-VRM"/>
                             <constraint firstItem="I7N-BZ-gVI" firstAttribute="height" secondItem="Bud-Xv-K0H" secondAttribute="height" multiplier="0.501188" id="reu-8i-vBq"/>
                             <constraint firstItem="Zcz-nF-ez4" firstAttribute="centerX" secondItem="Bud-Xv-K0H" secondAttribute="centerX" id="tEp-nm-hOU"/>
                             <constraint firstItem="Zcz-nF-ez4" firstAttribute="leading" relation="lessThanOrEqual" secondItem="PUU-ux-xr9" secondAttribute="leading" constant="170.5" id="tR2-fw-t89"/>
@@ -315,12 +337,14 @@
                     </view>
                     <connections>
                         <outlet property="BMRLabel" destination="Kyz-Nc-Xtn" id="n9k-fa-zUo"/>
+                        <outlet property="gainBMRLabel" destination="dhB-Rc-p4U" id="e1L-hT-gfr"/>
                         <outlet property="sexLabel" destination="Zcz-nF-ez4" id="Lfq-Ek-GqU"/>
+                        <outlet property="slimBMRLabel" destination="rTy-TN-xb5" id="duT-ou-xTV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90m-ZT-SLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2565.5999999999999" y="-198.35082458770617"/>
+            <point key="canvasLocation" x="2565.4205607476633" y="-198.92008639308855"/>
         </scene>
     </scenes>
     <resources>

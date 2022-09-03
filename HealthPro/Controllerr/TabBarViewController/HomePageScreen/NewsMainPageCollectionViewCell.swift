@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewsMainPageCollectionViewCell: UICollectionViewCell {
+final class NewsMainPageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var newsImage: UIImageView!
     

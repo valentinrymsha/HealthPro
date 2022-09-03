@@ -9,7 +9,7 @@ import UIKit
 import UserNotifications
 import CoreMotion
 
-class HomePageViewController: UIViewController {
+final class HomePageViewController: UIViewController {
 
     
     // swiftlint:disable force_try
@@ -35,7 +35,7 @@ class HomePageViewController: UIViewController {
     var userName = String()
     
     private var images: [UIImage] {
-        Array(1...3).compactMap { UIImage(named: "home\($0)")  }
+        Array(1...3).compactMap { UIImage(named: "h\($0)")  }
     }
         
     private var pedometer = CMPedometer()
@@ -45,16 +45,22 @@ class HomePageViewController: UIViewController {
     private let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     private func getPedometrInfo() -> String {
-        if (!CMPedometer.isStepCountingAvailable()) {
+        if !CMPedometer.isStepCountingAvailable() {
             print("cant counting")
         }
         let calendar = Calendar(identifier: .gregorian)
         DispatchQueue.main.async {
             self.pedometer.queryPedometerData(from: calendar.startOfDay(for: Date()), to: Date(), withHandler: {(pedometerData, error) in
-                self.countSteps = String(pedometerData?.numberOfSteps.int32Value ?? 0)
-                self.distance = String(pedometerData?.distance?.int32Value ?? 0)
-                self.floors = String(pedometerData?.floorsAscended?.int32Value ?? 0)
-            })
+                if let pedometerData = pedometerData {
+                    self.countSteps = String(pedometerData.numberOfSteps.int32Value)
+                    self.distance = String(pedometerData.distance?.int32Value ?? 0)
+                    self.floors = String(pedometerData.floorsAscended?.int32Value ?? 0)
+                } else {
+                    if let error = error {
+                        print("Something wrong: \(error.localizedDescription)")
+                    }
+                }
+                })
         }
         return self.countSteps
     }

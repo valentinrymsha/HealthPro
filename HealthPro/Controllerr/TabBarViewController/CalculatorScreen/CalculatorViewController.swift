@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+final class CalculatorViewController: UIViewController {
 
     // MARK: Outlets
     
@@ -75,19 +75,19 @@ class CalculatorViewController: UIViewController {
     }
     // MARK: Actions
     
-    @IBAction func didTouchAgeStep(_ sender: UIStepper) {
+    @IBAction private func didTouchAgeStep(_ sender: UIStepper) {
         currentAgeLabel.text = Int(sender.value).description
     }
     
-    @IBAction func didTouchWeightStep(_ sender: UIStepper) {
+    @IBAction private func didTouchWeightStep(_ sender: UIStepper) {
         currentWeightLabel.text = Int(sender.value).description
     }
     
-    @IBAction func didTouchHeightSlider(_ sender: UISlider) {
+    @IBAction private func didTouchHeightSlider(_ sender: UISlider) {
         currentHeightLabel.text = Float(round(100*sender.value)/100).description
     }
     
-    @IBAction func didTouchSwitcher(_ sender: UISwitch) {
+    @IBAction private func didTouchSwitcher(_ sender: UISwitch) {
         if sender.isOn {
             sex = "Female"
         } else {
@@ -95,7 +95,7 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-    @IBAction func logoutButton(_ sender: Any) {
+    @IBAction private func logoutButton(_ sender: Any) {
         guard let startVC = mainStoryBoard.instantiateViewController(identifier: "StartVC") as? StartViewController else { return }
             present(startVC, animated: false, completion: nil)
     }

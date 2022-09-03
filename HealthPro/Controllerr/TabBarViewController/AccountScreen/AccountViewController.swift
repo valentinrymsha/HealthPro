@@ -8,26 +8,26 @@
 import UIKit
 import YPImagePicker
 
-class AccountViewController: UIViewController {
+final class AccountViewController: UIViewController {
     
     // swiftlint:disable force_try
     
     // MARK: Outlets
     
-    @IBOutlet weak var accountImageView: UIImageView!
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var changeUserNameButton: UIButton!
-    @IBOutlet weak var logoutButton: UIButton!
-    @IBOutlet weak var faqButton: UIButton!
+    @IBOutlet private weak var accountImageView: UIImageView!
+    @IBOutlet private weak var userNameLabel: UILabel!
+    @IBOutlet private weak var changeUserNameButton: UIButton!
+    @IBOutlet private weak var logoutButton: UIButton!
+    @IBOutlet private weak var faqButton: UIButton!
     
     // MARK: Properties
     
-    let userNotificationCenter = UNUserNotificationCenter.current()
+    private let userNotificationCenter = UNUserNotificationCenter.current()
     
-    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    let mainTabBarStoryboard: UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
-    let changeStoryboard: UIStoryboard = UIStoryboard(name: "ChangeUsername", bundle: nil)
-    let faqStoryboard: UIStoryboard = UIStoryboard(name: "FAQ", bundle: nil)
+    private let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    private let mainTabBarStoryboard: UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
+    private let changeStoryboard: UIStoryboard = UIStoryboard(name: "ChangeUsername", bundle: nil)
+    private let faqStoryboard: UIStoryboard = UIStoryboard(name: "FAQ", bundle: nil)
     
     private func buttonConfig(_ button: UIButton) {
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
@@ -82,11 +82,11 @@ class AccountViewController: UIViewController {
         
         let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ -> Void in
             actionSheetController.dismiss(animated: true, completion: nil)  }
         actionSheetController.addAction(cancelAction)
         
-        let setPictureAction = UIAlertAction(title: "Set photo from gallery/camera", style: .default) { action -> Void in
+        let setPictureAction = UIAlertAction(title: "Set photo from gallery/camera", style: .default) { _ -> Void in
             //            let imageVC = UIImagePickerController()
             //            imageVC.sourceType = .photoLibrary
             //            imageVC.delegate = self
@@ -116,6 +116,9 @@ class AccountViewController: UIViewController {
         }
         actionSheetController.addAction(setPictureAction)
         
+        
+        // WAY WITHIUT COCOAPOD YMPICKER
+        
         //        let setPictureFromCameraAction = UIAlertAction(title: "Set photo from camera", style: .default) { action -> Void in
         //            let imageVC = UIImagePickerController()
         //
@@ -128,14 +131,14 @@ class AccountViewController: UIViewController {
         //        }
         //        actionSheetController.addAction(setPictureFromCameraAction)
         
-        let deletePhotoAction = UIAlertAction(title: "Delete current photo", style: .default) { action -> Void in
+        let deletePhotoAction = UIAlertAction(title: "Delete current photo", style: .default) { _ -> Void in
             let defaultImage = UIImage(named: "user-4")
             let defaultImageData = defaultImage?.pngData()
             UsersData.userDefault.set(defaultImageData, forKey: UsersData.userDefault.string(forKey: "currentUser")! + " user")
             UsersData.userDefault.synchronize()
             self.accountImageView.image = defaultImage
             self.accountImageView.contentMode = .center
-            PushNotification.pushNote("Your profile photo was removed :(",3)
+            PushNotification.pushNote("Your profile photo was removed :(", 3)
         }
         actionSheetController.addAction(deletePhotoAction)
         
@@ -176,7 +179,7 @@ class AccountViewController: UIViewController {
 // MARK: ImagePickerViewDelegate, NavigationDelegate
 
 extension AccountViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             
@@ -204,7 +207,7 @@ extension AccountViewController: UNUserNotificationCenterDelegate {
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert, .badge, .sound])
+        completionHandler([.banner, .badge, .sound])
     }
     
    

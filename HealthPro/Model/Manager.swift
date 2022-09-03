@@ -18,8 +18,8 @@ final class Manager {
        
         // Keys if >150 requests
         
-        let key1 = "9f40dbb7b8a54e3b9d76a431a5c55615"
-        let key2 = "64e3c271154342c2b257b67ffa540bbc"
+//        let key1 = "9f40dbb7b8a54e3b9d76a431a5c55615"
+//        let key2 = "64e3c271154342c2b257b67ffa540bbc"
         
         let api = "https://api.spoonacular.com/recipes/random?apiKey=c086eddbb7774da5822b81a9f6f45a22&number=20"
         guard let apiURL = URL(string: api) else { return }

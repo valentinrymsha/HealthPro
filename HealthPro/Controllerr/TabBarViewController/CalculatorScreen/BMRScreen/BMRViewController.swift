@@ -7,12 +7,14 @@
 
 import UIKit
 
-class BMRViewController: UIViewController {
+final class BMRViewController: UIViewController {
 
     // MARK: Outlets
     
-    @IBOutlet weak var sexLabel: UILabel!
-    @IBOutlet weak var BMRLabel: UILabel!
+    @IBOutlet private weak var sexLabel: UILabel!
+    @IBOutlet private weak var BMRLabel: UILabel!
+    @IBOutlet private weak var slimBMRLabel: UILabel!
+    @IBOutlet private weak var gainBMRLabel: UILabel!
     
     
     // MARK: Properties
@@ -25,6 +27,9 @@ class BMRViewController: UIViewController {
         super.viewDidLoad()
 
         BMRLabel.text = String(round(100*currentBMR)/100) + " Calories/Day"
+        slimBMRLabel.text = String(round(100*currentBMR)/100 - 253.27) + " Calories/Day"
+        gainBMRLabel.text = String(round(100*currentBMR)/100 + 257.06) + " Calories/Day"
+        
         sexLabel.text = currentSex
     }
 }

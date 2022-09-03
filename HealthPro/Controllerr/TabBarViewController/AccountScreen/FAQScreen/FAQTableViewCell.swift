@@ -7,9 +7,9 @@
 
 import UIKit
 
-class FAQTableViewCell: UITableViewCell {
+final class FAQTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var cellView: UIView! 
+    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     

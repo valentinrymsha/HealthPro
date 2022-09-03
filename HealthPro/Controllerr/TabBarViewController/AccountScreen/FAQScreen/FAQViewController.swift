@@ -7,24 +7,35 @@
 
 import UIKit
 
-class FAQViewController: UIViewController {
+final class FAQViewController: UIViewController {
 
     // MARK: Outlets
     
-    @IBOutlet weak var faqTableView: UITableView!
+    @IBOutlet private weak var faqTableView: UITableView!
     
     // MARK: Properties
     
-    let faqArray = [["How match api's the HealthPro uses?":"2 api's for diff goals."],
-                    ["How i can logout from app?":"You can do it in the Setting's menu."],
-                    ["Calculator do right?":"Yes, ofcource :)"],
-                    ["Who is founder of HealthPro?":"Valentin Rymsha."],
-                    ["How match account's i can to have?":"Eterniti <3"],
-                    ["Whats up?":"Nice cock."],
-                    ["Where localize servers of HealthPro?":"Republic of Belarus."],
-                    ["How many users HealthPro have?":"Near 2m+ users."]]
+    private let faqArray = [["Valeria is a good mentor?": "Exactly!"],
+                    ["What about her collegue?": "Also brilliat!"],
+                    ["How match api's the HealthPro uses?": "2 api's for diff goals."],
+                    ["How i can logout from app?": "You can do it in the Setting's menu."],
+                    ["Calculator do right?": "Yes, ofcource :)"],
+                    ["Who is founder of HealthPro?": "Valentin Rymsha."],
+                    ["How match account's i can to have?": "Eterniti <3"],
+                    ["Whats up?": "Nice cock."],
+                    ["Where localize servers of HealthPro?": "Republic of Belarus."],
+                    ["How many users HealthPro have?": "Near 2m+ users."],
+                    ["How i can create account?": "You can do it when you opening app at first."],
+                    ["How i can delete account?": "You cant do it yet."],
+                    ["How i can recive my password?": "You can do it with reciving on logining page."],
+                    ["Will app enable withot internet?": "Yes, but with limitations."],
+                    ["Can i recommend your app for friend?": "Absolutly yes."],
+                    ["Whats time is it?": "Now a good time for sleeping"],
+                    ["2 + 2?": "5."],
+                    ["What is a age limit?": "Our application is for a people 0+."],
+                    ["Do you like green color?": "Yes."]]
     
-    let faqStoryboard: UIStoryboard = UIStoryboard(name: "FAQ", bundle: nil)
+    private let faqStoryboard: UIStoryboard = UIStoryboard(name: "FAQ", bundle: nil)
     private var selectedIndex = Int()
     private var isCollapce = Bool()
     
@@ -53,9 +64,7 @@ extension FAQViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "faqCell") as? FAQTableViewCell else { fatalError() }
-        
-        let qa = faqArray[indexPath.row]
-        
+                
         cell.questionLabel.text = faqArray[indexPath.row].keys.first
         cell.answerLabel.text = faqArray[indexPath.row].values.first
         cell.layer.cornerRadius = 5

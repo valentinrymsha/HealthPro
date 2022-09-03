@@ -6,11 +6,11 @@
 //
 
 import Alamofire
-import SwiftyJSON
 import AlamofireImage
+import SwiftyJSON
 import UIKit
 
-class FoodViewController: UIViewController {
+final class FoodViewController: UIViewController {
 
     // MARK: Outlets
     

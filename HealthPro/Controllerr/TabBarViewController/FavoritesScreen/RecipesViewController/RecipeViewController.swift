@@ -5,11 +5,11 @@
 //  Created by User on 8/23/22.
 //
 import Alamofire
-import SwiftyJSON
 import AlamofireImage
+import SwiftyJSON
 import UIKit
 
-class RecipeViewController: UIViewController {
+final class RecipeViewController: UIViewController {
 
     // MARK: Outlets
     
