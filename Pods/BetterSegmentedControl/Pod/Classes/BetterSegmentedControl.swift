@@ -171,7 +171,7 @@ import UIKit
     private var segmentViews: [UIView] { return normalSegments + selectedSegments }
     private var totalInsetSize: CGFloat { return indicatorViewInset * 2.0 }
     private lazy var defaultSegments: [BetterSegmentedControlSegment] = {
-        return [LabelSegment(text: "Food"), LabelSegment(text: "Recipes")]
+        return [LabelSegment(text: "Food"), LabelSegment(text: "Composition")]
     }()
     private var isLayoutDirectionRightToLeft: Bool {
         let layoutDirection = UIView.userInterfaceLayoutDirection(for: semanticContentAttribute)
@@ -201,19 +201,19 @@ import UIKit
     }
     required public init?(coder aDecoder: NSCoder) {
         self.index = 0
-        self.segments = [LabelSegment(text: "Food"), LabelSegment(text: "Recipes")]
+        self.segments = [LabelSegment(text: "Food"), LabelSegment(text: "Composition")]
         super.init(coder: aDecoder)
         completeInit()
     }
     @available(*, unavailable, message: "Use init(frame:segments:index:options:) instead.")
     convenience override public init(frame: CGRect) {
         self.init(frame: frame,
-                  segments: [LabelSegment(text: "Food"), LabelSegment(text: "Recipes")])
+                  segments: [LabelSegment(text: "Food"), LabelSegment(text: "Composition")])
     }
     @available(*, unavailable, message: "Use init(frame:segments:index:options:) instead.")
     convenience init() {
         self.init(frame: .zero,
-                  segments: [LabelSegment(text: "Food"), LabelSegment(text: "Recipes")])
+                  segments: [LabelSegment(text: "Food"), LabelSegment(text: "Composition")])
     }
     private func completeInit() {
         layer.masksToBounds = true

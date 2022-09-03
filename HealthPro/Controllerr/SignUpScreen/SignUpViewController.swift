@@ -20,6 +20,8 @@ final class SignUpViewController: UIViewController {
     
     // MARK: Properties
     
+    let userNotificationCenter = UNUserNotificationCenter.current()
+    
     private let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     private let mainTabBarStoryboard: UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
     private let homeStoryboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
@@ -94,6 +96,8 @@ final class SignUpViewController: UIViewController {
         setTextFieldsProperies()
         
         submitButton.layer.cornerRadius = 13
+        
+        userNotificationCenter.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -152,6 +156,8 @@ final class SignUpViewController: UIViewController {
             UsersData.userDefault.set(true, forKey: "isLoggedIn")
             UsersData.userDefault.synchronize()
             
+            PushNotification.pushNote("Congrats with a new account <3", 3)
+            
             present(mainVC, animated: true, completion: nil)
             
         }
@@ -167,4 +173,17 @@ extension SignUpViewController: UITextFieldDelegate {
         textField.layer.borderColor = #colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)
 
     }
+}
+
+extension SignUpViewController: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        completionHandler()
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.badge, .badge, .sound])
+    }
+    
+   
 }

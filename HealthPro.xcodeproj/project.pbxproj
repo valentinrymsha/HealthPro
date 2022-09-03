@@ -17,8 +17,10 @@
 		CE18054728B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18054628B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift */; };
 		CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */; };
 		CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */; };
-		CE1EF96C28BBF7CD007EB20F /* Medical.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1EF96B28BBF7CD007EB20F /* Medical.storyboard */; };
-		CE1EF96F28BBF7E6007EB20F /* MedicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EF96E28BBF7E6007EB20F /* MedicalViewController.swift */; };
+		CE1EF96C28BBF7CD007EB20F /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1EF96B28BBF7CD007EB20F /* Map.storyboard */; };
+		CE1EF96F28BBF7E6007EB20F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EF96E28BBF7E6007EB20F /* MapViewController.swift */; };
+		CE262BBC28BF5F16005B55DF /* ChangeUsername.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE262BBB28BF5F16005B55DF /* ChangeUsername.storyboard */; };
+		CE262BBF28BF5F3C005B55DF /* ChangeUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE262BBE28BF5F3C005B55DF /* ChangeUsernameViewController.swift */; };
 		CE367D6328B63D2600B615FA /* RecoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE367D6228B63D2600B615FA /* RecoveryViewController.swift */; };
 		CE367D7128B64EFB00B615FA /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D7028B64EFB00B615FA /* Favorites.storyboard */; };
 		CE367D7628B6529900B615FA /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D7528B6529900B615FA /* Calculator.storyboard */; };
@@ -40,9 +42,14 @@
 		CE8A6B4C289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE8A6B4B289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf */; };
 		CE8A6B5A289ADC11002F1DD7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B59289ADC11002F1DD7 /* LoginViewController.swift */; };
 		CE8A6B5E289ADC24002F1DD7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B5D289ADC24002F1DD7 /* SignUpViewController.swift */; };
+		CE90703328C23CF900361D48 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90703228C23CF900361D48 /* Shop.swift */; };
 		CEA2B3C028ABF2280027D3D4 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA2B3BF28ABF2280027D3D4 /* RecipesTableViewCell.swift */; };
 		CEAFFA1628AE7FDA00011E65 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFFA1528AE7FDA00011E65 /* Manager.swift */; };
 		CEB9562B28AD2AFC0021D261 /* UsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9562A28AD2AFC0021D261 /* UsersData.swift */; };
+		CEDCAF8E28C0D439005D8324 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCAF8D28C0D439005D8324 /* PushNotification.swift */; };
+		CEDCAF9228C0DA03005D8324 /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDCAF9128C0DA03005D8324 /* FAQ.storyboard */; };
+		CEDCAF9528C0DA11005D8324 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCAF9428C0DA11005D8324 /* FAQViewController.swift */; };
+		CEDCAF9828C0E028005D8324 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCAF9728C0E028005D8324 /* FAQTableViewCell.swift */; };
 		E773A7C3EE0C34D9266F2839 /* Pods_HealthPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,8 +66,10 @@
 		CE18054628B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsMainPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodsCollectionViewCell.swift; sourceTree = "<group>"; };
-		CE1EF96B28BBF7CD007EB20F /* Medical.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Medical.storyboard; sourceTree = "<group>"; };
-		CE1EF96E28BBF7E6007EB20F /* MedicalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalViewController.swift; sourceTree = "<group>"; };
+		CE1EF96B28BBF7CD007EB20F /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		CE1EF96E28BBF7E6007EB20F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CE262BBB28BF5F16005B55DF /* ChangeUsername.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeUsername.storyboard; sourceTree = "<group>"; };
+		CE262BBE28BF5F3C005B55DF /* ChangeUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameViewController.swift; sourceTree = "<group>"; };
 		CE367D6228B63D2600B615FA /* RecoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryViewController.swift; sourceTree = "<group>"; };
 		CE367D7028B64EFB00B615FA /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		CE367D7528B6529900B615FA /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
@@ -84,9 +93,14 @@
 		CE8A6B4B289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TheBiggerTheBetter.ttf; sourceTree = "<group>"; };
 		CE8A6B59289ADC11002F1DD7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE8A6B5D289ADC24002F1DD7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CE90703228C23CF900361D48 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		CEA2B3BF28ABF2280027D3D4 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		CEAFFA1528AE7FDA00011E65 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		CEB9562A28AD2AFC0021D261 /* UsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersData.swift; sourceTree = "<group>"; };
+		CEDCAF8D28C0D439005D8324 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
+		CEDCAF9128C0DA03005D8324 /* FAQ.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
+		CEDCAF9428C0DA11005D8324 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		CEDCAF9728C0E028005D8324 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
 		E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -122,6 +136,8 @@
 		CE00FC5428BD2EF2007BC9EC /* AccountScreen */ = {
 			isa = PBXGroup;
 			children = (
+				CEDCAF9028C0D9F2005D8324 /* FAQScreen */,
+				CE262BBA28BF5EFF005B55DF /* ChangeUsernameScreen */,
 				CE00FC5528BD2F0D007BC9EC /* Account.storyboard */,
 				CE00FC5828BD2F2A007BC9EC /* AccountViewController.swift */,
 			);
@@ -165,6 +181,8 @@
 			children = (
 				CEB9562A28AD2AFC0021D261 /* UsersData.swift */,
 				CEAFFA1528AE7FDA00011E65 /* Manager.swift */,
+				CEDCAF8D28C0D439005D8324 /* PushNotification.swift */,
+				CE90703228C23CF900361D48 /* Shop.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,10 +203,19 @@
 		CE1EF96A28BBF7AC007EB20F /* AllDataViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CE1EF96B28BBF7CD007EB20F /* Medical.storyboard */,
-				CE1EF96E28BBF7E6007EB20F /* MedicalViewController.swift */,
+				CE1EF96B28BBF7CD007EB20F /* Map.storyboard */,
+				CE1EF96E28BBF7E6007EB20F /* MapViewController.swift */,
 			);
 			path = AllDataViewController;
+			sourceTree = "<group>";
+		};
+		CE262BBA28BF5EFF005B55DF /* ChangeUsernameScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE262BBB28BF5F16005B55DF /* ChangeUsername.storyboard */,
+				CE262BBE28BF5F3C005B55DF /* ChangeUsernameViewController.swift */,
+			);
+			path = ChangeUsernameScreen;
 			sourceTree = "<group>";
 		};
 		CE367D6128B63D0C00B615FA /* RecoveryPassViewController */ = {
@@ -306,6 +333,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CEDCAF9028C0D9F2005D8324 /* FAQScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CEDCAF9128C0DA03005D8324 /* FAQ.storyboard */,
+				CEDCAF9428C0DA11005D8324 /* FAQViewController.swift */,
+				CEDCAF9728C0E028005D8324 /* FAQTableViewCell.swift */,
+			);
+			path = FAQScreen;
+			sourceTree = "<group>";
+		};
 		CEF6FB4628AD41B20057D530 /* SignUpScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,8 +422,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1EF96C28BBF7CD007EB20F /* Medical.storyboard in Resources */,
+				CE1EF96C28BBF7CD007EB20F /* Map.storyboard in Resources */,
 				CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */,
+				CE262BBC28BF5F16005B55DF /* ChangeUsername.storyboard in Resources */,
 				CE8A6B3F289ACF43002F1DD7 /* LaunchScreen.storyboard in Resources */,
 				CE367D7128B64EFB00B615FA /* Favorites.storyboard in Resources */,
 				CE18053828B6E49500BAC5C0 /* Home.storyboard in Resources */,
@@ -397,6 +435,7 @@
 				CE367D7B28B653D500B615FA /* MainTabBar.storyboard in Resources */,
 				CE17BCCF28B6A09200DE5B3D /* Food.storyboard in Resources */,
 				CE8A6B3A289ACF41002F1DD7 /* Main.storyboard in Resources */,
+				CEDCAF9228C0DA03005D8324 /* FAQ.storyboard in Resources */,
 				CE367D7628B6529900B615FA /* Calculator.storyboard in Resources */,
 				CE367D8028B655DA00B615FA /* Login.storyboard in Resources */,
 			);
@@ -470,15 +509,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDCAF8E28C0D439005D8324 /* PushNotification.swift in Sources */,
 				CE759121289BD39B00F7098A /* StartViewController.swift in Sources */,
 				CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */,
 				CE18054328B6E4A600BAC5C0 /* HomePageViewController.swift in Sources */,
 				CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */,
-				CE1EF96F28BBF7E6007EB20F /* MedicalViewController.swift in Sources */,
+				CE1EF96F28BBF7E6007EB20F /* MapViewController.swift in Sources */,
 				CE5650D128A11CBE001E1668 /* MainTabBarViewController.swift in Sources */,
 				CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */,
+				CEDCAF9528C0DA11005D8324 /* FAQViewController.swift in Sources */,
 				CE5650C628A0E6A0001E1668 /* StartCollectionViewCell.swift in Sources */,
 				CE367D6328B63D2600B615FA /* RecoveryViewController.swift in Sources */,
+				CE262BBF28BF5F3C005B55DF /* ChangeUsernameViewController.swift in Sources */,
 				CEA2B3C028ABF2280027D3D4 /* RecipesTableViewCell.swift in Sources */,
 				CE8A6B5A289ADC11002F1DD7 /* LoginViewController.swift in Sources */,
 				CE18054728B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift in Sources */,
@@ -489,7 +531,9 @@
 				CE77F1C328B506E900F29069 /* BMRViewController.swift in Sources */,
 				CE09819528B91C2800AFAFBF /* Protocols.swift in Sources */,
 				CE77F1BD28B4F55300F29069 /* CalculatorViewController.swift in Sources */,
+				CEDCAF9828C0E028005D8324 /* FAQTableViewCell.swift in Sources */,
 				CEB9562B28AD2AFC0021D261 /* UsersData.swift in Sources */,
+				CE90703328C23CF900361D48 /* Shop.swift in Sources */,
 				CE8A6B35289ACF41002F1DD7 /* SceneDelegate.swift in Sources */,
 				CE77F1C828B5229300F29069 /* RecipeViewController.swift in Sources */,
 			);
@@ -568,7 +612,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -623,7 +667,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -640,8 +684,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79W7Z8MLYV;
 				INFOPLIST_FILE = HealthPro/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -660,8 +705,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79W7Z8MLYV;
 				INFOPLIST_FILE = HealthPro/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

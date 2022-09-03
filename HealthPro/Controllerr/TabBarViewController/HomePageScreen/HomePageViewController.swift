@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 import CoreMotion
 
 class HomePageViewController: UIViewController {
@@ -25,9 +26,12 @@ class HomePageViewController: UIViewController {
     @IBOutlet private weak var floorsCountLabel: UILabel!
     @IBOutlet private weak var distanceView: UIView!
     @IBOutlet private weak var floorsView: UIView!
+    @IBOutlet weak var nearestShopsButton: UIButton!
     
     // MARK: Properties
     
+    let medicalStoryboard: UIStoryboard = UIStoryboard(name: "Map", bundle: nil)
+
     var userName = String()
     
     private var images: [UIImage] {
@@ -73,6 +77,7 @@ class HomePageViewController: UIViewController {
         stepsView.layer.cornerRadius = 13
         distanceView.layer.cornerRadius = 13
         floorsView.layer.cornerRadius = 13
+        nearestShopsButton.layer.cornerRadius = 9
         
         stepsCountLabel.text = getPedometrInfo() + " steps!"
         
@@ -91,11 +96,19 @@ class HomePageViewController: UIViewController {
         stepsCountLabel.text = getPedometrInfo() + " steps"
         distanceCountLabel.text = distance + " meters"
         floorsCountLabel.text = floors + " floors"
+        
+        greetingLabel.text = "Hello, " + (UsersData.userDefault.string(forKey: "currentUser") ?? "User" )
 
     }
     
     // MARK: Actions
   
+    @IBAction func showDataButton(_ sender: UIButton) {
+        
+        guard let mapVC = medicalStoryboard.instantiateViewController(identifier: "mapVC") as? MapViewController else { return }
+       
+        present(mapVC, animated: true)
+    }
     
     
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DEd-5h-j3C">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -14,11 +14,14 @@
             <objects>
                 <viewController storyboardIdentifier="SettingsVC" title="SettingsVC" id="DEd-5h-j3C" customClass="AccountViewController" customModule="HealthPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="edx-cS-0Cc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back3" translatesAutoresizingMaskIntoConstraints="NO" id="YTv-Q3-wGS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-4" highlightedImage="defaultUserImage" translatesAutoresizingMaskIntoConstraints="NO" id="Et5-aA-eTY">
-                                <rect key="frame" x="142" y="87" width="130" height="130"/>
+                                <rect key="frame" x="122.5" y="43" width="130" height="130"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -27,22 +30,22 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pq7-iC-ZB5">
-                                <rect key="frame" x="124" y="224.5" width="166" height="20"/>
+                                <rect key="frame" x="112.5" y="180.5" width="150" height="20"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELP-gX-d75">
-                                <rect key="frame" x="144.5" y="59" width="125" height="20"/>
+                                <rect key="frame" x="131" y="15" width="113" height="20"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVh-Gz-bem">
-                                <rect key="frame" x="0.0" y="254.5" width="414" height="548.5"/>
+                                <rect key="frame" x="0.0" y="210.5" width="375" height="397.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afM-qX-Jjk">
-                                        <rect key="frame" x="3" y="0.0" width="408" height="66"/>
+                                        <rect key="frame" x="3" y="0.0" width="369" height="47.5"/>
                                         <color key="backgroundColor" red="0.67843137249999996" green="0.86754846569999999" blue="0.77025657889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
                                         <state key="normal" title="        Change username" image="userNameSet">
@@ -54,15 +57,18 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vi-qT-l8S">
-                                        <rect key="frame" x="3" y="69" width="408" height="65.5"/>
+                                        <rect key="frame" x="3" y="50.5" width="369" height="48"/>
                                         <color key="backgroundColor" red="0.67652475830000003" green="0.86754846569999999" blue="0.77025657889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
                                         <state key="normal" title="        FAQ" image="faq">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTappedFAQButton:" destination="DEd-5h-j3C" eventType="touchUpInside" id="eHr-G9-1Q7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdc-xN-LX0">
-                                        <rect key="frame" x="3" y="137.5" width="408" height="66"/>
+                                        <rect key="frame" x="3" y="101.5" width="369" height="47.5"/>
                                         <color key="backgroundColor" red="0.67652475830000003" green="0.86754846569999999" blue="0.77025657889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
                                         <state key="normal" title="        Logout" image="logout-3">
@@ -73,7 +79,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="afM-qX-Jjk" firstAttribute="height" secondItem="UVh-Gz-bem" secondAttribute="height" multiplier="0.12" id="CeE-Km-fZq"/>
                                     <constraint firstAttribute="trailing" secondItem="9vi-qT-l8S" secondAttribute="trailing" constant="3" id="Jkv-z3-Ti5"/>
@@ -95,10 +101,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="Rqg-JR-1UX" firstAttribute="bottom" secondItem="YTv-Q3-wGS" secondAttribute="bottom" id="1W7-og-9UC"/>
                             <constraint firstItem="ELP-gX-d75" firstAttribute="width" secondItem="edx-cS-0Cc" secondAttribute="width" multiplier="0.301932" id="3EO-Jo-MH0"/>
                             <constraint firstItem="Pq7-iC-ZB5" firstAttribute="centerX" secondItem="edx-cS-0Cc" secondAttribute="centerX" id="4So-cx-Et2"/>
+                            <constraint firstItem="YTv-Q3-wGS" firstAttribute="top" secondItem="Rqg-JR-1UX" secondAttribute="top" id="7aI-zT-jEn"/>
                             <constraint firstItem="Pq7-iC-ZB5" firstAttribute="top" secondItem="Et5-aA-eTY" secondAttribute="bottom" constant="7.5" id="PC1-6W-cK4"/>
+                            <constraint firstItem="Rqg-JR-1UX" firstAttribute="trailing" secondItem="YTv-Q3-wGS" secondAttribute="trailing" id="RXB-C7-VOe"/>
                             <constraint firstItem="UVh-Gz-bem" firstAttribute="leading" secondItem="Rqg-JR-1UX" secondAttribute="leading" id="Ume-Tg-ufm"/>
+                            <constraint firstItem="YTv-Q3-wGS" firstAttribute="leading" secondItem="edx-cS-0Cc" secondAttribute="leading" id="Yo8-Gc-MZb"/>
                             <constraint firstItem="Pq7-iC-ZB5" firstAttribute="width" secondItem="edx-cS-0Cc" secondAttribute="width" multiplier="0.400966" id="Zv0-Bq-5Rk"/>
                             <constraint firstItem="ELP-gX-d75" firstAttribute="centerX" secondItem="edx-cS-0Cc" secondAttribute="centerX" id="b3s-rM-WLH"/>
                             <constraint firstItem="ELP-gX-d75" firstAttribute="top" secondItem="Rqg-JR-1UX" secondAttribute="top" constant="15" id="jy1-ur-VIn"/>
@@ -122,10 +132,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qV-JN-RIx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.199999999999999" y="79.610194902548727"/>
+            <point key="canvasLocation" x="30.434782608695656" y="79.017857142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="back3" width="612" height="612"/>
         <image name="defaultUserImage" width="512" height="512"/>
         <image name="faq" width="24" height="24"/>
         <image name="logout-3" width="24" height="24"/>

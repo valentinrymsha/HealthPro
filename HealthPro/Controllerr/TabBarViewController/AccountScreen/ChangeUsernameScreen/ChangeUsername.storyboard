@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qAk-V2-zwk">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--changeUsernameVC-->
+        <scene sceneID="bcv-Om-VBg">
+            <objects>
+                <viewController storyboardIdentifier="changeUsernameVC" title="changeUsernameVC" modalPresentationStyle="pageSheet" id="qAk-V2-zwk" customClass="ChangeUsernameViewController" customModule="HealthPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iXz-I2-D4z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your new username!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zra-DX-X4G">
+                                <rect key="frame" x="63" y="325" width="292" height="34"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFit" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wwx-ne-g8y">
+                                <rect key="frame" x="20" y="325.5" width="33" height="32"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="69w-P6-IdH"/>
+                                    <constraint firstAttribute="height" constant="33" id="GQ2-1L-DOy"/>
+                                </constraints>
+                            </imageView>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NL6-NZ-hS2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbI-ZI-JHY">
+                                        <rect key="frame" x="89" y="18.5" width="197.5" height="23"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.56862745100000001" green="0.78151768450000003" blue="0.53913027049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2qe-Hr-LSu"/>
+                                    <constraint firstItem="nbI-ZI-JHY" firstAttribute="centerY" secondItem="NL6-NZ-hS2" secondAttribute="centerY" id="Y95-So-KEM"/>
+                                    <constraint firstItem="nbI-ZI-JHY" firstAttribute="centerX" secondItem="NL6-NZ-hS2" secondAttribute="centerX" id="bkr-JK-yka"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changing form" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eo-E8-dRB">
+                                <rect key="frame" x="100" y="176" width="175" height="21"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2h-p1-QcU">
+                                <rect key="frame" x="37.5" y="489" width="300" height="40"/>
+                                <color key="backgroundColor" red="0.56862745100000001" green="0.78151768450000003" blue="0.53913027049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SwF-Xu-rsT"/>
+                                    <constraint firstAttribute="width" constant="300" id="hc8-AM-ztk"/>
+                                </constraints>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="qAk-V2-zwk" eventType="touchUpInside" id="upP-1F-I5g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="187-ej-hIC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NL6-NZ-hS2" firstAttribute="leading" secondItem="187-ej-hIC" secondAttribute="leading" id="6YR-Z7-URF"/>
+                            <constraint firstItem="wwx-ne-g8y" firstAttribute="leading" secondItem="187-ej-hIC" secondAttribute="leading" constant="20" id="91e-Cf-5yW"/>
+                            <constraint firstItem="187-ej-hIC" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="8eo-E8-dRB" secondAttribute="trailing" constant="100" id="9hY-Hq-rGn"/>
+                            <constraint firstItem="zra-DX-X4G" firstAttribute="top" secondItem="8eo-E8-dRB" secondAttribute="bottom" constant="128" id="OcC-sS-01j"/>
+                            <constraint firstItem="187-ej-hIC" firstAttribute="trailing" secondItem="zra-DX-X4G" secondAttribute="trailing" constant="20" id="PkK-Iq-41g"/>
+                            <constraint firstItem="y2h-p1-QcU" firstAttribute="centerX" secondItem="iXz-I2-D4z" secondAttribute="centerX" id="RwV-po-zJw"/>
+                            <constraint firstItem="187-ej-hIC" firstAttribute="trailing" secondItem="NL6-NZ-hS2" secondAttribute="trailing" id="Sdp-89-zMg"/>
+                            <constraint firstItem="8eo-E8-dRB" firstAttribute="top" secondItem="NL6-NZ-hS2" secondAttribute="bottom" constant="116" id="c0y-Os-rVp"/>
+                            <constraint firstItem="NL6-NZ-hS2" firstAttribute="top" secondItem="187-ej-hIC" secondAttribute="top" id="fLy-En-FPX"/>
+                            <constraint firstItem="y2h-p1-QcU" firstAttribute="top" secondItem="zra-DX-X4G" secondAttribute="bottom" constant="130" id="iaG-EO-Uew"/>
+                            <constraint firstItem="zra-DX-X4G" firstAttribute="leading" secondItem="wwx-ne-g8y" secondAttribute="trailing" constant="10" id="mhx-56-sPB"/>
+                            <constraint firstItem="wwx-ne-g8y" firstAttribute="top" secondItem="zra-DX-X4G" secondAttribute="top" id="vEK-fu-azO"/>
+                            <constraint firstItem="8eo-E8-dRB" firstAttribute="leading" relation="lessThanOrEqual" secondItem="187-ej-hIC" secondAttribute="leading" constant="100" id="wV7-yY-TKG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeUsernameTextField" destination="zra-DX-X4G" id="s0d-ho-f0a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9P-FS-i5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-372.46376811594206" y="29.464285714285712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

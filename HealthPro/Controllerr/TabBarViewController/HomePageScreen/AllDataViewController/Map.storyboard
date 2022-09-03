@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HwZ-Gj-qNR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--mapVC-->
+        <scene sceneID="bJV-Jm-OUJ">
+            <objects>
+                <viewController storyboardIdentifier="mapVC" title="mapVC" id="HwZ-Gj-qNR" customClass="MapViewController" customModule="HealthPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="elD-P7-HCM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nearest shops" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diL-7t-edT">
+                                <rect key="frame" x="137" y="59" width="140.5" height="18"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NkI-SU-Oxb">
+                                <rect key="frame" x="0.0" y="93" width="414" height="769"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S0h-84-xAy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NkI-SU-Oxb" firstAttribute="top" secondItem="diL-7t-edT" secondAttribute="bottom" constant="16" id="7QR-FU-ONL"/>
+                            <constraint firstItem="diL-7t-edT" firstAttribute="top" secondItem="S0h-84-xAy" secondAttribute="top" constant="15" id="WMu-fp-iiV"/>
+                            <constraint firstItem="S0h-84-xAy" firstAttribute="bottom" secondItem="NkI-SU-Oxb" secondAttribute="bottom" id="X1d-kI-fXI"/>
+                            <constraint firstItem="S0h-84-xAy" firstAttribute="trailing" secondItem="NkI-SU-Oxb" secondAttribute="trailing" id="hOX-aj-dzr"/>
+                            <constraint firstItem="diL-7t-edT" firstAttribute="centerX" secondItem="elD-P7-HCM" secondAttribute="centerX" id="nHF-d3-c9u"/>
+                            <constraint firstItem="NkI-SU-Oxb" firstAttribute="leading" secondItem="S0h-84-xAy" secondAttribute="leading" id="vBv-4h-feh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="NkI-SU-Oxb" id="bOL-pl-cWn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ygf-7u-Yao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446.37681159420293" y="119.86607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

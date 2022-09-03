@@ -116,6 +116,7 @@ final class LoginViewController: UIViewController {
                 UsersData.userDefault.set(true, forKey: "isLoggedIn")
                 UsersData.userDefault.synchronize()
                 
+                PushNotification.pushNote("Nice to see you again, dude", 3)
                 present(mainVC, animated: true, completion: nil)
                 
                 
