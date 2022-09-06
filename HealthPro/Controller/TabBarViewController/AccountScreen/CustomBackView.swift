@@ -13,6 +13,7 @@ class CustomBackView: UIView {
         super.layoutSubviews()
         
         self.roundCorners([.bottomLeft, .bottomRight], radius: 20)
+        
     }
     
 }

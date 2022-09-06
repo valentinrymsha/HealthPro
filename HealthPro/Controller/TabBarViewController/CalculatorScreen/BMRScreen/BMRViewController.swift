@@ -27,8 +27,8 @@ final class BMRViewController: UIViewController {
         super.viewDidLoad()
 
         BMRLabel.text = String(round(100*currentBMR)/100) + " Calories/Day"
-        slimBMRLabel.text = String(round(100*currentBMR)/100 - 253.27) + " Calories/Day"
-        gainBMRLabel.text = String(round(100*currentBMR)/100 + 257.06) + " Calories/Day"
+        slimBMRLabel.text = String(round(100*(currentBMR - 253.06))/100) + " Calories/Day"
+        gainBMRLabel.text = String(round(100*(currentBMR - 253.27))/100 + 257.06) + " Calories/Day"
         
         sexLabel.text = currentSex
     }

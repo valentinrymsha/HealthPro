@@ -105,12 +105,6 @@ final class AccountViewController: UIViewController {
         actionSheetController.addAction(cancelAction)
         
         let setPictureAction = UIAlertAction(title: "Set photo from gallery/camera", style: .default) { _ -> Void in
-            //            let imageVC = UIImagePickerController()
-            //            imageVC.sourceType = .photoLibrary
-            //            imageVC.delegate = self
-            //            imageVC.allowsEditing = true
-            //
-            //            self.present(imageVC, animated: true)
             
             var config = YPImagePickerConfiguration()
             config.preferredStatusBarStyle = .lightContent
@@ -123,22 +117,32 @@ final class AccountViewController: UIViewController {
                     let data = image.pngData()
                     let user = self.realm.object(ofType: UserModel.self, forPrimaryKey: UsersData.userDefault.string(forKey: "currentUser"))
                     
+                    if data!.count <= 16 {
                     try! self.realm.write {
                         user!.userImage = data!
+                        
+                        self.accountImageView.image = image
+                        self.accountImageView.contentMode = .scaleAspectFill
+                        
+                        picker.dismiss(animated: true, completion: {
+                            PushNotification.pushNote("You place a new profile photo!", 3)
+                        })
                     }
-                    
-                    self.accountImageView.image = image
-                    self.accountImageView.contentMode = .scaleAspectFill
+                    } else {  picker.dismiss(animated: true, completion: {
+                        PushNotification.pushNote("Size of this image > 16.Choose another photo :)", 1)
+                    })
+                        return }
+                 
                 }
-                picker.dismiss(animated: true, completion: nil)
-                PushNotification.pushNote("You place a new profile photo!", 3)
+               
+                
             }
             self.present(picker, animated: true, completion: nil)
         }
         actionSheetController.addAction(setPictureAction)
         
         
-        // WAY WITHIUT COCOAPOD YMPICKER
+        // WAY WITHIUT YMPICKER
         
         //        let setPictureFromCameraAction = UIAlertAction(title: "Set photo from camera", style: .default) { action -> Void in
         //            let imageVC = UIImagePickerController()
