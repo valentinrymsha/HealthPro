@@ -36,6 +36,8 @@ final class FoodViewController: UIViewController {
         return image ?? UIImage()
     }
     
+    // MARK: LifeCircle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
  
@@ -44,7 +46,7 @@ final class FoodViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         
         self.foodImage.layer.cornerRadius = 8
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

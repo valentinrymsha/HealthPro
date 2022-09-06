@@ -59,6 +59,8 @@ final class FAQViewController: UIViewController {
     
 }
 
+// MARK: UITableViewDatasource
+
 extension FAQViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         faqArray.count
@@ -90,6 +92,8 @@ extension FAQViewController: UITableViewDataSource {
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
+
+// MARK: UITableViewDelegate
 
 extension FAQViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

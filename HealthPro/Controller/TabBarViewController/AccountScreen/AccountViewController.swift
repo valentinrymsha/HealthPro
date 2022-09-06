@@ -87,9 +87,9 @@ final class AccountViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         setupImageView()
-        
         userNameLabel.text = UsersData.userDefault.string(forKey: "currentUser")!
         
     }
@@ -113,48 +113,25 @@ final class AccountViewController: UIViewController {
             
             let picker = YPImagePicker(configuration: config)
             picker.didFinishPicking { [unowned picker] items, _ in
-                if let image = items.singlePhoto?.image {
+                if let image = items.singlePhoto?.image.resizeImage(image: items.singlePhoto!.image,
+                                                                    targetSize: .init(width: 500, height: 500)) {
                     let data = image.pngData()
                     let user = self.realm.object(ofType: UserModel.self, forPrimaryKey: UsersData.userDefault.string(forKey: "currentUser"))
                     
-                    if data!.count <= 16 {
                     try! self.realm.write {
                         user!.userImage = data!
-                        
-                        self.accountImageView.image = image
-                        self.accountImageView.contentMode = .scaleAspectFill
-                        
-                        picker.dismiss(animated: true, completion: {
-                            PushNotification.pushNote("You place a new profile photo!", 3)
-                        })
                     }
-                    } else {  picker.dismiss(animated: true, completion: {
-                        PushNotification.pushNote("Size of this image > 16.Choose another photo :)", 1)
+                    
+                    self.accountImageView.image = image
+                    self.accountImageView.contentMode = .scaleAspectFill
+                    picker.dismiss(animated: true, completion: {
+                        PushNotification.pushNote("You place a new profile photo!", 3)
                     })
-                        return }
-                 
                 }
-               
-                
             }
             self.present(picker, animated: true, completion: nil)
         }
         actionSheetController.addAction(setPictureAction)
-        
-        
-        // WAY WITHIUT YMPICKER
-        
-        //        let setPictureFromCameraAction = UIAlertAction(title: "Set photo from camera", style: .default) { action -> Void in
-        //            let imageVC = UIImagePickerController()
-        //
-        //            imageVC.sourceType = .camera
-        //
-        //            imageVC.delegate = self
-        //            imageVC.allowsEditing = true
-        //
-        //            self.present(imageVC, animated: true)
-        //        }
-        //        actionSheetController.addAction(setPictureFromCameraAction)
         
         let deletePhotoAction = UIAlertAction(title: "Delete current photo", style: .default) { _ -> Void in
             let defaultImage = UIImage(named: "user-4")
@@ -256,6 +233,4 @@ extension UIView {
          mask.path = path.cgPath
          self.layer.mask = mask
     }
-
 }
-

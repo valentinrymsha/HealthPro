@@ -146,6 +146,8 @@ final class LoginViewController: UIViewController {
     }
 }
 
+// MARK: UITextFieldDelegate
+
 extension LoginViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = #colorLiteral(red: 0.5589081985, green: 0.7141136811, blue: 0.9897997975, alpha: 1)

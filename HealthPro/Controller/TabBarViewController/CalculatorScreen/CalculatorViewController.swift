@@ -48,7 +48,7 @@ final class CalculatorViewController: UIViewController {
     
     
     
-    // MARK: viewDidLoad
+    // MARK: LifeCircle
     
     override func viewDidLoad() {
         super.viewDidLoad()

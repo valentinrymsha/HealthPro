@@ -7,8 +7,7 @@
 
 import UIKit
 
-// swiftlint:disable force_try
-// swiftlint:disable line_length
+
 
 final class StartViewController: UIViewController {
     
@@ -24,7 +23,6 @@ final class StartViewController: UIViewController {
     private var images: [UIImage] {
         Array(1...3).compactMap { UIImage(named: "png\($0)")  }
     }
- 
     private var lastIndex: Int {
         images.count - 1
     }
@@ -41,8 +39,6 @@ final class StartViewController: UIViewController {
         loginButton.alpha = isEnabled ? 1 : 0.5
         loginButton.isUserInteractionEnabled = isEnabled
     }
-    
- 
     
     // MARK: lifeCycle
     
@@ -66,6 +62,7 @@ final class StartViewController: UIViewController {
     
     @IBAction private func getStartedButton(_ sender: Any) {
         guard let registrationVC = registrationStoryBoard.instantiateViewController(identifier: "RegistrationVC") as? SignUpViewController else { return }
+        
         if startPageControl.currentPage == lastIndex {
             present(registrationVC, animated: false, completion: nil)
         }
@@ -74,11 +71,13 @@ final class StartViewController: UIViewController {
     @IBAction private func logInButton(_ sender: Any) {
         guard let loginVC = loginStoryBoard.instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController else { return }
         if startPageControl.currentPage == lastIndex {
+            
             present(loginVC, animated: false, completion: nil)
         }
     }
 
 }
+
 // MARK: - CollectionDataSource
 
 extension StartViewController: UICollectionViewDataSource {
@@ -91,11 +90,14 @@ extension StartViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "startCollectionViewCell", for: indexPath) as! StartCollectionViewCell
+        
         collectionView.tintColor = .white
-        if let image = images[indexPath.row] as? UIImage {
-            let newImage = image.resizeImage(image: image, targetSize: .init(width: 750, height: 750))
-            cell.startImageView.image = newImage
-        }
+        
+        let image = images[indexPath.row]
+        let newImage = image.resizeImage(image: image, targetSize: .init(width: 750, height: 750))
+        cell.startImageView.image = newImage
+        
+        
         return cell
     }
     

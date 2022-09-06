@@ -5,16 +5,13 @@
 //  Created by User on 8/16/22.
 //
 import Alamofire
-import SwiftyJSON
 import AlamofireImage
 import BetterSegmentedControl
+import SwiftyJSON
 import UIKit
 
 
 final class FavoritesViewController: UIViewController {
-
-    // swiftlint:disable force_try
-    // swiftlint:disable force_try
 
     // MARK: Outlets
     
@@ -62,7 +59,7 @@ final class FavoritesViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.recipesTableView.reloadData()
             self.foodsTableView.reloadData()

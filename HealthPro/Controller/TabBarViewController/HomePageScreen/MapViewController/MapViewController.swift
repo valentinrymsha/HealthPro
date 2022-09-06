@@ -38,21 +38,6 @@ final class MapViewController: UIViewController {
     private var currentLocation: CLLocationCoordinate2D?
     private var currentPlace: CLPlacemark?
     
-    // MARK: Lifecircle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setupLocationManager()
-      
-        mapView.delegate = self
-        
-        for shop in shops {
-            mapView.addAnnotation(shop)
-        }
-        
-    }
-    
     private func setupLocationManager() {
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
@@ -76,9 +61,24 @@ final class MapViewController: UIViewController {
         } else {
           locationManager.requestLocation()
         }
+    }
+    
+    // MARK: Lifecircle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
+        setupLocationManager()
+      
+        mapView.delegate = self
+        
+        for shop in shops {
+            mapView.addAnnotation(shop)
+        }
     }
 }
+
+// MARK: CLLocationManagerDelegate
 
 extension MapViewController: CLLocationManagerDelegate {
     
@@ -137,6 +137,8 @@ extension MapViewController: CLLocationManagerDelegate {
            }
 }
 
+// MARK: MKMapViewDelegate
+
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let render = MKPolylineRenderer(overlay: overlay as! MKPolyline)
@@ -155,28 +157,4 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         self.mapView.removeOverlays(mapView.overlays)
     }
-//
-//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//        guard let annotation = annotation as? Shop else { return nil }
-//            // 3
-//            let identifier = "marker"
-//            var view: MKMarkerAnnotationView
-//            // 4
-//            if let dequeuedView = mapView.dequeueReusableAnnotationView(
-//              withIdentifier: identifier) as? MKMarkerAnnotationView {
-//              dequeuedView.annotation = annotation
-//              view = dequeuedView
-//            } else {
-//              // 5
-//              view = MKMarkerAnnotationView(
-//                annotation: annotation,
-//                reuseIdentifier: identifier)
-//              view.canShowCallout = true
-//              view.calloutOffset = CGPoint(x: -5, y: 5)
-//              view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-//            }
-//            return view
-//          }
-
-
 }

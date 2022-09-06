@@ -9,7 +9,7 @@ import UIKit
 import UserNotifications
 
 final class PushNotification: NSObject {
-    let userNotificationCenter = UNUserNotificationCenter.current()
+    private let userNotificationCenter = UNUserNotificationCenter.current()
     
     static func pushNote(_ message: String, _ timeinterval: Double) {
         

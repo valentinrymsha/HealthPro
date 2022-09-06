@@ -80,13 +80,13 @@ class ChangeUsernameViewController: UIViewController {
               changePasswordTextField.text!.count >= 5
         else { return oopsAlert() }
 
-        changePasswordTextField.text!.forEach{
+        changePasswordTextField.text!.forEach {
             if "#@$^&*()?!§±№;%><=+".contains($0) {
                 oopsAlert()
             }
         }
 
-        if let mainVC = mainTabBarStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController {
+        if let _ = mainTabBarStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController {
             
             let user = realm.object(ofType: UserModel.self, forPrimaryKey: UsersData.userDefault.string(forKey: "currentUser")!)
             
@@ -112,11 +112,3 @@ extension ChangeUsernameViewController: UITextFieldDelegate {
 
     }
 }
-
-//extension Dictionary {
-//    mutating func switchKey(fromKey: Key, toKey: Key) {
-//        if let entry = removeValue(forKey: fromKey) {
-//            self[toKey] = entry
-//        }
-//    }
-//}

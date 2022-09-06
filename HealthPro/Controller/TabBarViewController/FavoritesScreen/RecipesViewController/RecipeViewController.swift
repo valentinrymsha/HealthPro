@@ -55,7 +55,7 @@ final class RecipeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         
         self.presentView.layer.cornerRadius = 13
 

@@ -12,10 +12,6 @@ import RealmSwift
 
 final class HomePageViewController: UIViewController {
 
-    
-    // swiftlint:disable force_try
-    // swiftlint:disable force_try
-
     // MARK: Outlets
     
     @IBOutlet private weak var greetingLabel: UILabel!
@@ -99,12 +95,16 @@ final class HomePageViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         stepsCountLabel.text = getPedometrInfo() + " steps"
         distanceCountLabel.text = distance + " meters"
         floorsCountLabel.text = floors + " floors"
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         stepsCountLabel.text = getPedometrInfo() + " steps"
         distanceCountLabel.text = distance + " meters"
         floorsCountLabel.text = floors + " floors"
@@ -125,7 +125,7 @@ final class HomePageViewController: UIViewController {
     
 }
 
-// MARK: Extensions
+// MARK: UICollectionViewDataSource
 
 extension HomePageViewController: UICollectionViewDataSource {
     
@@ -154,6 +154,8 @@ extension HomePageViewController: UICollectionViewDataSource {
     }
     
 }
+
+// MARK: UICollectionViewDelegateFlowLayout
 
 extension HomePageViewController: UICollectionViewDelegateFlowLayout {
     

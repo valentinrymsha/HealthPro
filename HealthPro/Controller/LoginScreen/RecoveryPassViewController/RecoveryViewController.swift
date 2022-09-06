@@ -39,6 +39,16 @@ final class RecoveryViewController: UIViewController {
         
     }
     
+    private func oopsAlert() {
+        let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Try to input data againg!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
+        
+        alert.view.layer.backgroundColor =  #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.7).cgColor
+        alert.view.layer.cornerRadius = 10
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: Lifecirle
     
     override func viewDidLoad() {
@@ -53,7 +63,7 @@ final class RecoveryViewController: UIViewController {
     
     
     @IBAction private func showPasswordButton(_ sender: UIButton) {
-        guard loginTextField.hasText else { return }
+        guard loginTextField.hasText else { return oopsAlert() }
         
         let user = realm.object(ofType: UserModel.self, forPrimaryKey: "\(loginTextField.text!)")
         if let text = user?.userName {
@@ -65,6 +75,8 @@ final class RecoveryViewController: UIViewController {
     }
     
 }
+
+// MARK: UITextFieldDelegate
 
 extension RecoveryViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {

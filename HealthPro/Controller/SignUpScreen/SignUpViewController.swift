@@ -92,7 +92,7 @@ final class SignUpViewController: UIViewController {
         
     }
     
-    // MARK: ViewDidLoad
+    // MARK: LifeCircle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,10 +102,6 @@ final class SignUpViewController: UIViewController {
         submitButton.layer.cornerRadius = 13
         
         userNotificationCenter.delegate = self
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        
     }
     
     // MARK: Actions
@@ -140,9 +136,7 @@ final class SignUpViewController: UIViewController {
                 oopsAlert()
             }
         }
-   
-        // UsersData.userDefault.dictionary(forKey: "\(userNameTextField.text!)")?.keys.first
-        
+           
         if let mainVC = mainTabBarStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController {
             guard userNameTextField.text! != realm.object(ofType: UserModel.self, forPrimaryKey: "\(userNameTextField.text!)")?.userName  else { return duplicateAccountAlert() }
             
@@ -152,11 +146,10 @@ final class SignUpViewController: UIViewController {
                 userRealm.userPassword = passwordTextField.text!
                 userRealm.isLoggined = true
                 
-                realm.beginWrite()
+                try! realm.write {
                 realm.add(userRealm)
-                try! realm.commitWrite()
-                
-//                UsersData.userDefault.setValue(["\(userNameTextField.text!)": "\(passwordTextField.text!)"], forKey: "\(userNameTextField.text!)")
+                }
+
             } else {
                 oopsAlert()
             }
@@ -176,6 +169,8 @@ final class SignUpViewController: UIViewController {
     }
 }
 
+// MARK: UITextFieldDelegate
+
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = #colorLiteral(red: 0.5589081985, green: 0.7141136811, blue: 0.9897997975, alpha: 1)
@@ -186,6 +181,8 @@ extension SignUpViewController: UITextFieldDelegate {
 
     }
 }
+
+// MARK: UNUserNotificationCenterDelegate
 
 extension SignUpViewController: UNUserNotificationCenterDelegate {
     
