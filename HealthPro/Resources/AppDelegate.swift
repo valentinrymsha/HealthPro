@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         
-        var config = Realm.Configuration(schemaVersion: 4)
+        var config = Realm.Configuration(schemaVersion: 5)
         config.deleteRealmIfMigrationNeeded = true
         Realm.Configuration.defaultConfiguration = config
                
