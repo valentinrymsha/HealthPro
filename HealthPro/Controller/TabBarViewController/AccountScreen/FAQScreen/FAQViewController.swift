@@ -51,6 +51,7 @@ final class FAQViewController: UIViewController {
         faqTableView.delegate = self
         faqTableView.dataSource = self
         faqTableView.rowHeight = UITableView.automaticDimension
+        faqTableView.layer.cornerRadius = 13
     }
 
     

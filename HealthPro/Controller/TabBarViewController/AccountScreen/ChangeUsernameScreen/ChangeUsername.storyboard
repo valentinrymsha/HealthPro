@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,7 +28,7 @@
                                     <constraint firstAttribute="height" constant="33" id="GQ2-1L-DOy"/>
                                 </constraints>
                             </imageView>
-                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NL6-NZ-hS2">
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NL6-NZ-hS2" customClass="ChangeUsernameBackView" customModule="HealthPro" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbI-ZI-JHY">
@@ -39,7 +38,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.56862745100000001" green="0.78151768450000003" blue="0.53913027049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.63137254899999995" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="2qe-Hr-LSu"/>
                                     <constraint firstItem="nbI-ZI-JHY" firstAttribute="centerY" secondItem="NL6-NZ-hS2" secondAttribute="centerY" id="Y95-So-KEM"/>
@@ -54,7 +53,7 @@
                             </label>
                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2h-p1-QcU">
                                 <rect key="frame" x="37.5" y="489" width="300" height="40"/>
-                                <color key="backgroundColor" red="0.56862745100000001" green="0.78151768450000003" blue="0.53913027049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.27450980390000002" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="SwF-Xu-rsT"/>
                                     <constraint firstAttribute="width" constant="300" id="hc8-AM-ztk"/>
@@ -68,7 +67,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="187-ej-hIC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.73333333329999995" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="NL6-NZ-hS2" firstAttribute="leading" secondItem="187-ej-hIC" secondAttribute="leading" id="6YR-Z7-URF"/>
                             <constraint firstItem="wwx-ne-g8y" firstAttribute="leading" secondItem="187-ej-hIC" secondAttribute="leading" constant="20" id="91e-Cf-5yW"/>
@@ -87,6 +86,7 @@
                     </view>
                     <connections>
                         <outlet property="changePasswordTextField" destination="zra-DX-X4G" id="Kmv-9h-zXf"/>
+                        <outlet property="submitButton" destination="y2h-p1-QcU" id="D4G-4a-ZC6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9P-FS-i5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -96,8 +96,5 @@
     </scenes>
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

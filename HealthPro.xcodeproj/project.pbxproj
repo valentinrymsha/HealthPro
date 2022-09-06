@@ -49,12 +49,30 @@
 		CEA2B3C028ABF2280027D3D4 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA2B3BF28ABF2280027D3D4 /* RecipesTableViewCell.swift */; };
 		CEAFFA1628AE7FDA00011E65 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFFA1528AE7FDA00011E65 /* Manager.swift */; };
 		CEB9562B28AD2AFC0021D261 /* UsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9562A28AD2AFC0021D261 /* UsersData.swift */; };
+		CED9406828C7DBFC0044C1DC /* StepWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9406728C7DBFC0044C1DC /* StepWidgetModel.swift */; };
+		CED9409B28C7FBF90044C1DC /* FaqBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9409A28C7FBF90044C1DC /* FaqBackView.swift */; };
+		CED9409E28C7FCDC0044C1DC /* ChangeUsernameBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9409D28C7FCDC0044C1DC /* ChangeUsernameBackView.swift */; };
+		CED940A128C803060044C1DC /* FavoritesBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED940A028C803060044C1DC /* FavoritesBackView.swift */; };
+		CED940A428C8043F0044C1DC /* CalculatorBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED940A328C8043F0044C1DC /* CalculatorBackView.swift */; };
 		CEDCAF8E28C0D439005D8324 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCAF8D28C0D439005D8324 /* PushNotification.swift */; };
 		CEDCAF9228C0DA03005D8324 /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDCAF9128C0DA03005D8324 /* FAQ.storyboard */; };
 		CEDCAF9528C0DA11005D8324 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCAF9428C0DA11005D8324 /* FAQViewController.swift */; };
 		CEDCAF9828C0E028005D8324 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCAF9728C0E028005D8324 /* FAQTableViewCell.swift */; };
 		CEFD6A7C28C3D72E00172388 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD6A7B28C3D72E00172388 /* UserModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CED9403328C7B9170044C1DC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A204F500672533D41DC8477 /* Pods-HealthPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthPro.debug.xcconfig"; path = "Target Support Files/Pods-HealthPro/Pods-HealthPro.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +120,13 @@
 		CEA2B3BF28ABF2280027D3D4 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		CEAFFA1528AE7FDA00011E65 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		CEB9562A28AD2AFC0021D261 /* UsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersData.swift; sourceTree = "<group>"; };
+		CED9402328C7B9160044C1DC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		CED9402528C7B9160044C1DC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		CED9406728C7DBFC0044C1DC /* StepWidgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepWidgetModel.swift; sourceTree = "<group>"; };
+		CED9409A28C7FBF90044C1DC /* FaqBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqBackView.swift; sourceTree = "<group>"; };
+		CED9409D28C7FCDC0044C1DC /* ChangeUsernameBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameBackView.swift; sourceTree = "<group>"; };
+		CED940A028C803060044C1DC /* FavoritesBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesBackView.swift; sourceTree = "<group>"; };
+		CED940A328C8043F0044C1DC /* CalculatorBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBackView.swift; sourceTree = "<group>"; };
 		CEDCAF8D28C0D439005D8324 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
 		CEDCAF9128C0DA03005D8324 /* FAQ.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
 		CEDCAF9428C0DA11005D8324 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */,
+				CED9402328C7B9160044C1DC /* WidgetKit.framework */,
+				CED9402528C7B9160044C1DC /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -192,6 +219,7 @@
 				CE90703228C23CF900361D48 /* Shop.swift */,
 				CEB9562A28AD2AFC0021D261 /* UsersData.swift */,
 				CEFD6A7B28C3D72E00172388 /* UserModel.swift */,
+				CED9406728C7DBFC0044C1DC /* StepWidgetModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,6 +233,7 @@
 				CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */,
 				CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */,
 				CEA2B3BF28ABF2280027D3D4 /* RecipesTableViewCell.swift */,
+				CED940A028C803060044C1DC /* FavoritesBackView.swift */,
 			);
 			path = FavoritesScreen;
 			sourceTree = "<group>";
@@ -223,6 +252,7 @@
 			children = (
 				CE262BBB28BF5F16005B55DF /* ChangeUsername.storyboard */,
 				CE262BBE28BF5F3C005B55DF /* ChangeUsernameViewController.swift */,
+				CED9409D28C7FCDC0044C1DC /* ChangeUsernameBackView.swift */,
 			);
 			path = ChangeUsernameScreen;
 			sourceTree = "<group>";
@@ -275,6 +305,7 @@
 				CE367D7528B6529900B615FA /* Calculator.storyboard */,
 				CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */,
 				CE77F1C128B506D200F29069 /* BMRScreen */,
+				CED940A328C8043F0044C1DC /* CalculatorBackView.swift */,
 			);
 			path = CalculatorScreen;
 			sourceTree = "<group>";
@@ -340,6 +371,7 @@
 				CEDCAF9128C0DA03005D8324 /* FAQ.storyboard */,
 				CEDCAF9428C0DA11005D8324 /* FAQViewController.swift */,
 				CEDCAF9728C0E028005D8324 /* FAQTableViewCell.swift */,
+				CED9409A28C7FBF90044C1DC /* FaqBackView.swift */,
 			);
 			path = FAQScreen;
 			sourceTree = "<group>";
@@ -376,6 +408,7 @@
 				CE8A6B2D289ACF41002F1DD7 /* Resources */,
 				CEE2F98E28A3A94F00B2B426 /* Run Script */,
 				848F5216DE98D3434064212A /* [CP] Embed Pods Frameworks */,
+				CED9403328C7B9170044C1DC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -513,6 +546,7 @@
 				CEDCAF8E28C0D439005D8324 /* PushNotification.swift in Sources */,
 				CE759121289BD39B00F7098A /* StartViewController.swift in Sources */,
 				CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */,
+				CED9406828C7DBFC0044C1DC /* StepWidgetModel.swift in Sources */,
 				CE18054328B6E4A600BAC5C0 /* HomePageViewController.swift in Sources */,
 				CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */,
 				CE1EF96F28BBF7E6007EB20F /* MapViewController.swift in Sources */,
@@ -523,8 +557,11 @@
 				CE5650C628A0E6A0001E1668 /* StartCollectionViewCell.swift in Sources */,
 				CE367D6328B63D2600B615FA /* RecoveryViewController.swift in Sources */,
 				CE262BBF28BF5F3C005B55DF /* ChangeUsernameViewController.swift in Sources */,
+				CED9409E28C7FCDC0044C1DC /* ChangeUsernameBackView.swift in Sources */,
 				CEA2B3C028ABF2280027D3D4 /* RecipesTableViewCell.swift in Sources */,
 				CE8A6B5A289ADC11002F1DD7 /* LoginViewController.swift in Sources */,
+				CED940A128C803060044C1DC /* FavoritesBackView.swift in Sources */,
+				CED9409B28C7FBF90044C1DC /* FaqBackView.swift in Sources */,
 				CE4A503528C6742E00332F77 /* CustomBackView.swift in Sources */,
 				CE18054728B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift in Sources */,
 				CEAFFA1628AE7FDA00011E65 /* Manager.swift in Sources */,
@@ -536,6 +573,7 @@
 				CE09819528B91C2800AFAFBF /* Protocols.swift in Sources */,
 				CE77F1BD28B4F55300F29069 /* CalculatorViewController.swift in Sources */,
 				CEDCAF9828C0E028005D8324 /* FAQTableViewCell.swift in Sources */,
+				CED940A428C8043F0044C1DC /* CalculatorBackView.swift in Sources */,
 				CEB9562B28AD2AFC0021D261 /* UsersData.swift in Sources */,
 				CE90703328C23CF900361D48 /* Shop.swift in Sources */,
 				CE8A6B35289ACF41002F1DD7 /* SceneDelegate.swift in Sources */,
@@ -685,6 +723,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0A204F500672533D41DC8477 /* Pods-HealthPro.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -706,6 +745,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C673CCB482C24BEEEE58DCC8 /* Pods-HealthPro.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

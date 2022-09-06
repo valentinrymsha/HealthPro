@@ -22,11 +22,24 @@ final class CalculatorViewController: UIViewController {
     
     @IBOutlet private weak var calculateButton: UIButton!
     
+    @IBOutlet weak var ageStepperBackView: UIView!
+    @IBOutlet weak var weightStepperBackView: UIView!
+    @IBOutlet weak var heightSliderBackView: UIView!
+    @IBOutlet weak var sexSwitchBackView: UIView!
+    
     // MARK: Properties
     
     private var sex = String()
     
     private let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    private func setBackViews() {
+        ageStepperBackView.layer.cornerRadius = 13
+        weightStepperBackView.layer.cornerRadius = 13
+        heightSliderBackView.layer.cornerRadius = 13
+        sexSwitchBackView.layer.cornerRadius = 13
+        
+    }
     
     private func calculateBRMMale() -> Double {
         
@@ -56,6 +69,8 @@ final class CalculatorViewController: UIViewController {
         ageStepper.value = 25
         weightStepper.value = 60
         heightSlider.value = 1.75
+        
+        setBackViews()
         
         sex = "Female"
         

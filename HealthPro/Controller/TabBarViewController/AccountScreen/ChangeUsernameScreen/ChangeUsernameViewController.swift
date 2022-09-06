@@ -15,6 +15,7 @@ class ChangeUsernameViewController: UIViewController {
     // MARK: Outlets
     
     @IBOutlet private  weak var changePasswordTextField: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
     
     // MARK: Properties
     
@@ -70,6 +71,8 @@ class ChangeUsernameViewController: UIViewController {
         changePasswordTextField.layer.borderColor = #colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)
         changePasswordTextField.layer.borderWidth = 0.5
         changePasswordTextField.layer.cornerRadius = 5
+        
+        submitButton.layer.cornerRadius = 13
     }
     
     // MARK: Actions

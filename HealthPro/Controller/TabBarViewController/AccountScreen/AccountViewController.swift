@@ -37,7 +37,7 @@ final class AccountViewController: UIViewController {
     private func buttonConfig(_ button: UIButton) {
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         button.layer.cornerRadius = 10
-        button.backgroundColor = #colorLiteral(red: 0.6765247583, green: 0.8675484657, blue: 0.7702565789, alpha: 1).withAlphaComponent(1)
+        button.backgroundColor = #colorLiteral(red: 0.3326578438, green: 0.6460694075, blue: 0.6575706601, alpha: 1).withAlphaComponent(0.8)
         button.isUserInteractionEnabled = true
         button.isEnabled = true
     }
@@ -188,7 +188,7 @@ final class AccountViewController: UIViewController {
         
         let alert = UIAlertController(title: "Are you sure?", message: nil, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { _ in
             
             let user = self.realm.object(ofType: UserModel.self, forPrimaryKey: UsersData.userDefault.string(forKey: "currentUser")! as String)
             
@@ -201,7 +201,10 @@ final class AccountViewController: UIViewController {
             })
             
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {_ in
+            self.dismiss(animated: true)
+        }))
 
         present(alert, animated: true)
     }

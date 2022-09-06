@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,15 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iot-xV-fex" customClass="FaqBackView" customModule="HealthPro" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="35"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.89019607840000003" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="FAQ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvg-TB-vnC">
-                                <rect key="frame" x="187.5" y="59" width="39.5" height="20"/>
+                                <rect key="frame" x="187.5" y="54" width="39.5" height="25"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xMW-pX-5ns">
+                            <tableView clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xMW-pX-5ns">
                                 <rect key="frame" x="20" y="87" width="374" height="775"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.73333333329999995" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="faqCell" rowHeight="80" id="HPh-cg-Iud" customClass="FAQTableViewCell" customModule="HealthPro" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="80"/>
@@ -90,12 +94,16 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Eav-hQ-5mt"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.73333333329999995" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Fvg-TB-vnC" firstAttribute="top" secondItem="Eav-hQ-5mt" secondAttribute="top" constant="15" id="0nc-ac-ECQ"/>
+                            <constraint firstItem="Fvg-TB-vnC" firstAttribute="top" secondItem="Eav-hQ-5mt" secondAttribute="top" constant="10" id="0nc-ac-ECQ"/>
                             <constraint firstItem="Fvg-TB-vnC" firstAttribute="centerX" secondItem="kIV-Og-qzc" secondAttribute="centerX" id="6fF-Zp-0bH"/>
+                            <constraint firstItem="iot-xV-fex" firstAttribute="top" secondItem="Eav-hQ-5mt" secondAttribute="top" id="87F-aY-ptp"/>
+                            <constraint firstItem="xMW-pX-5ns" firstAttribute="top" secondItem="iot-xV-fex" secondAttribute="bottom" constant="8" symbolic="YES" id="8Ai-lM-688"/>
                             <constraint firstItem="xMW-pX-5ns" firstAttribute="height" secondItem="kIV-Og-qzc" secondAttribute="height" multiplier="0.864955" id="AbG-e5-FxT"/>
                             <constraint firstItem="xMW-pX-5ns" firstAttribute="top" secondItem="Fvg-TB-vnC" secondAttribute="bottom" constant="8" symbolic="YES" id="Byd-dh-Wap"/>
+                            <constraint firstItem="iot-xV-fex" firstAttribute="leading" secondItem="Eav-hQ-5mt" secondAttribute="leading" id="C5F-aa-Sdm"/>
+                            <constraint firstItem="Eav-hQ-5mt" firstAttribute="trailing" secondItem="iot-xV-fex" secondAttribute="trailing" id="DWH-fi-K4l"/>
                             <constraint firstItem="xMW-pX-5ns" firstAttribute="width" secondItem="kIV-Og-qzc" secondAttribute="width" multiplier="0.903382" id="SeZ-OQ-VZe"/>
                             <constraint firstItem="Eav-hQ-5mt" firstAttribute="bottom" secondItem="xMW-pX-5ns" secondAttribute="bottom" id="l1E-Ds-t8e"/>
                             <constraint firstItem="xMW-pX-5ns" firstAttribute="leading" secondItem="Eav-hQ-5mt" secondAttribute="leading" constant="20" id="tEJ-3m-ruc"/>
