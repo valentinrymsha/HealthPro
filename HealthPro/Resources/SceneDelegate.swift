@@ -6,28 +6,50 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    // swiftlint:disable force_try
+    
     var window: UIWindow?
-
+    private let realm = try! Realm()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let winScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: winScene)
-        let isUserLoggedIn: Bool = UsersData.userDefault.bool(forKey: "isLoggedIn")
         
-        if isUserLoggedIn {
-            let mainStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
-            let tabBarVC = mainStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController ?? UIViewController()
-            window!.rootViewController = tabBarVC
-            window!.makeKeyAndVisible()
+        let user = realm.object(ofType: UserModel.self, forPrimaryKey: UsersData.userDefault.string(forKey: "currentUser"))
+        
+        
+           
+        if user?.isLoggined == true {
+                let mainStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
+                let tabBarVC = mainStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController ?? UIViewController()
+                window!.rootViewController = tabBarVC
+                window!.makeKeyAndVisible()
         } else {
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let startVC = mainStoryboard.instantiateViewController(withIdentifier: "StartVC") as? StartViewController ?? UIViewController()
-            window!.rootViewController = startVC
-            window!.makeKeyAndVisible()
-        }
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let startVC = mainStoryboard.instantiateViewController(withIdentifier: "StartVC") as? StartViewController ?? UIViewController()
+                window!.rootViewController = startVC
+                window!.makeKeyAndVisible()
+            }
     }
+//
+//        let isUserLoggedIn: Bool = ((user?.isLoggined) != nil)
+//
+//        if isUserLoggedIn {
+//            let mainStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
+//            let tabBarVC = mainStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController ?? UIViewController()
+//            window!.rootViewController = tabBarVC
+//            window!.makeKeyAndVisible()
+//        } else {
+//            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let startVC = mainStoryboard.instantiateViewController(withIdentifier: "StartVC") as? StartViewController ?? UIViewController()
+//            window!.rootViewController = startVC
+//            window!.makeKeyAndVisible()
+//        }
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

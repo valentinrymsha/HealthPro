@@ -15,5 +15,7 @@ pod 'SwiftLint'
 pod 'BetterSegmentedControl', '~> 1.3'
 pod 'IQKeyboardManagerSwift'
 pod 'YPImagePicker'
+pod 'RealmSwift','10.25.1'
+pod 'Realm','10.25.1'
 
 end

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DEd-5h-j3C">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SettingsVC-->
+        <scene sceneID="kTh-Wc-gbA">
+            <objects>
+                <viewController storyboardIdentifier="SettingsVC" title="SettingsVC" id="DEd-5h-j3C" customClass="AccountViewController" customModule="HealthPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="edx-cS-0Cc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back3" translatesAutoresizingMaskIntoConstraints="NO" id="YTv-Q3-wGS">
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                            </imageView>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Idp-pF-22i" customClass="CustomBackView" customModule="HealthPro" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="43.999999999999986" width="375" height="207.66666666666663"/>
+                                <color key="backgroundColor" red="0.67843137249999996" green="0.86754846569999999" blue="0.77025657889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-4" highlightedImage="defaultUserImage" translatesAutoresizingMaskIntoConstraints="NO" id="Et5-aA-eTY">
+                                <rect key="frame" x="122.66666666666669" y="87" width="130" height="130"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="QOh-oc-bbD"/>
+                                    <constraint firstAttribute="width" constant="130" id="lg0-9b-ll5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pq7-iC-ZB5">
+                                <rect key="frame" x="112.33333333333333" y="224.66666666666666" width="150.33333333333337" height="20"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELP-gX-d75">
+                                <rect key="frame" x="131" y="59" width="113" height="20"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVh-Gz-bem">
+                                <rect key="frame" x="0.0" y="254.66666666666666" width="375" height="464.33333333333337"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afM-qX-Jjk">
+                                        <rect key="frame" x="3" y="0.0" width="369" height="55.666666666666664"/>
+                                        <color key="backgroundColor" red="0.67843137249999996" green="0.86754846569999999" blue="0.77025657889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
+                                        <state key="normal" title="        Change password" image="userNameSet">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                            <color key="titleShadowColor" red="0.3728069799" green="0.47150823800000002" blue="0.51233343909999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTappedChangeUserPasswordButton:" destination="DEd-5h-j3C" eventType="touchUpInside" id="wDR-xJ-RDM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vi-qT-l8S">
+                                        <rect key="frame" x="3" y="58.666666666666657" width="369" height="55.666666666666657"/>
+                                        <color key="backgroundColor" red="0.67652475830000003" green="0.86754846569999999" blue="0.77025657889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
+                                        <state key="normal" title="        FAQ" image="faq">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTappedFAQButton:" destination="DEd-5h-j3C" eventType="touchUpInside" id="eHr-G9-1Q7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdc-xN-LX0">
+                                        <rect key="frame" x="3" y="117.33333333333336" width="369" height="55.666666666666671"/>
+                                        <color key="backgroundColor" red="0.67652475830000003" green="0.86754846569999999" blue="0.77025657889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
+                                        <state key="normal" title="        Logout" image="logout-3">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTappedLogoutButton:" destination="DEd-5h-j3C" eventType="touchUpInside" id="C62-Tq-ORe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvs-am-T0b">
+                                        <rect key="frame" x="3" y="175.66666666666666" width="369" height="59.666666666666657"/>
+                                        <color key="backgroundColor" red="0.67652475830000003" green="0.86754846569999999" blue="0.77025657889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
+                                        <state key="normal" title="        Delete account" image="unfollow">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTappedDeleteAccountButton:" destination="DEd-5h-j3C" eventType="touchUpInside" id="Kf3-Ei-J89"/>
+                                            <action selector="didTappedLogoutButton:" destination="DEd-5h-j3C" eventType="touchUpInside" id="VDr-88-jaK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="afM-qX-Jjk" firstAttribute="height" secondItem="UVh-Gz-bem" secondAttribute="height" multiplier="0.12" id="CeE-Km-fZq"/>
+                                    <constraint firstAttribute="trailing" secondItem="9vi-qT-l8S" secondAttribute="trailing" constant="3" id="Jkv-z3-Ti5"/>
+                                    <constraint firstItem="9vi-qT-l8S" firstAttribute="leading" secondItem="UVh-Gz-bem" secondAttribute="leading" constant="3" id="Jq9-3U-2WU"/>
+                                    <constraint firstAttribute="trailing" secondItem="afM-qX-Jjk" secondAttribute="trailing" constant="3" id="Nj2-l9-L4W"/>
+                                    <constraint firstItem="rdc-xN-LX0" firstAttribute="leading" secondItem="UVh-Gz-bem" secondAttribute="leading" constant="3" id="Tlo-tz-AE1"/>
+                                    <constraint firstItem="rdc-xN-LX0" firstAttribute="height" secondItem="UVh-Gz-bem" secondAttribute="height" multiplier="0.12" id="XwB-PX-Srx"/>
+                                    <constraint firstItem="zvs-am-T0b" firstAttribute="top" secondItem="rdc-xN-LX0" secondAttribute="bottom" constant="2.5" id="ZaT-Kw-f7Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="rdc-xN-LX0" secondAttribute="trailing" constant="3" id="dDu-lL-UW2"/>
+                                    <constraint firstItem="9vi-qT-l8S" firstAttribute="centerX" secondItem="UVh-Gz-bem" secondAttribute="centerX" id="dbG-U6-SjI"/>
+                                    <constraint firstItem="rdc-xN-LX0" firstAttribute="top" secondItem="9vi-qT-l8S" secondAttribute="bottom" constant="3" id="fO4-Y5-B2w"/>
+                                    <constraint firstItem="afM-qX-Jjk" firstAttribute="leading" secondItem="UVh-Gz-bem" secondAttribute="leading" constant="3" id="lXc-b0-DB9"/>
+                                    <constraint firstItem="9vi-qT-l8S" firstAttribute="height" secondItem="UVh-Gz-bem" secondAttribute="height" multiplier="0.12" id="mOV-c2-GlT"/>
+                                    <constraint firstItem="afM-qX-Jjk" firstAttribute="top" secondItem="UVh-Gz-bem" secondAttribute="top" id="qoy-DR-nwS"/>
+                                    <constraint firstItem="9vi-qT-l8S" firstAttribute="top" secondItem="afM-qX-Jjk" secondAttribute="bottom" constant="3" id="v4U-jW-kbs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rqg-JR-1UX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Rqg-JR-1UX" firstAttribute="bottom" secondItem="YTv-Q3-wGS" secondAttribute="bottom" id="1W7-og-9UC"/>
+                            <constraint firstAttribute="trailing" secondItem="Idp-pF-22i" secondAttribute="trailing" id="1Zi-uM-L62"/>
+                            <constraint firstItem="ELP-gX-d75" firstAttribute="width" secondItem="edx-cS-0Cc" secondAttribute="width" multiplier="0.301932" id="3EO-Jo-MH0"/>
+                            <constraint firstItem="Pq7-iC-ZB5" firstAttribute="centerX" secondItem="edx-cS-0Cc" secondAttribute="centerX" id="4So-cx-Et2"/>
+                            <constraint firstItem="YTv-Q3-wGS" firstAttribute="top" secondItem="Rqg-JR-1UX" secondAttribute="top" id="7aI-zT-jEn"/>
+                            <constraint firstItem="Pq7-iC-ZB5" firstAttribute="top" secondItem="Et5-aA-eTY" secondAttribute="bottom" constant="7.5" id="PC1-6W-cK4"/>
+                            <constraint firstItem="Rqg-JR-1UX" firstAttribute="trailing" secondItem="YTv-Q3-wGS" secondAttribute="trailing" id="RXB-C7-VOe"/>
+                            <constraint firstItem="UVh-Gz-bem" firstAttribute="leading" secondItem="Rqg-JR-1UX" secondAttribute="leading" id="Ume-Tg-ufm"/>
+                            <constraint firstItem="zvs-am-T0b" firstAttribute="leading" secondItem="Rqg-JR-1UX" secondAttribute="leading" constant="3" id="UwJ-Yx-dz6"/>
+                            <constraint firstItem="zvs-am-T0b" firstAttribute="height" secondItem="edx-cS-0Cc" secondAttribute="height" multiplier="0.0736607" id="Yep-dt-uzq"/>
+                            <constraint firstItem="YTv-Q3-wGS" firstAttribute="leading" secondItem="edx-cS-0Cc" secondAttribute="leading" id="Yo8-Gc-MZb"/>
+                            <constraint firstItem="Pq7-iC-ZB5" firstAttribute="width" secondItem="edx-cS-0Cc" secondAttribute="width" multiplier="0.400966" id="Zv0-Bq-5Rk"/>
+                            <constraint firstItem="ELP-gX-d75" firstAttribute="centerX" secondItem="edx-cS-0Cc" secondAttribute="centerX" id="b3s-rM-WLH"/>
+                            <constraint firstItem="Idp-pF-22i" firstAttribute="leading" secondItem="Rqg-JR-1UX" secondAttribute="leading" id="d6A-GF-ohi"/>
+                            <constraint firstItem="Rqg-JR-1UX" firstAttribute="trailing" secondItem="zvs-am-T0b" secondAttribute="trailing" constant="3" id="h6C-sG-HNI"/>
+                            <constraint firstItem="ELP-gX-d75" firstAttribute="top" secondItem="Rqg-JR-1UX" secondAttribute="top" constant="15" id="jy1-ur-VIn"/>
+                            <constraint firstItem="Et5-aA-eTY" firstAttribute="centerX" secondItem="edx-cS-0Cc" secondAttribute="centerX" id="m4K-bm-M6d"/>
+                            <constraint firstItem="UVh-Gz-bem" firstAttribute="top" secondItem="Pq7-iC-ZB5" secondAttribute="bottom" constant="10" id="mQx-Sg-tU9"/>
+                            <constraint firstItem="Idp-pF-22i" firstAttribute="top" secondItem="Rqg-JR-1UX" secondAttribute="top" id="r9s-Ul-qrX"/>
+                            <constraint firstItem="Rqg-JR-1UX" firstAttribute="trailing" secondItem="UVh-Gz-bem" secondAttribute="trailing" id="rqK-2J-RGX"/>
+                            <constraint firstItem="Rqg-JR-1UX" firstAttribute="bottom" secondItem="UVh-Gz-bem" secondAttribute="bottom" constant="10" id="sSQ-Le-YGQ"/>
+                            <constraint firstItem="Et5-aA-eTY" firstAttribute="top" secondItem="ELP-gX-d75" secondAttribute="bottom" constant="8" symbolic="YES" id="tBO-Aa-SAB"/>
+                            <constraint firstItem="UVh-Gz-bem" firstAttribute="top" secondItem="Idp-pF-22i" secondAttribute="bottom" constant="3" id="tP2-AY-sgE"/>
+                            <constraint firstItem="UVh-Gz-bem" firstAttribute="centerX" secondItem="edx-cS-0Cc" secondAttribute="centerX" id="xed-pE-Otu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="settings" landscapeImage="settings" id="9NQ-av-y5U"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="accountImageView" destination="Et5-aA-eTY" id="Vbd-2c-w1f"/>
+                        <outlet property="backHeaderView" destination="Idp-pF-22i" id="H9X-9g-iVW"/>
+                        <outlet property="changeUserPasswordButton" destination="afM-qX-Jjk" id="UUC-2W-Qkx"/>
+                        <outlet property="deleteAccountButton" destination="zvs-am-T0b" id="soo-hn-lCP"/>
+                        <outlet property="faqButton" destination="9vi-qT-l8S" id="CsF-J5-nKX"/>
+                        <outlet property="logoutButton" destination="rdc-xN-LX0" id="pUR-yj-gMA"/>
+                        <outlet property="userNameLabel" destination="Pq7-iC-ZB5" id="T1M-rt-AB7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0qV-JN-RIx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30.434782608695656" y="79.017857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back3" width="612" height="612"/>
+        <image name="defaultUserImage" width="512" height="512"/>
+        <image name="faq" width="24" height="24"/>
+        <image name="logout-3" width="24" height="24"/>
+        <image name="settings" width="32" height="32"/>
+        <image name="unfollow" width="24" height="24"/>
+        <image name="user-4" width="64" height="64"/>
+        <image name="userNameSet" width="24" height="24"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

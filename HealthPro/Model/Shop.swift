@@ -11,12 +11,12 @@ import UIKit
 
 final class Shop: NSObject, MKAnnotation {
     
-    var name: String
+    var title: String?
     
     var coordinate: CLLocationCoordinate2D
     
-    init(_ name: String, coordinate: CLLocationCoordinate2D) {
-        self.name = name
+    init(_ title: String, coordinate: CLLocationCoordinate2D) {
+        self.title = title
         
         self.coordinate = coordinate
     }

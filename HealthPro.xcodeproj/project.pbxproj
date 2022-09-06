@@ -27,8 +27,10 @@
 		CE367D7B28B653D500B615FA /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D7A28B653D500B615FA /* MainTabBar.storyboard */; };
 		CE367D8028B655DA00B615FA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D7F28B655DA00B615FA /* Login.storyboard */; };
 		CE367D8428B6576D00B615FA /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D8328B6576D00B615FA /* Recipe.storyboard */; };
+		CE4A502F28C6406200332F77 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4A502E28C6406200332F77 /* Registration.storyboard */; };
+		CE4A503528C6742E00332F77 /* CustomBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A503428C6742E00332F77 /* CustomBackView.swift */; };
+		CE4A503828C674A700332F77 /* CustomHomeBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A503728C674A700332F77 /* CustomHomeBackView.swift */; };
 		CE5650C628A0E6A0001E1668 /* StartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */; };
-		CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5650C928A118D5001E1668 /* Registration.storyboard */; };
 		CE5650D128A11CBE001E1668 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650D028A11CBE001E1668 /* MainTabBarViewController.swift */; };
 		CE759121289BD39B00F7098A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE759120289BD39B00F7098A /* StartViewController.swift */; };
 		CE77F1BD28B4F55300F29069 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */; };
@@ -50,6 +52,7 @@
 		CEDCAF9228C0DA03005D8324 /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDCAF9128C0DA03005D8324 /* FAQ.storyboard */; };
 		CEDCAF9528C0DA11005D8324 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCAF9428C0DA11005D8324 /* FAQViewController.swift */; };
 		CEDCAF9828C0E028005D8324 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCAF9728C0E028005D8324 /* FAQTableViewCell.swift */; };
+		CEFD6A7C28C3D72E00172388 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD6A7B28C3D72E00172388 /* UserModel.swift */; };
 		E773A7C3EE0C34D9266F2839 /* Pods_HealthPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +79,10 @@
 		CE367D7A28B653D500B615FA /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		CE367D7F28B655DA00B615FA /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		CE367D8328B6576D00B615FA /* Recipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recipe.storyboard; sourceTree = "<group>"; };
+		CE4A502E28C6406200332F77 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		CE4A503428C6742E00332F77 /* CustomBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackView.swift; sourceTree = "<group>"; };
+		CE4A503728C674A700332F77 /* CustomHomeBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHomeBackView.swift; sourceTree = "<group>"; };
 		CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCollectionViewCell.swift; sourceTree = "<group>"; };
-		CE5650C928A118D5001E1668 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Registration.storyboard; path = /Users/user/Documents/HealthPro/HealthPro/Controller/LoginingRegistrationStoryboard/Registration.storyboard; sourceTree = "<absolute>"; };
 		CE5650D028A11CBE001E1668 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		CE759120289BD39B00F7098A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +106,7 @@
 		CEDCAF9128C0DA03005D8324 /* FAQ.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
 		CEDCAF9428C0DA11005D8324 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		CEDCAF9728C0E028005D8324 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
+		CEFD6A7B28C3D72E00172388 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,6 +146,7 @@
 				CE262BBA28BF5EFF005B55DF /* ChangeUsernameScreen */,
 				CE00FC5528BD2F0D007BC9EC /* Account.storyboard */,
 				CE00FC5828BD2F2A007BC9EC /* AccountViewController.swift */,
+				CE4A503428C6742E00332F77 /* CustomBackView.swift */,
 			);
 			path = AccountScreen;
 			sourceTree = "<group>";
@@ -156,10 +163,11 @@
 		CE18053628B6E47D00BAC5C0 /* HomePageScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CE1EF96A28BBF7AC007EB20F /* AllDataViewController */,
+				CE1EF96A28BBF7AC007EB20F /* MapViewController */,
 				CE18053728B6E49500BAC5C0 /* Home.storyboard */,
 				CE18054228B6E4A600BAC5C0 /* HomePageViewController.swift */,
 				CE18054628B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift */,
+				CE4A503728C674A700332F77 /* CustomHomeBackView.swift */,
 			);
 			path = HomePageScreen;
 			sourceTree = "<group>";
@@ -179,10 +187,11 @@
 		CE18464B28AB9AEE003BCD42 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEB9562A28AD2AFC0021D261 /* UsersData.swift */,
 				CEAFFA1528AE7FDA00011E65 /* Manager.swift */,
 				CEDCAF8D28C0D439005D8324 /* PushNotification.swift */,
 				CE90703228C23CF900361D48 /* Shop.swift */,
+				CEB9562A28AD2AFC0021D261 /* UsersData.swift */,
+				CEFD6A7B28C3D72E00172388 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,13 +209,13 @@
 			path = FavoritesScreen;
 			sourceTree = "<group>";
 		};
-		CE1EF96A28BBF7AC007EB20F /* AllDataViewController */ = {
+		CE1EF96A28BBF7AC007EB20F /* MapViewController */ = {
 			isa = PBXGroup;
 			children = (
 				CE1EF96B28BBF7CD007EB20F /* Map.storyboard */,
 				CE1EF96E28BBF7E6007EB20F /* MapViewController.swift */,
 			);
-			path = AllDataViewController;
+			path = MapViewController;
 			sourceTree = "<group>";
 		};
 		CE262BBA28BF5EFF005B55DF /* ChangeUsernameScreen */ = {
@@ -226,7 +235,7 @@
 			path = RecoveryPassViewController;
 			sourceTree = "<group>";
 		};
-		CE367D6828B647CE00B615FA /* Controllerr */ = {
+		CE367D6828B647CE00B615FA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				CE367D6928B647F700B615FA /* MainScreen */,
@@ -234,7 +243,7 @@
 				CEF6FB4728AD41C50057D530 /* LoginScreen */,
 				CE367D6C28B648D100B615FA /* TabBarViewController */,
 			);
-			path = Controllerr;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		CE367D6928B647F700B615FA /* MainScreen */ = {
@@ -310,8 +319,7 @@
 			children = (
 				CE18464928AB9A2D003BCD42 /* Resources */,
 				CE18464B28AB9AEE003BCD42 /* Model */,
-				CE8B457B289BD5B800003DEF /* View */,
-				CE367D6828B647CE00B615FA /* Controllerr */,
+				CE367D6828B647CE00B615FA /* Controller */,
 				CE8A6B40289ACF43002F1DD7 /* Info.plist */,
 				CE8A6B4A289AD0CC002F1DD7 /* fonts */,
 			);
@@ -324,13 +332,6 @@
 				CE8A6B4B289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf */,
 			);
 			path = fonts;
-			sourceTree = "<group>";
-		};
-		CE8B457B289BD5B800003DEF /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		CEDCAF9028C0D9F2005D8324 /* FAQScreen */ = {
@@ -346,7 +347,7 @@
 		CEF6FB4628AD41B20057D530 /* SignUpScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CE5650C928A118D5001E1668 /* Registration.storyboard */,
+				CE4A502E28C6406200332F77 /* Registration.storyboard */,
 				CE8A6B5D289ADC24002F1DD7 /* SignUpViewController.swift */,
 			);
 			path = SignUpScreen;
@@ -423,7 +424,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1EF96C28BBF7CD007EB20F /* Map.storyboard in Resources */,
-				CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */,
 				CE262BBC28BF5F16005B55DF /* ChangeUsername.storyboard in Resources */,
 				CE8A6B3F289ACF43002F1DD7 /* LaunchScreen.storyboard in Resources */,
 				CE367D7128B64EFB00B615FA /* Favorites.storyboard in Resources */,
@@ -433,6 +433,7 @@
 				CE367D8428B6576D00B615FA /* Recipe.storyboard in Resources */,
 				CE8A6B4C289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf in Resources */,
 				CE367D7B28B653D500B615FA /* MainTabBar.storyboard in Resources */,
+				CE4A502F28C6406200332F77 /* Registration.storyboard in Resources */,
 				CE17BCCF28B6A09200DE5B3D /* Food.storyboard in Resources */,
 				CE8A6B3A289ACF41002F1DD7 /* Main.storyboard in Resources */,
 				CEDCAF9228C0DA03005D8324 /* FAQ.storyboard in Resources */,
@@ -517,16 +518,19 @@
 				CE1EF96F28BBF7E6007EB20F /* MapViewController.swift in Sources */,
 				CE5650D128A11CBE001E1668 /* MainTabBarViewController.swift in Sources */,
 				CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */,
+				CEFD6A7C28C3D72E00172388 /* UserModel.swift in Sources */,
 				CEDCAF9528C0DA11005D8324 /* FAQViewController.swift in Sources */,
 				CE5650C628A0E6A0001E1668 /* StartCollectionViewCell.swift in Sources */,
 				CE367D6328B63D2600B615FA /* RecoveryViewController.swift in Sources */,
 				CE262BBF28BF5F3C005B55DF /* ChangeUsernameViewController.swift in Sources */,
 				CEA2B3C028ABF2280027D3D4 /* RecipesTableViewCell.swift in Sources */,
 				CE8A6B5A289ADC11002F1DD7 /* LoginViewController.swift in Sources */,
+				CE4A503528C6742E00332F77 /* CustomBackView.swift in Sources */,
 				CE18054728B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift in Sources */,
 				CEAFFA1628AE7FDA00011E65 /* Manager.swift in Sources */,
 				CE8A6B5E289ADC24002F1DD7 /* SignUpViewController.swift in Sources */,
 				CE8A6B33289ACF41002F1DD7 /* AppDelegate.swift in Sources */,
+				CE4A503828C674A700332F77 /* CustomHomeBackView.swift in Sources */,
 				CE00FC5928BD2F2A007BC9EC /* AccountViewController.swift in Sources */,
 				CE77F1C328B506E900F29069 /* BMRViewController.swift in Sources */,
 				CE09819528B91C2800AFAFBF /* Protocols.swift in Sources */,
