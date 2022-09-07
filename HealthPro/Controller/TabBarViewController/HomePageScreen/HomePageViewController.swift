@@ -5,10 +5,10 @@
 //  Created by User on 8/25/22.
 //
 
-import UIKit
-import UserNotifications
 import CoreMotion
 import RealmSwift
+import UIKit
+import UserNotifications
 
 final class HomePageViewController: UIViewController {
 
@@ -34,7 +34,7 @@ final class HomePageViewController: UIViewController {
     var userName = String()
     
     private var images: [UIImage] {
-        Array(1...3).compactMap { UIImage(named: "h\($0)")  }
+        Array(1...3).compactMap { UIImage(named: "m\($0)")?.resizeImage(image: UIImage(named: "m\($0)")!, targetSize: .init(width: 600, height: 600)) }
     }
         
     private var pedometer = CMPedometer()

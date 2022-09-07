@@ -5,8 +5,8 @@
 //  Created by User on 8/3/22.
 //
 
-import UIKit
 import RealmSwift
+import UIKit
 
 final class SignUpViewController: UIViewController {
 
@@ -118,12 +118,12 @@ final class SignUpViewController: UIViewController {
               repeatedPasswordTextField.hasText
         else { return oopsAlert() }
         
-        guard userNameTextField.text!.count <= 10,
-              userNameTextField.text!.count >= 3,
-              passwordTextField.text!.count <= 12,
-              passwordTextField.text!.count >= 5,
-              repeatedPasswordTextField.text!.count <= 12,
-              repeatedPasswordTextField.text!.count >= 5
+        guard userNameTextField.text!.trimmingCharacters(in: .whitespaces).count <= 10,
+              userNameTextField.text!.trimmingCharacters(in: .whitespaces).count >= 3,
+              passwordTextField.text!.trimmingCharacters(in: .whitespaces).count <= 12,
+              passwordTextField.text!.trimmingCharacters(in: .whitespaces).count >= 5,
+              repeatedPasswordTextField.text!.trimmingCharacters(in: .whitespaces).count <= 12,
+              repeatedPasswordTextField.text!.trimmingCharacters(in: .whitespaces).count >= 5
         else { return oopsAlert() }
         
         userNameTextField.text!.forEach {
@@ -138,12 +138,12 @@ final class SignUpViewController: UIViewController {
         }
            
         if let mainVC = mainTabBarStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController {
-            guard userNameTextField.text! != realm.object(ofType: UserModel.self, forPrimaryKey: "\(userNameTextField.text!)")?.userName  else { return duplicateAccountAlert() }
+        guard userNameTextField.text!.trimmingCharacters(in: .whitespaces) != realm.object(ofType: UserModel.self, forPrimaryKey: "\(userNameTextField.text!.trimmingCharacters(in: .whitespaces))")?.userName  else { return duplicateAccountAlert() }
             
-            if passwordTextField.text == repeatedPasswordTextField.text {
+            if passwordTextField.text!.trimmingCharacters(in: .whitespaces) == repeatedPasswordTextField.text!.trimmingCharacters(in: .whitespaces) {
                 
-                userRealm.userName = userNameTextField.text!
-                userRealm.userPassword = passwordTextField.text!
+                userRealm.userName = userNameTextField.text!.trimmingCharacters(in: .whitespaces)
+                userRealm.userPassword = passwordTextField.text!.trimmingCharacters(in: .whitespaces)
                 userRealm.isLoggined = true
                 
                 try! realm.write {
@@ -154,11 +154,11 @@ final class SignUpViewController: UIViewController {
                 oopsAlert()
             }
             if let homeVC = mainVC.viewControllers?.first as? HomePageViewController {
-                homeVC.userName = userNameTextField.text!
+                homeVC.userName = userNameTextField.text!.trimmingCharacters(in: .whitespaces)
             }
             
             
-            UsersData.userDefault.set("\(userNameTextField.text!)", forKey: "currentUser")
+            UsersData.userDefault.set("\(userNameTextField.text!.trimmingCharacters(in: .whitespaces))", forKey: "currentUser")
             UsersData.userDefault.synchronize()
             
             PushNotification.pushNote("Congrats with a new account <3", 3)
@@ -174,6 +174,7 @@ final class SignUpViewController: UIViewController {
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = #colorLiteral(red: 0.5589081985, green: 0.7141136811, blue: 0.9897997975, alpha: 1)
+        textField.layer.borderWidth = 1.2
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

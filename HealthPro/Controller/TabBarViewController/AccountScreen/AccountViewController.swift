@@ -5,9 +5,9 @@
 //  Created by User on 8/29/22.
 //
 
+import RealmSwift
 import UIKit
 import YPImagePicker
-import RealmSwift
 
 final class AccountViewController: UIViewController {
     
@@ -65,6 +65,14 @@ final class AccountViewController: UIViewController {
         
     }
     
+    private func setupWrongAlert() {
+        let alert = UIAlertController(title: "Some troubles with servers :(", message: nil, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        
+        present(alert, animated: true)
+    }
+    
     // MARK: Lifecirlce
     
     override func viewDidLoad() {
@@ -89,14 +97,12 @@ final class AccountViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setupImageView()
-        userNameLabel.text = UsersData.userDefault.string(forKey: "currentUser")!
-        
+        setupImageView()        
     }
     
     // MARK: Actions
     
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+    @objc private func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         
         let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
@@ -108,8 +114,7 @@ final class AccountViewController: UIViewController {
             
             var config = YPImagePickerConfiguration()
             config.preferredStatusBarStyle = .lightContent
-            config.colors.progressBarTrackColor = .black
-            
+            config.colors.progressBarTrackColor = .black            
             
             let picker = YPImagePicker(configuration: config)
             picker.didFinishPicking { [unowned picker] items, _ in
@@ -154,14 +159,14 @@ final class AccountViewController: UIViewController {
         
     }
     
-    @IBAction func didTappedChangeUserPasswordButton(_ sender: UIButton) {
+    @IBAction private func didTappedChangeUserPasswordButton(_ sender: UIButton) {
         sender.isSelected.toggle()
         guard let changeVC = changeStoryboard.instantiateViewController(identifier: "changeUsernameVC") as? ChangeUsernameViewController else { return }
         
         present(changeVC, animated: true)
     }
     
-    @IBAction func didTappedLogoutButton(_ sender: UIButton) {
+    @IBAction private func didTappedLogoutButton(_ sender: UIButton) {
         
         guard let startVC = mainStoryboard.instantiateViewController(identifier: "StartVC") as? StartViewController else { return }
         
@@ -177,18 +182,18 @@ final class AccountViewController: UIViewController {
         
     }
     
-    @IBAction func didTappedFAQButton(_ sender: UIButton) {
+    @IBAction private func didTappedFAQButton(_ sender: UIButton) {
         guard let faqVC = faqStoryboard.instantiateViewController(identifier: "faqVC") as? FAQViewController else { return }
         
         present(faqVC, animated: true)
     }
     
-    @IBAction func didTappedDeleteAccountButton(_ sender: UIButton) {
+    @IBAction private func didTappedDeleteAccountButton(_ sender: UIButton) {
         guard let startVC = mainStoryboard.instantiateViewController(identifier: "StartVC") as? StartViewController else { return }
         
         let alert = UIAlertController(title: "Are you sure?", message: nil, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
             
             let user = self.realm.object(ofType: UserModel.self, forPrimaryKey: UsersData.userDefault.string(forKey: "currentUser")! as String)
             
@@ -202,13 +207,33 @@ final class AccountViewController: UIViewController {
             
         }))
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {_ in
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in
             self.dismiss(animated: true)
         }))
 
         present(alert, animated: true)
     }
     
+    @IBAction private func didTappedTwitterButton(_ sender: UIButton) {
+        
+        if let url = URL(string: "https://twitter.com") {
+            UIApplication.shared.open(url)
+        } else {
+            setupWrongAlert()
+        }
+    }
+    
+    @IBAction private func didTappedInstButton(_ sender: UIButton) {
+        if let url = URL(string: "https://instagram.com") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @IBAction private func didTappedTelegramButton(_ sender: UIButton) {
+        if let url = URL(string: "https://telegram.org") {
+            UIApplication.shared.open(url)
+        }
+    }
     
 }
 
@@ -225,15 +250,5 @@ extension AccountViewController: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.banner, .badge, .sound])
-    }
-}
-
-extension UIView {
-
-    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
-         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-         let mask = CAShapeLayer()
-         mask.path = path.cgPath
-         self.layer.mask = mask
     }
 }

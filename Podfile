@@ -8,14 +8,14 @@ target 'HealthPro' do
   # Pods for HealthPro
 
 pod 'Alamofire','4.9.1'
-pod 'SwiftyJSON', '~> 4.0'
-pod 'AlamofireSwiftyJSON'
 pod 'AlamofireImage'
-pod 'SwiftLint'
+pod 'AlamofireSwiftyJSON'
 pod 'BetterSegmentedControl', '~> 1.3'
 pod 'IQKeyboardManagerSwift'
-pod 'YPImagePicker'
 pod 'RealmSwift','10.25.1'
 pod 'Realm','10.25.1'
+pod 'SwiftyJSON', '~> 4.0'
+pod 'SwiftLint'
+pod 'YPImagePicker'
 
 end

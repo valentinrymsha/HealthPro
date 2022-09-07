@@ -8,7 +8,7 @@
 import RealmSwift
 import UIKit
 
-class ChangeUsernameViewController: UIViewController {
+final class ChangeUsernameViewController: UIViewController {
 
     // swiftlint:disable force_try
     
@@ -71,6 +71,7 @@ class ChangeUsernameViewController: UIViewController {
         changePasswordTextField.layer.borderColor = #colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)
         changePasswordTextField.layer.borderWidth = 0.5
         changePasswordTextField.layer.cornerRadius = 5
+        changePasswordTextField.delegate = self
         
         submitButton.layer.cornerRadius = 13
     }
@@ -108,6 +109,7 @@ class ChangeUsernameViewController: UIViewController {
 extension ChangeUsernameViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = #colorLiteral(red: 0.5589081985, green: 0.7141136811, blue: 0.9897997975, alpha: 1)
+        textField.layer.borderWidth = 1.2
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

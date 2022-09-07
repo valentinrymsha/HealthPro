@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomHomeBackView: UIView {
+final class CustomHomeBackView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         

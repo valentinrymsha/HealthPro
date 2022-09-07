@@ -103,7 +103,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dDY-Rg-vXC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.73333333329999995" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tF4-Jl-dxF" firstAttribute="leading" secondItem="86w-wH-PUA" secondAttribute="trailing" constant="15" id="0vF-tu-elZ"/>
                             <constraint firstItem="tF4-Jl-dxF" firstAttribute="top" secondItem="Qk5-FT-jP8" secondAttribute="bottom" constant="18" id="1XH-tP-Tdo"/>
@@ -205,7 +205,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j5q-pJ-KZn"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.73333333329999995" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1FC-e2-9QP" firstAttribute="leading" secondItem="TBV-M2-N03" secondAttribute="trailing" constant="15" id="5mz-S6-POA"/>
                             <constraint firstItem="j5q-pJ-KZn" firstAttribute="trailing" secondItem="1FC-e2-9QP" secondAttribute="trailing" constant="30" id="6yZ-Gs-yTb"/>
@@ -240,9 +240,6 @@
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

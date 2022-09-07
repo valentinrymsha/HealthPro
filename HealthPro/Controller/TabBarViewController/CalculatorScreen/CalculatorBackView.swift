@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CalculatorBackView: UIView {
+final class CalculatorBackView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         

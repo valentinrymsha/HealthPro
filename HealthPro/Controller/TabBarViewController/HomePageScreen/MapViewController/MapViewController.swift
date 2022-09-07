@@ -5,9 +5,9 @@
 //  Created by User on 8/28/22.
 //
 
-import UIKit
-import MapKit
 import CoreLocation
+import MapKit
+import UIKit
 
 final class MapViewController: UIViewController {
 

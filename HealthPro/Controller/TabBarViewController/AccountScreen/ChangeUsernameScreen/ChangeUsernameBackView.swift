@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChangeUsernameBackView: UIView {
+final class ChangeUsernameBackView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()

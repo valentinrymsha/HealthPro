@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoritesBackView: UIView {
+final class FavoritesBackView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         

@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-4" highlightedImage="defaultUserImage" translatesAutoresizingMaskIntoConstraints="NO" id="Et5-aA-eTY">
-                                <rect key="frame" x="142" y="87" width="130" height="130"/>
+                                <rect key="frame" x="142" y="86.5" width="130" height="130"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -33,13 +33,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pq7-iC-ZB5">
-                                <rect key="frame" x="124" y="224.5" width="166" height="20"/>
+                                <rect key="frame" x="124" y="224" width="166" height="20.5"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELP-gX-d75">
-                                <rect key="frame" x="144.5" y="59" width="125" height="20"/>
+                                <rect key="frame" x="144.5" y="59" width="125" height="19.5"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -93,9 +93,37 @@
                                             <action selector="didTappedLogoutButton:" destination="DEd-5h-j3C" eventType="touchUpInside" id="VDr-88-jaK"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="kV7-N7-74I">
+                                        <rect key="frame" x="124" y="292" width="166" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPh-av-kEt">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                <state key="normal" image="twitter"/>
+                                                <connections>
+                                                    <action selector="didTappedTwitterButton:" destination="DEd-5h-j3C" eventType="touchUpInside" id="VsP-dc-zmb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbV-Wa-sZw">
+                                                <rect key="frame" x="71" y="0.0" width="24" height="24"/>
+                                                <state key="normal" image="instagram"/>
+                                                <connections>
+                                                    <action selector="didTappedInstButton:" destination="DEd-5h-j3C" eventType="touchUpInside" id="HSo-I9-Xvh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfb-xZ-DGv">
+                                                <rect key="frame" x="142" y="0.0" width="24" height="24"/>
+                                                <state key="normal" image="telegram-2"/>
+                                                <connections>
+                                                    <action selector="didTappedTelegramButton:" destination="DEd-5h-j3C" eventType="touchUpInside" id="T1U-mM-Fe7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="kV7-N7-74I" firstAttribute="centerX" secondItem="UVh-Gz-bem" secondAttribute="centerX" id="2zG-Hn-4PI"/>
+                                    <constraint firstItem="kV7-N7-74I" firstAttribute="top" secondItem="zvs-am-T0b" secondAttribute="bottom" constant="20" id="6mm-WY-k7y"/>
                                     <constraint firstItem="afM-qX-Jjk" firstAttribute="height" secondItem="UVh-Gz-bem" secondAttribute="height" multiplier="0.12" id="CeE-Km-fZq"/>
                                     <constraint firstAttribute="trailing" secondItem="9vi-qT-l8S" secondAttribute="trailing" constant="3" id="Jkv-z3-Ti5"/>
                                     <constraint firstItem="9vi-qT-l8S" firstAttribute="leading" secondItem="UVh-Gz-bem" secondAttribute="leading" constant="3" id="Jq9-3U-2WU"/>
@@ -164,8 +192,11 @@
         <image name="back3" width="612" height="612"/>
         <image name="defaultUserImage" width="512" height="512"/>
         <image name="faq" width="24" height="24"/>
+        <image name="instagram" width="24" height="24"/>
         <image name="logout-3" width="24" height="24"/>
         <image name="settings" width="32" height="32"/>
+        <image name="telegram-2" width="24" height="24"/>
+        <image name="twitter" width="24" height="24"/>
         <image name="unfollow" width="24" height="24"/>
         <image name="user-4" width="64" height="64"/>
         <image name="userNameSet" width="24" height="24"/>

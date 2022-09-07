@@ -18,6 +18,7 @@
 		CE18054728B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18054628B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift */; };
 		CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */; };
 		CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */; };
+		CE1ED93928C8DB2E0085A2C8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1ED93828C8DB2E0085A2C8 /* Extensions.swift */; };
 		CE1EF96C28BBF7CD007EB20F /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1EF96B28BBF7CD007EB20F /* Map.storyboard */; };
 		CE1EF96F28BBF7E6007EB20F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EF96E28BBF7E6007EB20F /* MapViewController.swift */; };
 		CE262BBC28BF5F16005B55DF /* ChangeUsername.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE262BBB28BF5F16005B55DF /* ChangeUsername.storyboard */; };
@@ -87,6 +88,7 @@
 		CE18054628B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsMainPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodsCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE1ED93828C8DB2E0085A2C8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CE1EF96B28BBF7CD007EB20F /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		CE1EF96E28BBF7E6007EB20F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CE262BBB28BF5F16005B55DF /* ChangeUsername.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeUsername.storyboard; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				CE8A6B34289ACF41002F1DD7 /* SceneDelegate.swift */,
 				CE8A6B3D289ACF43002F1DD7 /* LaunchScreen.storyboard */,
 				CE8A6B3B289ACF43002F1DD7 /* Assets.xcassets */,
+				CE1ED93828C8DB2E0085A2C8 /* Extensions.swift */,
 				CE09819428B91C2800AFAFBF /* Protocols.swift */,
 			);
 			path = Resources;
@@ -227,7 +230,7 @@
 		CE18465E28ABCC56003BCD42 /* FavoritesScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CE77F1C628B5226C00F29069 /* RecipesViewController */,
+				CE77F1C628B5226C00F29069 /* CompositionViewController */,
 				CE17BCCD28B6A07E00DE5B3D /* FoodViewController */,
 				CE367D7028B64EFB00B615FA /* Favorites.storyboard */,
 				CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */,
@@ -268,7 +271,7 @@
 		CE367D6828B647CE00B615FA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CE367D6928B647F700B615FA /* MainScreen */,
+				CE367D6928B647F700B615FA /* StartScreen */,
 				CEF6FB4628AD41B20057D530 /* SignUpScreen */,
 				CEF6FB4728AD41C50057D530 /* LoginScreen */,
 				CE367D6C28B648D100B615FA /* TabBarViewController */,
@@ -276,14 +279,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		CE367D6928B647F700B615FA /* MainScreen */ = {
+		CE367D6928B647F700B615FA /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
 				CE8A6B38289ACF41002F1DD7 /* Main.storyboard */,
 				CE759120289BD39B00F7098A /* StartViewController.swift */,
 				CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */,
 			);
-			path = MainScreen;
+			path = StartScreen;
 			sourceTree = "<group>";
 		};
 		CE367D6C28B648D100B615FA /* TabBarViewController */ = {
@@ -318,13 +321,13 @@
 			path = BMRScreen;
 			sourceTree = "<group>";
 		};
-		CE77F1C628B5226C00F29069 /* RecipesViewController */ = {
+		CE77F1C628B5226C00F29069 /* CompositionViewController */ = {
 			isa = PBXGroup;
 			children = (
 				CE367D8328B6576D00B615FA /* Recipe.storyboard */,
 				CE77F1C728B5229300F29069 /* RecipeViewController.swift */,
 			);
-			path = RecipesViewController;
+			path = CompositionViewController;
 			sourceTree = "<group>";
 		};
 		CE8A6B26289ACF40002F1DD7 = {
@@ -562,6 +565,7 @@
 				CE8A6B5A289ADC11002F1DD7 /* LoginViewController.swift in Sources */,
 				CED940A128C803060044C1DC /* FavoritesBackView.swift in Sources */,
 				CED9409B28C7FBF90044C1DC /* FaqBackView.swift in Sources */,
+				CE1ED93928C8DB2E0085A2C8 /* Extensions.swift in Sources */,
 				CE4A503528C6742E00332F77 /* CustomBackView.swift in Sources */,
 				CE18054728B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift in Sources */,
 				CEAFFA1628AE7FDA00011E65 /* Manager.swift in Sources */,

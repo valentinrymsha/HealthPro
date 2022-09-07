@@ -5,8 +5,8 @@
 //  Created by User on 8/24/22.
 //
 
-import UIKit
 import RealmSwift
+import UIKit
 
 final class RecoveryViewController: UIViewController {
 
@@ -65,8 +65,8 @@ final class RecoveryViewController: UIViewController {
     @IBAction private func showPasswordButton(_ sender: UIButton) {
         guard loginTextField.hasText else { return oopsAlert() }
         
-        let user = realm.object(ofType: UserModel.self, forPrimaryKey: "\(loginTextField.text!)")
-        if let text = user?.userName {
+        let user = realm.object(ofType: UserModel.self, forPrimaryKey: "\(loginTextField.text!.trimmingCharacters(in: .whitespaces))")
+        if let text = user?.userPassword {
             yourPasswordLabel.text = "Your password is:\n" + "'\(text)'"
         } else {
             yourPasswordLabel.text = "You have not account yet"
@@ -81,6 +81,7 @@ final class RecoveryViewController: UIViewController {
 extension RecoveryViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = #colorLiteral(red: 0.5589081985, green: 0.7141136811, blue: 0.9897997975, alpha: 1)
+        textField.layer.borderWidth = 1.2
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

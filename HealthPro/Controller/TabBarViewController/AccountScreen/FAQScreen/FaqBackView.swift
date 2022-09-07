@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FaqBackView: UIView {
+final class FaqBackView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         

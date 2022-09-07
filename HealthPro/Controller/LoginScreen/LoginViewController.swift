@@ -4,8 +4,9 @@
 //
 //  Created by User on 8/3/22.
 //
-import UIKit
+
 import RealmSwift
+import UIKit
 
 final class LoginViewController: UIViewController {
     
@@ -118,17 +119,17 @@ final class LoginViewController: UIViewController {
         
         else { return self.oopsAlert() }
         
-        let user = realm.object(ofType: UserModel.self, forPrimaryKey: "\(userNameTextField.text!)")
+        let user = realm.object(ofType: UserModel.self, forPrimaryKey: "\(userNameTextField.text!.trimmingCharacters(in: .whitespaces))")
         
         guard user?.userName != nil else { return notExistAccountAlert() }
         
-        if [user?.userName: user?.userPassword] as? Dictionary == ["\(userNameTextField.text!)": "\(passwordTextField.text!)"] {
+        if [user?.userName: user?.userPassword] as? Dictionary == ["\(userNameTextField.text!.trimmingCharacters(in: .whitespaces))": "\(passwordTextField.text!.trimmingCharacters(in: .whitespaces))"] {
             if let mainVC = mainTabBarStoryboard.instantiateViewController(withIdentifier: "mainTabBarVC") as? MainTabBarViewController {
                 if let homeVC = mainVC.viewControllers?.first as? HomePageViewController {
-                    homeVC.userName = userNameTextField.text!
+                    homeVC.userName = userNameTextField.text!.trimmingCharacters(in: .whitespaces)
                 }
                 
-                UsersData.userDefault.set("\(userNameTextField.text!)", forKey: "currentUser")
+                UsersData.userDefault.set("\(userNameTextField.text!.trimmingCharacters(in: .whitespaces))", forKey: "currentUser")
                 UsersData.userDefault.synchronize()
                 
                 try? realm.write {
@@ -151,6 +152,7 @@ final class LoginViewController: UIViewController {
 extension LoginViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = #colorLiteral(red: 0.5589081985, green: 0.7141136811, blue: 0.9897997975, alpha: 1)
+        textField.layer.borderWidth = 1.2
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

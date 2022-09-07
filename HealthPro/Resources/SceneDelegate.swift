@@ -5,8 +5,8 @@
 //  Created by User on 8/3/22.
 //
 
-import UIKit
 import RealmSwift
+import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
