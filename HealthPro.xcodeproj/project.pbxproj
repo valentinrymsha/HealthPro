@@ -54,7 +54,6 @@
 		CEA2B3C028ABF2280027D3D4 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA2B3BF28ABF2280027D3D4 /* RecipesTableViewCell.swift */; };
 		CEAFFA1628AE7FDA00011E65 /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFFA1528AE7FDA00011E65 /* RecipeManager.swift */; };
 		CEB9562B28AD2AFC0021D261 /* UsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9562A28AD2AFC0021D261 /* UsersData.swift */; };
-		CED9406828C7DBFC0044C1DC /* StepWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9406728C7DBFC0044C1DC /* StepWidgetModel.swift */; };
 		CED9409B28C7FBF90044C1DC /* FaqBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9409A28C7FBF90044C1DC /* FaqBackView.swift */; };
 		CED9409E28C7FCDC0044C1DC /* ChangeUsernameBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9409D28C7FCDC0044C1DC /* ChangeUsernameBackView.swift */; };
 		CED940A128C803060044C1DC /* FavoritesBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED940A028C803060044C1DC /* FavoritesBackView.swift */; };
@@ -132,7 +131,6 @@
 		CEB9562A28AD2AFC0021D261 /* UsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersData.swift; sourceTree = "<group>"; };
 		CED9402328C7B9160044C1DC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CED9402528C7B9160044C1DC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		CED9406728C7DBFC0044C1DC /* StepWidgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepWidgetModel.swift; sourceTree = "<group>"; };
 		CED9409A28C7FBF90044C1DC /* FaqBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqBackView.swift; sourceTree = "<group>"; };
 		CED9409D28C7FCDC0044C1DC /* ChangeUsernameBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameBackView.swift; sourceTree = "<group>"; };
 		CED940A028C803060044C1DC /* FavoritesBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesBackView.swift; sourceTree = "<group>"; };
@@ -232,7 +230,6 @@
 				CE90703228C23CF900361D48 /* Shop.swift */,
 				CEB9562A28AD2AFC0021D261 /* UsersData.swift */,
 				CEFD6A7B28C3D72E00172388 /* UserModel.swift */,
-				CED9406728C7DBFC0044C1DC /* StepWidgetModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -571,7 +568,6 @@
 				CE759121289BD39B00F7098A /* StartViewController.swift in Sources */,
 				CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */,
 				CE5E6C4128CA211D00EEC5B6 /* AdviceManager.swift in Sources */,
-				CED9406828C7DBFC0044C1DC /* StepWidgetModel.swift in Sources */,
 				CE1ED94028C8F3B40085A2C8 /* WeatherManager.swift in Sources */,
 				CE18054328B6E4A600BAC5C0 /* HomePageViewController.swift in Sources */,
 				CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */,
