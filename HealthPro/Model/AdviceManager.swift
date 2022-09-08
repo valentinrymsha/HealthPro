@@ -24,8 +24,6 @@ final class AdviceManager {
                 if let advice = advice {
                     complition(.init(advice))
                     print("success")
-                    print(advice)
-                    print(advice.slip?.advice)
                 } else {
                     complition(nil)
                     print("error")

@@ -10,7 +10,7 @@
 
 import Foundation
 
-final class Manager {
+final class RecipeManager {
     
     static func checkUserOnServer(complition: @escaping (Root?) -> Void) {
         

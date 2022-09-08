@@ -39,7 +39,7 @@ final class FavoritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Manager.checkUserOnServer { root in
+        RecipeManager.checkUserOnServer { root in
             self.recipesArray = root
             DispatchQueue.main.async {
                 self.recipesTableView.reloadData()
@@ -72,7 +72,7 @@ final class FavoritesViewController: UIViewController {
     
     @IBAction private func searchRecipesButton(_ sender: Any) {
         DispatchQueue.main.async {
-            Manager.checkUserOnServer { (root) in
+            RecipeManager.checkUserOnServer { (root) in
                 self.recipesArray = root
                 self.recipes = self.recipesArray?.recipes
             }
