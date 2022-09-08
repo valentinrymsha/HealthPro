@@ -21,7 +21,7 @@ final class Manager {
 //        let key1 = "9f40dbb7b8a54e3b9d76a431a5c55615"
 //        let key2 = "64e3c271154342c2b257b67ffa540bbc"
         
-        let api = "https://api.spoonacular.com/recipes/random?apiKey=c086eddbb7774da5822b81a9f6f45a22&number=20"
+        let api = "https://api.spoonacular.com/recipes/random?apiKey=c086eddbb7774da5822b81a9f6f45a22&number=50"
         guard let apiURL = URL(string: api) else { return }
       
         session.dataTask(with: apiURL) { (data, _, error) in

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lJO-Ia-FVd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--bonusVC-->
+        <scene sceneID="Sx2-uF-sge">
+            <objects>
+                <viewController storyboardIdentifier="bonusVC" title="bonusVC" modalPresentationStyle="pageSheet" id="lJO-Ia-FVd" customClass="BonusViewController" customModule="HealthPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bg2-GG-L3K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your personal advice:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS8-NC-EQx">
+                                <rect key="frame" x="93.5" y="244" width="227" height="18"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBA-Rt-1Gg">
+                                <rect key="frame" x="85.5" y="612" width="243" height="50"/>
+                                <color key="backgroundColor" red="0.27450980390000002" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <state key="normal" title="Get one more advice!">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTappedGetAdviceButton:" destination="lJO-Ia-FVd" eventType="touchUpInside" id="k96-B2-6oE"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4A8-MU-UPT" customClass="BonusBackView" customModule="HealthPro" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="39"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remove-3" translatesAutoresizingMaskIntoConstraints="NO" id="2AF-x3-9IH">
+                                        <rect key="frame" x="172" y="12.5" width="70" height="14"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.63137254899999995" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2AF-x3-9IH" firstAttribute="centerY" secondItem="4A8-MU-UPT" secondAttribute="centerY" id="gz1-aU-wUZ"/>
+                                    <constraint firstItem="2AF-x3-9IH" firstAttribute="height" secondItem="4A8-MU-UPT" secondAttribute="height" multiplier="0.358974" id="j4o-zd-XeU"/>
+                                    <constraint firstItem="2AF-x3-9IH" firstAttribute="width" secondItem="4A8-MU-UPT" secondAttribute="width" multiplier="0.169082" id="jWH-Av-2iw"/>
+                                    <constraint firstItem="2AF-x3-9IH" firstAttribute="centerX" secondItem="4A8-MU-UPT" secondAttribute="centerX" id="zXs-FV-vnz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07Z-U4-PJh">
+                                <rect key="frame" x="20" y="345.5" width="374" height="205"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sy-rv-EMx">
+                                        <rect key="frame" x="24" y="93" width="327" height="20"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8980392157" green="0.89019607840000003" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0Sy-rv-EMx" firstAttribute="centerX" secondItem="07Z-U4-PJh" secondAttribute="centerX" id="dWt-ii-q3a"/>
+                                    <constraint firstItem="0Sy-rv-EMx" firstAttribute="centerY" secondItem="07Z-U4-PJh" secondAttribute="centerY" id="jh7-Xr-AQk"/>
+                                    <constraint firstItem="0Sy-rv-EMx" firstAttribute="width" secondItem="07Z-U4-PJh" secondAttribute="width" multiplier="0.874332" id="yhf-au-irs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wkr-wH-FJg"/>
+                        <color key="backgroundColor" red="0.73333333329999995" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NS8-NC-EQx" firstAttribute="top" secondItem="wkr-wH-FJg" secondAttribute="top" constant="200" id="4sJ-la-Mnm"/>
+                            <constraint firstItem="4A8-MU-UPT" firstAttribute="height" secondItem="bg2-GG-L3K" secondAttribute="height" multiplier="0.0435268" id="5MM-HM-aZU"/>
+                            <constraint firstItem="4A8-MU-UPT" firstAttribute="centerX" secondItem="bg2-GG-L3K" secondAttribute="centerX" id="5p0-Dg-yP5"/>
+                            <constraint firstItem="GBA-Rt-1Gg" firstAttribute="width" secondItem="bg2-GG-L3K" secondAttribute="width" multiplier="0.586957" id="CrD-Q7-UoY"/>
+                            <constraint firstItem="wkr-wH-FJg" firstAttribute="bottom" secondItem="GBA-Rt-1Gg" secondAttribute="bottom" constant="200" id="KAe-QA-iRd"/>
+                            <constraint firstItem="07Z-U4-PJh" firstAttribute="width" secondItem="bg2-GG-L3K" secondAttribute="width" multiplier="0.903382" id="MHA-Yj-r7g"/>
+                            <constraint firstItem="07Z-U4-PJh" firstAttribute="centerX" secondItem="bg2-GG-L3K" secondAttribute="centerX" id="PPB-1u-OSy"/>
+                            <constraint firstItem="4A8-MU-UPT" firstAttribute="width" secondItem="bg2-GG-L3K" secondAttribute="width" id="QHa-8W-EIs"/>
+                            <constraint firstItem="GBA-Rt-1Gg" firstAttribute="centerX" secondItem="bg2-GG-L3K" secondAttribute="centerX" id="TxB-tt-Ljg"/>
+                            <constraint firstItem="NS8-NC-EQx" firstAttribute="centerX" secondItem="bg2-GG-L3K" secondAttribute="centerX" id="ak8-CU-FEl"/>
+                            <constraint firstItem="07Z-U4-PJh" firstAttribute="height" secondItem="bg2-GG-L3K" secondAttribute="height" multiplier="0.228795" id="bGx-fU-zHi"/>
+                            <constraint firstItem="GBA-Rt-1Gg" firstAttribute="height" secondItem="bg2-GG-L3K" secondAttribute="height" multiplier="0.0558036" id="cXn-31-jGn"/>
+                            <constraint firstItem="4A8-MU-UPT" firstAttribute="top" secondItem="wkr-wH-FJg" secondAttribute="top" id="jZQ-M3-kHB"/>
+                            <constraint firstItem="07Z-U4-PJh" firstAttribute="centerY" secondItem="bg2-GG-L3K" secondAttribute="centerY" id="pML-TC-BeA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adviceLabel" destination="0Sy-rv-EMx" id="VVY-QW-iIC"/>
+                        <outlet property="adviceLabelBackView" destination="07Z-U4-PJh" id="U9H-81-Oda"/>
+                        <outlet property="getAdviceButton" destination="GBA-Rt-1Gg" id="ysI-au-JvY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qgt-zj-V39" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94.20289855072464" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="remove-3" width="128" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

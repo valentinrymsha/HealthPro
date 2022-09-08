@@ -6,7 +6,6 @@
 //
 import Alamofire
 import AlamofireImage
-import BetterSegmentedControl
 import SwiftyJSON
 import RealmSwift
 import UIKit
@@ -27,6 +26,7 @@ final class AccountViewController: UIViewController {
     @IBOutlet private weak var deleteAccountButton: UIButton!
     @IBOutlet private weak var weatherIconImage: UIImageView!
     @IBOutlet private weak var weatherLabel: UILabel!
+    @IBOutlet private weak var bonusButton: UIButton!
     
     // MARK: Properties
     
@@ -37,6 +37,8 @@ final class AccountViewController: UIViewController {
     private let mainTabBarStoryboard: UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
     private let changeStoryboard: UIStoryboard = UIStoryboard(name: "ChangeUsername", bundle: nil)
     private let faqStoryboard: UIStoryboard = UIStoryboard(name: "FAQ", bundle: nil)
+    private let bonusStoryboard: UIStoryboard = UIStoryboard(name: "Bonus", bundle: nil)
+    
     private let realm = try! Realm()
     
     private var rootWeatherInfo: RootInfo?
@@ -82,22 +84,7 @@ final class AccountViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    // MARK: Lifecirlce
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        buttonConfig(changeUserPasswordButton)
-        buttonConfig(logoutButton)
-        buttonConfig(faqButton)
-        buttonConfig(deleteAccountButton)
-        
-        setupImageView()
-        
-        DispatchQueue.main.async {
-            self.userNameLabel.text = UsersData.userDefault.string(forKey: "currentUser")!
-        }
-        
+    private func setupWeatherData() {
         WeatherManager.checkUserOnServer { root in
             self.rootWeatherInfo = root
             DispatchQueue.main.async { [self] in
@@ -107,7 +94,7 @@ final class AccountViewController: UIViewController {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
             if let image = self.conditionWeather?.icon {
                 let imageUrl = "https:" + image
                 Alamofire.request(imageUrl).responseImage { response in
@@ -117,6 +104,25 @@ final class AccountViewController: UIViewController {
                 }
             }
         })
+    }
+    
+    // MARK: Lifecirlce
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        buttonConfig(changeUserPasswordButton)
+        buttonConfig(logoutButton)
+        buttonConfig(faqButton)
+        buttonConfig(deleteAccountButton)
+        buttonConfig(bonusButton)
+        
+        setupImageView()
+        setupWeatherData()
+        
+        DispatchQueue.main.async {
+            self.userNameLabel.text = UsersData.userDefault.string(forKey: "currentUser")!
+        }
         
         self.pickerController.delegate = self
         self.userNotificationCenter.delegate = self
@@ -125,7 +131,8 @@ final class AccountViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setupImageView()        
+        setupImageView()
+        setupWeatherData()
     }
     
     // MARK: Actions
@@ -198,16 +205,24 @@ final class AccountViewController: UIViewController {
         
         guard let startVC = mainStoryboard.instantiateViewController(identifier: "StartVC") as? StartViewController else { return }
         
-        let user = realm.object(ofType: UserModel.self, forPrimaryKey: UsersData.userDefault.string(forKey: "currentUser")! as String)
+        let alert = UIAlertController(title: "Are you sure?", message: nil, preferredStyle: .alert)
         
-        try! realm.write {
-            user?.isLoggined = false
-        }
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [self] _ in
+            
+            let user = realm.object(ofType: UserModel.self, forPrimaryKey: UsersData.userDefault.string(forKey: "currentUser")! as String)
+            
+            try! realm.write {
+                user?.isLoggined = false
+            }
+            
+            present(startVC, animated: false, completion: {
+                PushNotification.pushNote("You logouted!", 3)
+            })
+        }))
         
-        present(startVC, animated: false, completion: {
-            PushNotification.pushNote("You logouted!", 3)
-        })
-        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+        present(alert, animated: true)
     }
     
     @IBAction private func didTappedFAQButton(_ sender: UIButton) {
@@ -235,11 +250,15 @@ final class AccountViewController: UIViewController {
             
         }))
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in
-            self.dismiss(animated: true)
-        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 
         present(alert, animated: true)
+    }
+    
+    @IBAction func didTappedBonusButton(_ sender: UIButton) {
+        guard let bonusVC = bonusStoryboard.instantiateViewController(withIdentifier: "bonusVC") as? BonusViewController else { return }
+       
+        present(bonusVC, animated: true)
     }
     
     @IBAction private func didTappedTwitterButton(_ sender: UIButton) {

@@ -35,6 +35,10 @@
 		CE4A503828C674A700332F77 /* CustomHomeBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A503728C674A700332F77 /* CustomHomeBackView.swift */; };
 		CE5650C628A0E6A0001E1668 /* StartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */; };
 		CE5650D128A11CBE001E1668 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650D028A11CBE001E1668 /* MainTabBarViewController.swift */; };
+		CE5E6C4128CA211D00EEC5B6 /* AdviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E6C4028CA211D00EEC5B6 /* AdviceManager.swift */; };
+		CE5E6C4628CA226100EEC5B6 /* BonusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E6C4528CA226100EEC5B6 /* BonusViewController.swift */; };
+		CE5E6C4A28CA227200EEC5B6 /* Bonus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5E6C4928CA227200EEC5B6 /* Bonus.storyboard */; };
+		CE5E6C4D28CA33E800EEC5B6 /* BonusBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E6C4C28CA33E800EEC5B6 /* BonusBackView.swift */; };
 		CE759121289BD39B00F7098A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE759120289BD39B00F7098A /* StartViewController.swift */; };
 		CE77F1BD28B4F55300F29069 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */; };
 		CE77F1C328B506E900F29069 /* BMRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1C228B506E900F29069 /* BMRViewController.swift */; };
@@ -106,6 +110,10 @@
 		CE4A503728C674A700332F77 /* CustomHomeBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHomeBackView.swift; sourceTree = "<group>"; };
 		CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE5650D028A11CBE001E1668 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		CE5E6C4028CA211D00EEC5B6 /* AdviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceManager.swift; sourceTree = "<group>"; };
+		CE5E6C4528CA226100EEC5B6 /* BonusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusViewController.swift; sourceTree = "<group>"; };
+		CE5E6C4928CA227200EEC5B6 /* Bonus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bonus.storyboard; sourceTree = "<group>"; };
+		CE5E6C4C28CA33E800EEC5B6 /* BonusBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusBackView.swift; sourceTree = "<group>"; };
 		CE759120289BD39B00F7098A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		CE77F1C228B506E900F29069 /* BMRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMRViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +181,7 @@
 		CE00FC5428BD2EF2007BC9EC /* AccountScreen */ = {
 			isa = PBXGroup;
 			children = (
+				CE5E6C4428CA224800EEC5B6 /* BonusScreen */,
 				CEDCAF9028C0D9F2005D8324 /* FAQScreen */,
 				CE262BBA28BF5EFF005B55DF /* ChangeUsernameScreen */,
 				CE00FC5528BD2F0D007BC9EC /* Account.storyboard */,
@@ -221,6 +230,7 @@
 			children = (
 				CEAFFA1528AE7FDA00011E65 /* Manager.swift */,
 				CE1ED93F28C8F3B40085A2C8 /* WeatherManager.swift */,
+				CE5E6C4028CA211D00EEC5B6 /* AdviceManager.swift */,
 				CEDCAF8D28C0D439005D8324 /* PushNotification.swift */,
 				CE90703228C23CF900361D48 /* Shop.swift */,
 				CEB9562A28AD2AFC0021D261 /* UsersData.swift */,
@@ -303,6 +313,16 @@
 				CE00FC5428BD2EF2007BC9EC /* AccountScreen */,
 			);
 			path = TabBarViewController;
+			sourceTree = "<group>";
+		};
+		CE5E6C4428CA224800EEC5B6 /* BonusScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E6C4528CA226100EEC5B6 /* BonusViewController.swift */,
+				CE5E6C4928CA227200EEC5B6 /* Bonus.storyboard */,
+				CE5E6C4C28CA33E800EEC5B6 /* BonusBackView.swift */,
+			);
+			path = BonusScreen;
 			sourceTree = "<group>";
 		};
 		CE77F1B528B4F50800F29069 /* CalculatorScreen */ = {
@@ -465,6 +485,7 @@
 				CE1EF96C28BBF7CD007EB20F /* Map.storyboard in Resources */,
 				CE262BBC28BF5F16005B55DF /* ChangeUsername.storyboard in Resources */,
 				CE8A6B3F289ACF43002F1DD7 /* LaunchScreen.storyboard in Resources */,
+				CE5E6C4A28CA227200EEC5B6 /* Bonus.storyboard in Resources */,
 				CE367D7128B64EFB00B615FA /* Favorites.storyboard in Resources */,
 				CE18053828B6E49500BAC5C0 /* Home.storyboard in Resources */,
 				CE8A6B3C289ACF43002F1DD7 /* Assets.xcassets in Resources */,
@@ -552,12 +573,14 @@
 				CEDCAF8E28C0D439005D8324 /* PushNotification.swift in Sources */,
 				CE759121289BD39B00F7098A /* StartViewController.swift in Sources */,
 				CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */,
+				CE5E6C4128CA211D00EEC5B6 /* AdviceManager.swift in Sources */,
 				CED9406828C7DBFC0044C1DC /* StepWidgetModel.swift in Sources */,
 				CE1ED94028C8F3B40085A2C8 /* WeatherManager.swift in Sources */,
 				CE18054328B6E4A600BAC5C0 /* HomePageViewController.swift in Sources */,
 				CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */,
 				CE1EF96F28BBF7E6007EB20F /* MapViewController.swift in Sources */,
 				CE5650D128A11CBE001E1668 /* MainTabBarViewController.swift in Sources */,
+				CE5E6C4628CA226100EEC5B6 /* BonusViewController.swift in Sources */,
 				CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */,
 				CEFD6A7C28C3D72E00172388 /* UserModel.swift in Sources */,
 				CEDCAF9528C0DA11005D8324 /* FAQViewController.swift in Sources */,
@@ -572,6 +595,7 @@
 				CE1ED93928C8DB2E0085A2C8 /* Extensions.swift in Sources */,
 				CE4A503528C6742E00332F77 /* CustomBackView.swift in Sources */,
 				CE18054728B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift in Sources */,
+				CE5E6C4D28CA33E800EEC5B6 /* BonusBackView.swift in Sources */,
 				CEAFFA1628AE7FDA00011E65 /* Manager.swift in Sources */,
 				CE8A6B5E289ADC24002F1DD7 /* SignUpViewController.swift in Sources */,
 				CE8A6B33289ACF41002F1DD7 /* AppDelegate.swift in Sources */,
