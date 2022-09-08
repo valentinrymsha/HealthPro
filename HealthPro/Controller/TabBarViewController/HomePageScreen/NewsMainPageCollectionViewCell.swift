@@ -11,4 +11,9 @@ final class NewsMainPageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var newsImage: UIImageView!
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        newsImage.layer.cornerRadius = 13
+    }
 }

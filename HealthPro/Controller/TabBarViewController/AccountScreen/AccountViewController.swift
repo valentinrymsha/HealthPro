@@ -4,7 +4,10 @@
 //
 //  Created by User on 8/29/22.
 //
-
+import Alamofire
+import AlamofireImage
+import BetterSegmentedControl
+import SwiftyJSON
 import RealmSwift
 import UIKit
 import YPImagePicker
@@ -21,7 +24,9 @@ final class AccountViewController: UIViewController {
     @IBOutlet private weak var logoutButton: UIButton!
     @IBOutlet private weak var faqButton: UIButton!
     @IBOutlet private weak var backHeaderView: UIView!
-    @IBOutlet weak var deleteAccountButton: UIButton!
+    @IBOutlet private weak var deleteAccountButton: UIButton!
+    @IBOutlet private weak var weatherIconImage: UIImageView!
+    @IBOutlet private weak var weatherLabel: UILabel!
     
     // MARK: Properties
     
@@ -33,6 +38,10 @@ final class AccountViewController: UIViewController {
     private let changeStoryboard: UIStoryboard = UIStoryboard(name: "ChangeUsername", bundle: nil)
     private let faqStoryboard: UIStoryboard = UIStoryboard(name: "FAQ", bundle: nil)
     private let realm = try! Realm()
+    
+    private var rootWeatherInfo: RootInfo?
+    private var currentWeather: Current?
+    private var conditionWeather: Condition?
     
     private func buttonConfig(_ button: UIButton) {
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
@@ -89,6 +98,25 @@ final class AccountViewController: UIViewController {
             self.userNameLabel.text = UsersData.userDefault.string(forKey: "currentUser")!
         }
         
+        WeatherManager.checkUserOnServer { root in
+            self.rootWeatherInfo = root
+            DispatchQueue.main.async { [self] in
+                self.currentWeather = self.rootWeatherInfo?.current
+                self.conditionWeather = self.currentWeather?.condition
+                self.weatherLabel.text = (currentWeather?.temp_c.description ?? "0") + "℃"
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+            if let image = self.conditionWeather?.icon {
+                let imageUrl = "https:" + image
+                Alamofire.request(imageUrl).responseImage { response in
+                    if let image = response.result.value {
+                        self.weatherIconImage.image = image
+                    }
+                }
+            }
+        })
         
         self.pickerController.delegate = self
         self.userNotificationCenter.delegate = self

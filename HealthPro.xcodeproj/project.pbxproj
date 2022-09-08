@@ -19,6 +19,7 @@
 		CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */; };
 		CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */; };
 		CE1ED93928C8DB2E0085A2C8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1ED93828C8DB2E0085A2C8 /* Extensions.swift */; };
+		CE1ED94028C8F3B40085A2C8 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1ED93F28C8F3B40085A2C8 /* WeatherManager.swift */; };
 		CE1EF96C28BBF7CD007EB20F /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1EF96B28BBF7CD007EB20F /* Map.storyboard */; };
 		CE1EF96F28BBF7E6007EB20F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EF96E28BBF7E6007EB20F /* MapViewController.swift */; };
 		CE262BBC28BF5F16005B55DF /* ChangeUsername.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE262BBB28BF5F16005B55DF /* ChangeUsername.storyboard */; };
@@ -89,6 +90,7 @@
 		CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE1ED93828C8DB2E0085A2C8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CE1ED93F28C8F3B40085A2C8 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		CE1EF96B28BBF7CD007EB20F /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		CE1EF96E28BBF7E6007EB20F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CE262BBB28BF5F16005B55DF /* ChangeUsername.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeUsername.storyboard; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				CEAFFA1528AE7FDA00011E65 /* Manager.swift */,
+				CE1ED93F28C8F3B40085A2C8 /* WeatherManager.swift */,
 				CEDCAF8D28C0D439005D8324 /* PushNotification.swift */,
 				CE90703228C23CF900361D48 /* Shop.swift */,
 				CEB9562A28AD2AFC0021D261 /* UsersData.swift */,
@@ -550,6 +553,7 @@
 				CE759121289BD39B00F7098A /* StartViewController.swift in Sources */,
 				CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */,
 				CED9406828C7DBFC0044C1DC /* StepWidgetModel.swift in Sources */,
+				CE1ED94028C8F3B40085A2C8 /* WeatherManager.swift in Sources */,
 				CE18054328B6E4A600BAC5C0 /* HomePageViewController.swift in Sources */,
 				CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */,
 				CE1EF96F28BBF7E6007EB20F /* MapViewController.swift in Sources */,

@@ -88,10 +88,10 @@ final class HomePageViewController: UIViewController {
         nearestShopsButton.layer.cornerRadius = 9
                 
         stepsCountLabel.text = getPedometrInfo() + " steps!"
-        
-        greetingLabel.text = "Hello, " + (UsersData.userDefault.string(forKey: "currentUser")!)
-        
+        distanceCountLabel.text = distance + " meters"
         floorsCountLabel.text = floors + " floors"
+
+        greetingLabel.text = "Hello, " + (UsersData.userDefault.string(forKey: "currentUser")!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -141,9 +141,6 @@ extension HomePageViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsVCell", for: indexPath) as! NewsMainPageCollectionViewCell 
-        
-        collectionView.backgroundColor = #colorLiteral(red: 0.7626346361, green: 1, blue: 0.8789471334, alpha: 1)
-        
         cell.newsImage.image = images[indexPath.row]
         
         return cell

@@ -39,7 +39,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DSi-Xa-R3j">
                                 <rect key="frame" x="20" y="120" width="374" height="230"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fod-vP-BGl">
                                     <size key="itemSize" width="161" height="138"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -66,7 +66,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="MAG-hw-p69" secondAttribute="bottom" id="ZgG-gw-JTb"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.97134924379999998" blue="0.84253776329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="161" height="138"/>
                                         <connections>
                                             <outlet property="newsImage" destination="MAG-hw-p69" id="Gu1-Ip-0Hy"/>
