@@ -62,6 +62,10 @@
 		CEDCAF9228C0DA03005D8324 /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDCAF9128C0DA03005D8324 /* FAQ.storyboard */; };
 		CEDCAF9528C0DA11005D8324 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCAF9428C0DA11005D8324 /* FAQViewController.swift */; };
 		CEDCAF9828C0E028005D8324 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCAF9728C0E028005D8324 /* FAQTableViewCell.swift */; };
+		CEF6472928CB62C200DC29A3 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF6472828CB62C200DC29A3 /* Game.storyboard */; };
+		CEF6472C28CB631F00DC29A3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6472B28CB631F00DC29A3 /* GameViewController.swift */; };
+		CEF6472F28CB63D500DC29A3 /* ParticleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CEF6472E28CB63D500DC29A3 /* ParticleScene.sks */; };
+		CEF6473228CB646400DC29A3 /* ParticleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6473128CB646400DC29A3 /* ParticleScene.swift */; };
 		CEFD6A7C28C3D72E00172388 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD6A7B28C3D72E00172388 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +143,10 @@
 		CEDCAF9128C0DA03005D8324 /* FAQ.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
 		CEDCAF9428C0DA11005D8324 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		CEDCAF9728C0E028005D8324 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
+		CEF6472828CB62C200DC29A3 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		CEF6472B28CB631F00DC29A3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		CEF6472E28CB63D500DC29A3 /* ParticleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ParticleScene.sks; sourceTree = "<group>"; };
+		CEF6473128CB646400DC29A3 /* ParticleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleScene.swift; sourceTree = "<group>"; };
 		CEFD6A7B28C3D72E00172388 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -177,6 +185,7 @@
 		CE00FC5428BD2EF2007BC9EC /* AccountScreen */ = {
 			isa = PBXGroup;
 			children = (
+				CEF6472728CB627A00DC29A3 /* MiniGameScreen */,
 				CE5E6C4428CA224800EEC5B6 /* BonusScreen */,
 				CEDCAF9028C0D9F2005D8324 /* FAQScreen */,
 				CE262BBA28BF5EFF005B55DF /* ChangeUsernameScreen */,
@@ -396,6 +405,17 @@
 			path = FAQScreen;
 			sourceTree = "<group>";
 		};
+		CEF6472728CB627A00DC29A3 /* MiniGameScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CEF6472828CB62C200DC29A3 /* Game.storyboard */,
+				CEF6472B28CB631F00DC29A3 /* GameViewController.swift */,
+				CEF6472E28CB63D500DC29A3 /* ParticleScene.sks */,
+				CEF6473128CB646400DC29A3 /* ParticleScene.swift */,
+			);
+			path = MiniGameScreen;
+			sourceTree = "<group>";
+		};
 		CEF6FB4628AD41B20057D530 /* SignUpScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,6 +508,8 @@
 				CE8A6B4C289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf in Resources */,
 				CE367D7B28B653D500B615FA /* MainTabBar.storyboard in Resources */,
 				CE4A502F28C6406200332F77 /* Registration.storyboard in Resources */,
+				CEF6472F28CB63D500DC29A3 /* ParticleScene.sks in Resources */,
+				CEF6472928CB62C200DC29A3 /* Game.storyboard in Resources */,
 				CE17BCCF28B6A09200DE5B3D /* Food.storyboard in Resources */,
 				CE8A6B3A289ACF41002F1DD7 /* Main.storyboard in Resources */,
 				CEDCAF9228C0DA03005D8324 /* FAQ.storyboard in Resources */,
@@ -568,6 +590,7 @@
 				CE759121289BD39B00F7098A /* StartViewController.swift in Sources */,
 				CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */,
 				CE5E6C4128CA211D00EEC5B6 /* AdviceManager.swift in Sources */,
+				CEF6472C28CB631F00DC29A3 /* GameViewController.swift in Sources */,
 				CE1ED94028C8F3B40085A2C8 /* WeatherManager.swift in Sources */,
 				CE18054328B6E4A600BAC5C0 /* HomePageViewController.swift in Sources */,
 				CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */,
@@ -587,6 +610,7 @@
 				CED9409B28C7FBF90044C1DC /* FaqBackView.swift in Sources */,
 				CE1ED93928C8DB2E0085A2C8 /* Extensions.swift in Sources */,
 				CE4A503528C6742E00332F77 /* CustomBackView.swift in Sources */,
+				CEF6473228CB646400DC29A3 /* ParticleScene.swift in Sources */,
 				CE18054728B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift in Sources */,
 				CE5E6C4D28CA33E800EEC5B6 /* BonusBackView.swift in Sources */,
 				CEAFFA1628AE7FDA00011E65 /* RecipeManager.swift in Sources */,

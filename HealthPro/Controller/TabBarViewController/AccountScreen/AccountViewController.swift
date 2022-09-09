@@ -38,6 +38,7 @@ final class AccountViewController: UIViewController {
     private let changeStoryboard: UIStoryboard = UIStoryboard(name: "ChangeUsername", bundle: nil)
     private let faqStoryboard: UIStoryboard = UIStoryboard(name: "FAQ", bundle: nil)
     private let bonusStoryboard: UIStoryboard = UIStoryboard(name: "Bonus", bundle: nil)
+    private let gameStoryboard: UIStoryboard = UIStoryboard(name: "Game", bundle: nil)
     
     private let realm = try! Realm()
     
@@ -281,6 +282,13 @@ final class AccountViewController: UIViewController {
             UIApplication.shared.open(url)
         }
     }
+    
+    @IBAction func didTappedMinigameButton(_ sender: UIButton) {
+        guard let gameVC = gameStoryboard.instantiateViewController(withIdentifier: "gameVC") as? GameViewController else { return }
+       
+        present(gameVC, animated: true)
+    }
+    
     
 }
 
