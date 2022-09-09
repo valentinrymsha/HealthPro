@@ -17,14 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your personal advice:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS8-NC-EQx">
-                                <rect key="frame" x="93.5" y="244" width="227" height="18"/>
+                                <rect key="frame" x="93.5" y="267.5" width="227" height="18"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBA-Rt-1Gg">
-                                <rect key="frame" x="85.5" y="612" width="243" height="50"/>
+                                <rect key="frame" x="85.5" y="610.5" width="243" height="40"/>
                                 <color key="backgroundColor" red="0.27450980390000002" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Pca-lr-Kl0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 <state key="normal" title="Get one more advice!">
                                     <color key="titleColor" systemColor="labelColor"/>
@@ -52,7 +55,7 @@
                                 <rect key="frame" x="20" y="345.5" width="374" height="205"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sy-rv-EMx">
-                                        <rect key="frame" x="24" y="93" width="327" height="20"/>
+                                        <rect key="frame" x="23.5" y="93" width="327" height="19.5"/>
                                         <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -69,18 +72,17 @@
                         <viewLayoutGuide key="safeArea" id="wkr-wH-FJg"/>
                         <color key="backgroundColor" red="0.73333333329999995" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="NS8-NC-EQx" firstAttribute="top" secondItem="wkr-wH-FJg" secondAttribute="top" constant="200" id="4sJ-la-Mnm"/>
                             <constraint firstItem="4A8-MU-UPT" firstAttribute="height" secondItem="bg2-GG-L3K" secondAttribute="height" multiplier="0.0435268" id="5MM-HM-aZU"/>
                             <constraint firstItem="4A8-MU-UPT" firstAttribute="centerX" secondItem="bg2-GG-L3K" secondAttribute="centerX" id="5p0-Dg-yP5"/>
                             <constraint firstItem="GBA-Rt-1Gg" firstAttribute="width" secondItem="bg2-GG-L3K" secondAttribute="width" multiplier="0.586957" id="CrD-Q7-UoY"/>
-                            <constraint firstItem="wkr-wH-FJg" firstAttribute="bottom" secondItem="GBA-Rt-1Gg" secondAttribute="bottom" constant="200" id="KAe-QA-iRd"/>
                             <constraint firstItem="07Z-U4-PJh" firstAttribute="width" secondItem="bg2-GG-L3K" secondAttribute="width" multiplier="0.903382" id="MHA-Yj-r7g"/>
                             <constraint firstItem="07Z-U4-PJh" firstAttribute="centerX" secondItem="bg2-GG-L3K" secondAttribute="centerX" id="PPB-1u-OSy"/>
                             <constraint firstItem="4A8-MU-UPT" firstAttribute="width" secondItem="bg2-GG-L3K" secondAttribute="width" id="QHa-8W-EIs"/>
+                            <constraint firstItem="07Z-U4-PJh" firstAttribute="top" secondItem="NS8-NC-EQx" secondAttribute="bottom" constant="60" id="QnS-kC-A7O"/>
                             <constraint firstItem="GBA-Rt-1Gg" firstAttribute="centerX" secondItem="bg2-GG-L3K" secondAttribute="centerX" id="TxB-tt-Ljg"/>
+                            <constraint firstItem="GBA-Rt-1Gg" firstAttribute="top" secondItem="07Z-U4-PJh" secondAttribute="bottom" constant="60" id="ZK8-Xn-Ft8"/>
                             <constraint firstItem="NS8-NC-EQx" firstAttribute="centerX" secondItem="bg2-GG-L3K" secondAttribute="centerX" id="ak8-CU-FEl"/>
                             <constraint firstItem="07Z-U4-PJh" firstAttribute="height" secondItem="bg2-GG-L3K" secondAttribute="height" multiplier="0.228795" id="bGx-fU-zHi"/>
-                            <constraint firstItem="GBA-Rt-1Gg" firstAttribute="height" secondItem="bg2-GG-L3K" secondAttribute="height" multiplier="0.0558036" id="cXn-31-jGn"/>
                             <constraint firstItem="4A8-MU-UPT" firstAttribute="top" secondItem="wkr-wH-FJg" secondAttribute="top" id="jZQ-M3-kHB"/>
                             <constraint firstItem="07Z-U4-PJh" firstAttribute="centerY" secondItem="bg2-GG-L3K" secondAttribute="centerY" id="pML-TC-BeA"/>
                         </constraints>
