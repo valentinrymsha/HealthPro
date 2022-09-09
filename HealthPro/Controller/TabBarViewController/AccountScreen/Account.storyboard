@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DEd-5h-j3C">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController storyboardIdentifier="SettingsVC" title="SettingsVC" id="DEd-5h-j3C" customClass="AccountViewController" customModule="HealthPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="edx-cS-0Cc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Idp-pF-22i" customClass="CustomBackView" customModule="HealthPro" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="205.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="205.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hdP-wR-U0I">
                                         <rect key="frame" x="20" y="68" width="70" height="70"/>
@@ -28,7 +28,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCx-0l-8Pz">
-                                        <rect key="frame" x="280" y="91.5" width="70" height="23"/>
+                                        <rect key="frame" x="311.5" y="91.5" width="77.5" height="23"/>
                                         <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-4" highlightedImage="defaultUserImage" translatesAutoresizingMaskIntoConstraints="NO" id="Et5-aA-eTY">
-                                <rect key="frame" x="122.5" y="42.5" width="130" height="130"/>
+                                <rect key="frame" x="142" y="86.5" width="130" height="130"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -53,22 +53,22 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pq7-iC-ZB5">
-                                <rect key="frame" x="112.5" y="180" width="150" height="20.5"/>
+                                <rect key="frame" x="124" y="224" width="166" height="20.5"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELP-gX-d75">
-                                <rect key="frame" x="131" y="15" width="113" height="19.5"/>
+                                <rect key="frame" x="144.5" y="59" width="125" height="19.5"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVh-Gz-bem">
-                                <rect key="frame" x="0.0" y="210.5" width="375" height="397.5"/>
+                                <rect key="frame" x="0.0" y="254.5" width="414" height="548.5"/>
                                 <subviews>
                                     <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afM-qX-Jjk">
-                                        <rect key="frame" x="3" y="0.0" width="369" height="47.5"/>
+                                        <rect key="frame" x="3" y="0.0" width="408" height="66"/>
                                         <color key="backgroundColor" red="0.27450980390000002" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
                                         <state key="normal" title="        Change password" image="userNameSet">
@@ -80,7 +80,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vi-qT-l8S">
-                                        <rect key="frame" x="3" y="50.5" width="369" height="48"/>
+                                        <rect key="frame" x="3" y="69" width="408" height="65.5"/>
                                         <color key="backgroundColor" red="0.27450980390000002" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
                                         <state key="normal" title="        FAQ" image="faq">
@@ -91,7 +91,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdc-xN-LX0">
-                                        <rect key="frame" x="3" y="101.5" width="369" height="47.5"/>
+                                        <rect key="frame" x="3" y="137.5" width="408" height="66"/>
                                         <color key="backgroundColor" red="0.27450980390000002" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
                                         <state key="normal" title="        Logout" image="logout-3">
@@ -102,7 +102,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvs-am-T0b">
-                                        <rect key="frame" x="3" y="152" width="369" height="49"/>
+                                        <rect key="frame" x="3" y="206.5" width="408" height="66"/>
                                         <color key="backgroundColor" red="0.27450980390000002" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
                                         <state key="normal" title="        Delete account" image="unfollow">
@@ -113,7 +113,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JG8-OE-X7Q">
-                                        <rect key="frame" x="3" y="204" width="369" height="49"/>
+                                        <rect key="frame" x="3" y="275.5" width="408" height="67.5"/>
                                         <color key="backgroundColor" red="0.27450980390000002" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
                                         <state key="normal" title="        Bonus" image="bonus">
@@ -124,7 +124,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="kV7-N7-74I">
-                                        <rect key="frame" x="104.5" y="277" width="166" height="24"/>
+                                        <rect key="frame" x="124" y="367" width="166" height="24"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPh-av-kEt">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>

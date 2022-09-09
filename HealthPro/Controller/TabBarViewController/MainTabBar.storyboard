@@ -14,7 +14,7 @@
                     <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="Qjq-si-DNf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.89019607840000003" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.27450980390000002" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.8980392157" green="0.89019607840000003" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="selectedImageTintColor" red="0.27450980390000002" green="0.58431372550000005" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>

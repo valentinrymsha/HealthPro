@@ -35,7 +35,19 @@ final class ChangeUsernameViewController: UIViewController {
     }
     
     private func oopsAlert() {
-        let alert = UIAlertController(title: "Oops\n Something wrong!", message: "Try to input data againg!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Oops\n Field should have minimum 5 simbols!", message: "Try to input data againg!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
+        
+        clearBackgroundColor(of: alert.view)
+        
+        alert.view.layer.backgroundColor =  #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.7).cgColor
+        alert.view.layer.cornerRadius = 10
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func invalidSimbolsAlert() {
+        let alert = UIAlertController(title: "Oops\n Invalid simbols in the field!", message: "Try to input data againg!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
         
         clearBackgroundColor(of: alert.view)
@@ -47,7 +59,7 @@ final class ChangeUsernameViewController: UIViewController {
     }
     
     private func duplicateAccountAlert() {
-        let alert = UIAlertController(title: "It's a curren password for this account!", message: "Choose another password!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "This password is a current pass for this account!", message: "Choose another password!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         
         clearBackgroundColor(of: alert.view)
@@ -86,7 +98,7 @@ final class ChangeUsernameViewController: UIViewController {
 
         changePasswordTextField.text!.forEach {
             if "#@$^&*()?!§±№;%><=+".contains($0) {
-                oopsAlert()
+                invalidSimbolsAlert()
             }
         }
 

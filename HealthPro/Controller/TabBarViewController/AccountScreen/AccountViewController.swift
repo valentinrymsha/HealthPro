@@ -94,7 +94,7 @@ final class AccountViewController: UIViewController {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7, execute: {
             if let image = self.conditionWeather?.icon {
                 let imageUrl = "https:" + image
                 Alamofire.request(imageUrl).responseImage { response in
@@ -271,7 +271,7 @@ final class AccountViewController: UIViewController {
     }
     
     @IBAction private func didTappedInstButton(_ sender: UIButton) {
-        if let url = URL(string: "https://instagram.com") {
+        if let url = URL(string: "https://instagram.com/valentinrymsha") {
             UIApplication.shared.open(url)
         }
     }

@@ -68,6 +68,66 @@ final class SignUpViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    private func shortLoginLengthAlert() {
+        let alert = UIAlertController(title: "Oops\n Login should have minimum 3 simbols!", message: "Try to input data againg!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
+        
+        clearBackgroundColor(of: alert.view)
+        
+        alert.view.layer.backgroundColor =  #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.7).cgColor
+        alert.view.layer.cornerRadius = 10
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func shortPasswordLengthAlert() {
+        let alert = UIAlertController(title: "Oops\n Password should have minimum 5 simbols!", message: "Try to input data againg!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
+        
+        clearBackgroundColor(of: alert.view)
+        
+        alert.view.layer.backgroundColor =  #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.7).cgColor
+        alert.view.layer.cornerRadius = 10
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func emptyFieldAlert() {
+        let alert = UIAlertController(title: "Oops\n Fields should not be empty!", message: "Try to input data againg!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
+        
+        clearBackgroundColor(of: alert.view)
+        
+        alert.view.layer.backgroundColor =  #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.7).cgColor
+        alert.view.layer.cornerRadius = 10
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func repeatPasswordAlert() {
+        let alert = UIAlertController(title: "Oops\n Password fields not equal!", message: "Try to input data againg!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
+        
+        clearBackgroundColor(of: alert.view)
+        
+        alert.view.layer.backgroundColor =  #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.7).cgColor
+        alert.view.layer.cornerRadius = 10
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func invalidSimbolsAlert() {
+        let alert = UIAlertController(title: "Oops\n Invalid simbols in fields!", message: "Try to input data againg!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
+        
+        clearBackgroundColor(of: alert.view)
+        
+        alert.view.layer.backgroundColor =  #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.7).cgColor
+        alert.view.layer.cornerRadius = 10
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     self.view.endEditing(true)
     }
@@ -116,24 +176,28 @@ final class SignUpViewController: UIViewController {
         guard userNameTextField.hasText,
               passwordTextField.hasText,
               repeatedPasswordTextField.hasText
-        else { return oopsAlert() }
+        else { return emptyFieldAlert() }
         
         guard userNameTextField.text!.trimmingCharacters(in: .whitespaces).count <= 10,
-              userNameTextField.text!.trimmingCharacters(in: .whitespaces).count >= 3,
-              passwordTextField.text!.trimmingCharacters(in: .whitespaces).count <= 12,
-              passwordTextField.text!.trimmingCharacters(in: .whitespaces).count >= 5,
-              repeatedPasswordTextField.text!.trimmingCharacters(in: .whitespaces).count <= 12,
+              userNameTextField.text!.trimmingCharacters(in: .whitespaces).count >= 3
+        else { return shortLoginLengthAlert() }
+              
+        guard passwordTextField.text!.trimmingCharacters(in: .whitespaces).count <= 12,
+              passwordTextField.text!.trimmingCharacters(in: .whitespaces).count >= 5
+        else { return shortPasswordLengthAlert() }
+              
+        guard repeatedPasswordTextField.text!.trimmingCharacters(in: .whitespaces).count <= 12,
               repeatedPasswordTextField.text!.trimmingCharacters(in: .whitespaces).count >= 5
-        else { return oopsAlert() }
+        else { return repeatPasswordAlert() }
         
         userNameTextField.text!.forEach {
             if "#@$^&*()?!§±№;%><=+".contains($0) {
-                oopsAlert()
+                invalidSimbolsAlert()
             }
         }
         passwordTextField.text!.forEach {
             if "#@$^&*()?!§±№;%><=+".contains($0) {
-                oopsAlert()
+                invalidSimbolsAlert()
             }
         }
            
@@ -156,7 +220,6 @@ final class SignUpViewController: UIViewController {
             if let homeVC = mainVC.viewControllers?.first as? HomePageViewController {
                 homeVC.userName = userNameTextField.text!.trimmingCharacters(in: .whitespaces)
             }
-            
             
             UsersData.userDefault.set("\(userNameTextField.text!.trimmingCharacters(in: .whitespaces))", forKey: "currentUser")
             UsersData.userDefault.synchronize()
