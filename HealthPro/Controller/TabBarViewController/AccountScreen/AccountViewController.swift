@@ -27,6 +27,7 @@ final class AccountViewController: UIViewController {
     @IBOutlet private weak var weatherIconImage: UIImageView!
     @IBOutlet private weak var weatherLabel: UILabel!
     @IBOutlet private weak var bonusButton: UIButton!
+    @IBOutlet private weak var miniGameButton: UIButton!
     
     // MARK: Properties
     
@@ -117,6 +118,7 @@ final class AccountViewController: UIViewController {
         buttonConfig(faqButton)
         buttonConfig(deleteAccountButton)
         buttonConfig(bonusButton)
+        buttonConfig(miniGameButton)
         
         setupImageView()
         setupWeatherData()

@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <skView contentMode="scaleToFill" sceneName="ParticleScene.sks" translatesAutoresizingMaskIntoConstraints="NO" id="CYs-7F-jnm">
+                            <skView contentMode="scaleToFill" sceneName="GameScene.sks" translatesAutoresizingMaskIntoConstraints="NO" id="CYs-7F-jnm">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </skView>
                         </subviews>
@@ -29,9 +29,6 @@
                             <constraint firstAttribute="bottom" secondItem="CYs-7F-jnm" secondAttribute="bottom" id="xuH-92-edb"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="particleView" destination="CYs-7F-jnm" id="sPG-GF-fUb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fk-Bq-0rD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
