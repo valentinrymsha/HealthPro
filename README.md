@@ -2,6 +2,8 @@
 
 This app was developed as part of the **Swift** programming language training.
 
+The application is designed for convenient tracking of daily activity indicators, viewing and searching for healthy recipes, as well as for calculating the required number of calories (calculator). There are login, registration, password recovery pages in the application. There is also a user page where the user can see the current weather, change or set a profile photo, also the user can change the password, open the bonus page, FAQ page, log out of the account, delete the account, play a mini game (beta).
+
 ## Getting Started
 
 Here are step-by-step instructions for preparing and running the application on your simulator or iPhone.
@@ -32,14 +34,18 @@ A step by step series of examples that tell you how to get a development end run
 Below are screenshots of the graphical interface of the application
 
 <p align="center">
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot1.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot2.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot3.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot4.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot5.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot6.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot7.png" width="200" >
-  <img src="https://github.com/nek-to/KKOApp/blob/main/Screenshots/screenshot8.png" width="200" >
+  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/1.png" width="200" >
+  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/2.png" width="200" >
+  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/3.png" width="200" >
+  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/4.png" width="200" >
+  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/5.png" width="200" >
+  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/6.png" width="200" >
+  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/7.png" width="200" >
+  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/8.png" width="200" >
+  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/9.png" width="200" >
+  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/10.png" width="200" >
+  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/11.png" width="200" >
+  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/12.png" width="200" >
 </p>
 
 
