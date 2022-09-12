@@ -59,7 +59,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         buttonExit.selectedHandler = { [self] in
             let skView = self.view?.window?.rootViewController?.presentedViewController
             
-            skView?.dismiss(animated: true, completion: nil)
+            skView?.dismiss(animated: false)
         }
         
         buttonRestart.state = .MSButtonNodeStateHidden
