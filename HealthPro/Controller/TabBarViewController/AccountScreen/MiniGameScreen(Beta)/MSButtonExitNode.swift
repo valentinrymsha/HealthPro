@@ -1,10 +1,10 @@
 import SpriteKit
 
-enum MSButtonNodeState {
+enum MSButtonExitNodeState {
     case MSButtonNodeStateActive, MSButtonNodeStateSelected, MSButtonNodeStateHidden
 }
 
-class MSButtonNode: SKSpriteNode {
+class MSButtonExitNode: SKSpriteNode {
     
     var selectedHandler: () -> Void = { print("No button action set") }
     
@@ -24,7 +24,7 @@ class MSButtonNode: SKSpriteNode {
                 
                 self.isUserInteractionEnabled = false
                 self.alpha = 0
-                
+            
             }
         }
     }
@@ -33,10 +33,10 @@ class MSButtonNode: SKSpriteNode {
         
         super.init(coder: aDecoder)
         self.isUserInteractionEnabled = true
-        
+    
     }
     
-    // MARK: Touch handling
+    // MARK: - Touch handling
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         state = .MSButtonNodeStateSelected
     }
