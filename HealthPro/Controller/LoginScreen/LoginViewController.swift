@@ -138,8 +138,6 @@ final class LoginViewController: UIViewController {
                 
                 PushNotification.pushNote("Nice to see you again, dude", 3)
                 present(mainVC, animated: true, completion: nil)
-                
-                
             }
         } else {
             invalidLoginDataAlert()

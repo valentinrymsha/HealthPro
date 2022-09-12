@@ -49,7 +49,6 @@ final class FavoritesViewController: UIViewController {
     
         searchButton.layer.cornerRadius = 13
         
-        
         recipesTableView.delegate = self
         recipesTableView.dataSource = self
         

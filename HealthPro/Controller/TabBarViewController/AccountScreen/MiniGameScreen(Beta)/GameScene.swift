@@ -19,7 +19,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var gameState: GameSceneState = .active
     var scoreLabel: SKLabelNode!
     var points = 0
-    var mainstoryboard: UIStoryboard = UIStoryboard(name: "Account", bundle: nil)
+    var mainstoryboard: UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
     
     // MARK: Lifecircle
     
@@ -58,8 +58,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         buttonExit.selectedHandler = { [self] in
             let skView = self.view?.window?.rootViewController?.presentedViewController
-            
-            skView?.dismiss(animated: true, completion: nil)
+
+            skView?.dismiss(animated: false, completion: nil)
         }
         
         buttonRestart.state = .MSButtonNodeStateHidden
