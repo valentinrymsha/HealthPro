@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rpZ-Vm-Aef">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--foodVC-->
+        <scene sceneID="jev-1X-dYB">
+            <objects>
+                <viewController storyboardIdentifier="foodVC" title="foodVC" modalPresentationStyle="pageSheet" id="rpZ-Vm-Aef" customClass="FoodViewController" customModule="HealthPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BIL-HR-wu9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="O0z-Ay-7SI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G6f-zj-hZI">
+                                <rect key="frame" x="20" y="223.5" width="374" height="449"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ixc-Tx-2og"/>
+                        <color key="backgroundColor" red="0.35686274509999999" green="0.63137254899999995" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="O0z-Ay-7SI" firstAttribute="leading" secondItem="Ixc-Tx-2og" secondAttribute="leading" id="BeL-mh-4Yv"/>
+                            <constraint firstItem="Ixc-Tx-2og" firstAttribute="bottom" secondItem="O0z-Ay-7SI" secondAttribute="bottom" id="CpZ-bc-E6k"/>
+                            <constraint firstItem="G6f-zj-hZI" firstAttribute="centerX" secondItem="BIL-HR-wu9" secondAttribute="centerX" id="Tjy-pI-wHl"/>
+                            <constraint firstItem="Ixc-Tx-2og" firstAttribute="trailing" secondItem="O0z-Ay-7SI" secondAttribute="trailing" id="YeT-VH-9GJ"/>
+                            <constraint firstItem="G6f-zj-hZI" firstAttribute="width" secondItem="BIL-HR-wu9" secondAttribute="width" multiplier="0.903382" id="bGy-Gk-Gs3"/>
+                            <constraint firstItem="G6f-zj-hZI" firstAttribute="centerY" secondItem="BIL-HR-wu9" secondAttribute="centerY" id="rRZ-5V-qap"/>
+                            <constraint firstItem="O0z-Ay-7SI" firstAttribute="top" secondItem="Ixc-Tx-2og" secondAttribute="top" id="sA9-JB-5Wi"/>
+                            <constraint firstItem="G6f-zj-hZI" firstAttribute="height" secondItem="BIL-HR-wu9" secondAttribute="height" multiplier="0.501116" id="xih-GW-z9Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="foodImage" destination="G6f-zj-hZI" id="nUY-4k-mcu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yi5-L3-ZYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230.43478260869566" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="1380" height="920"/>
+    </resources>
+</document>

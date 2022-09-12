@@ -7,12 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B2A725DB11CF85AD47C4367 /* Pods_HealthPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */; };
+		CE00FC5628BD2F0D007BC9EC /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE00FC5528BD2F0D007BC9EC /* Account.storyboard */; };
+		CE00FC5928BD2F2A007BC9EC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE00FC5828BD2F2A007BC9EC /* AccountViewController.swift */; };
+		CE17BCCF28B6A09200DE5B3D /* Food.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17BCCE28B6A09200DE5B3D /* Food.storyboard */; };
+		CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17BCD128B6A09F00DE5B3D /* FoodViewController.swift */; };
+		CE18053828B6E49500BAC5C0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE18053728B6E49500BAC5C0 /* Home.storyboard */; };
+		CE18054328B6E4A600BAC5C0 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18054228B6E4A600BAC5C0 /* HomePageViewController.swift */; };
+		CE18054728B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18054628B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift */; };
 		CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */; };
 		CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */; };
+		CE1ED93928C8DB2E0085A2C8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1ED93828C8DB2E0085A2C8 /* Extensions.swift */; };
+		CE1ED94028C8F3B40085A2C8 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1ED93F28C8F3B40085A2C8 /* WeatherManager.swift */; };
+		CE1EF96C28BBF7CD007EB20F /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1EF96B28BBF7CD007EB20F /* Map.storyboard */; };
+		CE1EF96F28BBF7E6007EB20F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EF96E28BBF7E6007EB20F /* MapViewController.swift */; };
+		CE262BBC28BF5F16005B55DF /* ChangeUsername.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE262BBB28BF5F16005B55DF /* ChangeUsername.storyboard */; };
+		CE262BBF28BF5F3C005B55DF /* ChangeUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE262BBE28BF5F3C005B55DF /* ChangeUsernameViewController.swift */; };
+		CE367D6328B63D2600B615FA /* RecoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE367D6228B63D2600B615FA /* RecoveryViewController.swift */; };
+		CE367D7128B64EFB00B615FA /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D7028B64EFB00B615FA /* Favorites.storyboard */; };
+		CE367D7628B6529900B615FA /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D7528B6529900B615FA /* Calculator.storyboard */; };
+		CE367D7B28B653D500B615FA /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D7A28B653D500B615FA /* MainTabBar.storyboard */; };
+		CE367D8028B655DA00B615FA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D7F28B655DA00B615FA /* Login.storyboard */; };
+		CE367D8428B6576D00B615FA /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE367D8328B6576D00B615FA /* Recipe.storyboard */; };
+		CE4A502F28C6406200332F77 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4A502E28C6406200332F77 /* Registration.storyboard */; };
+		CE4A503528C6742E00332F77 /* CustomBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A503428C6742E00332F77 /* CustomBackView.swift */; };
+		CE4A503828C674A700332F77 /* CustomHomeBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A503728C674A700332F77 /* CustomHomeBackView.swift */; };
 		CE5650C628A0E6A0001E1668 /* StartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */; };
-		CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5650C928A118D5001E1668 /* Registration.storyboard */; };
-		CE5650D128A11CBE001E1668 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650D028A11CBE001E1668 /* MainPageViewController.swift */; };
+		CE5650D128A11CBE001E1668 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650D028A11CBE001E1668 /* MainTabBarViewController.swift */; };
+		CE5E6C4128CA211D00EEC5B6 /* AdviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E6C4028CA211D00EEC5B6 /* AdviceManager.swift */; };
+		CE5E6C4628CA226100EEC5B6 /* BonusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E6C4528CA226100EEC5B6 /* BonusViewController.swift */; };
+		CE5E6C4A28CA227200EEC5B6 /* Bonus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5E6C4928CA227200EEC5B6 /* Bonus.storyboard */; };
+		CE5E6C4D28CA33E800EEC5B6 /* BonusBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E6C4C28CA33E800EEC5B6 /* BonusBackView.swift */; };
 		CE759121289BD39B00F7098A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE759120289BD39B00F7098A /* StartViewController.swift */; };
+		CE77F1BD28B4F55300F29069 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */; };
+		CE77F1C328B506E900F29069 /* BMRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1C228B506E900F29069 /* BMRViewController.swift */; };
+		CE77F1C828B5229300F29069 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77F1C728B5229300F29069 /* RecipeViewController.swift */; };
 		CE8A6B33289ACF41002F1DD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B32289ACF41002F1DD7 /* AppDelegate.swift */; };
 		CE8A6B35289ACF41002F1DD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B34289ACF41002F1DD7 /* SceneDelegate.swift */; };
 		CE8A6B3A289ACF41002F1DD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8A6B38289ACF41002F1DD7 /* Main.storyboard */; };
@@ -21,21 +50,81 @@
 		CE8A6B4C289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE8A6B4B289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf */; };
 		CE8A6B5A289ADC11002F1DD7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B59289ADC11002F1DD7 /* LoginViewController.swift */; };
 		CE8A6B5E289ADC24002F1DD7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6B5D289ADC24002F1DD7 /* SignUpViewController.swift */; };
+		CE8C6B9A28CF6D91006296EA /* MSButtonExitNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C6B9928CF6D91006296EA /* MSButtonExitNode.swift */; };
+		CE90703328C23CF900361D48 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90703228C23CF900361D48 /* Shop.swift */; };
 		CEA2B3C028ABF2280027D3D4 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA2B3BF28ABF2280027D3D4 /* RecipesTableViewCell.swift */; };
-		CEAFFA1628AE7FDA00011E65 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFFA1528AE7FDA00011E65 /* Manager.swift */; };
+		CEAFFA1628AE7FDA00011E65 /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFFA1528AE7FDA00011E65 /* RecipeManager.swift */; };
 		CEB9562B28AD2AFC0021D261 /* UsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9562A28AD2AFC0021D261 /* UsersData.swift */; };
-		E773A7C3EE0C34D9266F2839 /* Pods_HealthPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */; };
+		CED9409B28C7FBF90044C1DC /* FaqBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9409A28C7FBF90044C1DC /* FaqBackView.swift */; };
+		CED9409E28C7FCDC0044C1DC /* ChangeUsernameBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9409D28C7FCDC0044C1DC /* ChangeUsernameBackView.swift */; };
+		CED940A128C803060044C1DC /* FavoritesBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED940A028C803060044C1DC /* FavoritesBackView.swift */; };
+		CED940A428C8043F0044C1DC /* CalculatorBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED940A328C8043F0044C1DC /* CalculatorBackView.swift */; };
+		CEDCAF8E28C0D439005D8324 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCAF8D28C0D439005D8324 /* PushNotification.swift */; };
+		CEDCAF9228C0DA03005D8324 /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDCAF9128C0DA03005D8324 /* FAQ.storyboard */; };
+		CEDCAF9528C0DA11005D8324 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCAF9428C0DA11005D8324 /* FAQViewController.swift */; };
+		CEDCAF9828C0E028005D8324 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCAF9728C0E028005D8324 /* FAQTableViewCell.swift */; };
+		CEF3FC3228CE15A300B6D4D2 /* Hero.sks in Resources */ = {isa = PBXBuildFile; fileRef = CEF3FC3128CE15A300B6D4D2 /* Hero.sks */; };
+		CEF3FC3828CE15C400B6D4D2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CEF3FC3728CE15C400B6D4D2 /* GameScene.sks */; };
+		CEF3FC3D28CE1D3A00B6D4D2 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3FC3C28CE1D3A00B6D4D2 /* CGFloatExtensions.swift */; };
+		CEF3FC4028CE1FEA00B6D4D2 /* Obstacle.sks in Resources */ = {isa = PBXBuildFile; fileRef = CEF3FC3F28CE1FEA00B6D4D2 /* Obstacle.sks */; };
+		CEF3FC4C28CE5D2A00B6D4D2 /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3FC4B28CE5D2A00B6D4D2 /* MSButtonNode.swift */; };
+		CEF3FC4F28CE5F1200B6D4D2 /* GameEffects.sks in Resources */ = {isa = PBXBuildFile; fileRef = CEF3FC4E28CE5F1200B6D4D2 /* GameEffects.sks */; };
+		CEF6472928CB62C200DC29A3 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF6472828CB62C200DC29A3 /* Game.storyboard */; };
+		CEF6472C28CB631F00DC29A3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6472B28CB631F00DC29A3 /* GameViewController.swift */; };
+		CEF6473228CB646400DC29A3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6473128CB646400DC29A3 /* GameScene.swift */; };
+		CEFD6A7C28C3D72E00172388 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD6A7B28C3D72E00172388 /* UserModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CED9403328C7B9170044C1DC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A204F500672533D41DC8477 /* Pods-HealthPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthPro.debug.xcconfig"; path = "Target Support Files/Pods-HealthPro/Pods-HealthPro.debug.xcconfig"; sourceTree = "<group>"; };
 		C673CCB482C24BEEEE58DCC8 /* Pods-HealthPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthPro.release.xcconfig"; path = "Target Support Files/Pods-HealthPro/Pods-HealthPro.release.xcconfig"; sourceTree = "<group>"; };
+		CE00FC5528BD2F0D007BC9EC /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		CE00FC5828BD2F2A007BC9EC /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		CE17BCCE28B6A09200DE5B3D /* Food.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Food.storyboard; sourceTree = "<group>"; };
+		CE17BCD128B6A09F00DE5B3D /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		CE18053728B6E49500BAC5C0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		CE18054228B6E4A600BAC5C0 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		CE18054628B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsMainPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodsCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE1ED93828C8DB2E0085A2C8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CE1ED93F28C8F3B40085A2C8 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		CE1EF96B28BBF7CD007EB20F /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		CE1EF96E28BBF7E6007EB20F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CE262BBB28BF5F16005B55DF /* ChangeUsername.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeUsername.storyboard; sourceTree = "<group>"; };
+		CE262BBE28BF5F3C005B55DF /* ChangeUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameViewController.swift; sourceTree = "<group>"; };
+		CE367D6228B63D2600B615FA /* RecoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryViewController.swift; sourceTree = "<group>"; };
+		CE367D7028B64EFB00B615FA /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		CE367D7528B6529900B615FA /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
+		CE367D7A28B653D500B615FA /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
+		CE367D7F28B655DA00B615FA /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		CE367D8328B6576D00B615FA /* Recipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recipe.storyboard; sourceTree = "<group>"; };
+		CE4A502E28C6406200332F77 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		CE4A503428C6742E00332F77 /* CustomBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackView.swift; sourceTree = "<group>"; };
+		CE4A503728C674A700332F77 /* CustomHomeBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHomeBackView.swift; sourceTree = "<group>"; };
 		CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCollectionViewCell.swift; sourceTree = "<group>"; };
-		CE5650C928A118D5001E1668 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Registration.storyboard; path = /Users/user/Documents/HealthPro/HealthPro/Controller/LoginingRegistrationStoryboard/Registration.storyboard; sourceTree = "<absolute>"; };
-		CE5650D028A11CBE001E1668 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		CE5650D028A11CBE001E1668 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		CE5E6C4028CA211D00EEC5B6 /* AdviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceManager.swift; sourceTree = "<group>"; };
+		CE5E6C4528CA226100EEC5B6 /* BonusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusViewController.swift; sourceTree = "<group>"; };
+		CE5E6C4928CA227200EEC5B6 /* Bonus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bonus.storyboard; sourceTree = "<group>"; };
+		CE5E6C4C28CA33E800EEC5B6 /* BonusBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusBackView.swift; sourceTree = "<group>"; };
 		CE759120289BD39B00F7098A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		CE77F1C228B506E900F29069 /* BMRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMRViewController.swift; sourceTree = "<group>"; };
+		CE77F1C728B5229300F29069 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		CE8A6B2F289ACF41002F1DD7 /* HealthPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8A6B32289ACF41002F1DD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8A6B34289ACF41002F1DD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,9 +135,31 @@
 		CE8A6B4B289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TheBiggerTheBetter.ttf; sourceTree = "<group>"; };
 		CE8A6B59289ADC11002F1DD7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE8A6B5D289ADC24002F1DD7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CE8C6B9928CF6D91006296EA /* MSButtonExitNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSButtonExitNode.swift; sourceTree = "<group>"; };
+		CE90703228C23CF900361D48 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		CEA2B3BF28ABF2280027D3D4 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
-		CEAFFA1528AE7FDA00011E65 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		CEAFFA1528AE7FDA00011E65 /* RecipeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeManager.swift; sourceTree = "<group>"; };
 		CEB9562A28AD2AFC0021D261 /* UsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersData.swift; sourceTree = "<group>"; };
+		CED9402328C7B9160044C1DC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		CED9402528C7B9160044C1DC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		CED9409A28C7FBF90044C1DC /* FaqBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqBackView.swift; sourceTree = "<group>"; };
+		CED9409D28C7FCDC0044C1DC /* ChangeUsernameBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameBackView.swift; sourceTree = "<group>"; };
+		CED940A028C803060044C1DC /* FavoritesBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesBackView.swift; sourceTree = "<group>"; };
+		CED940A328C8043F0044C1DC /* CalculatorBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBackView.swift; sourceTree = "<group>"; };
+		CEDCAF8D28C0D439005D8324 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
+		CEDCAF9128C0DA03005D8324 /* FAQ.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
+		CEDCAF9428C0DA11005D8324 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		CEDCAF9728C0E028005D8324 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
+		CEF3FC3128CE15A300B6D4D2 /* Hero.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Hero.sks; sourceTree = "<group>"; };
+		CEF3FC3728CE15C400B6D4D2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		CEF3FC3C28CE1D3A00B6D4D2 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
+		CEF3FC3F28CE1FEA00B6D4D2 /* Obstacle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Obstacle.sks; sourceTree = "<group>"; };
+		CEF3FC4B28CE5D2A00B6D4D2 /* MSButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
+		CEF3FC4E28CE5F1200B6D4D2 /* GameEffects.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameEffects.sks; sourceTree = "<group>"; };
+		CEF6472828CB62C200DC29A3 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		CEF6472B28CB631F00DC29A3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		CEF6473128CB646400DC29A3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		CEFD6A7B28C3D72E00172388 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -57,7 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E773A7C3EE0C34D9266F2839 /* Pods_HealthPro.framework in Frameworks */,
+				1B2A725DB11CF85AD47C4367 /* Pods_HealthPro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,8 +188,45 @@
 			isa = PBXGroup;
 			children = (
 				E6391CD57F21D2B4733812B1 /* Pods_HealthPro.framework */,
+				CED9402328C7B9160044C1DC /* WidgetKit.framework */,
+				CED9402528C7B9160044C1DC /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE00FC5428BD2EF2007BC9EC /* AccountScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE00FC5528BD2F0D007BC9EC /* Account.storyboard */,
+				CE00FC5828BD2F2A007BC9EC /* AccountViewController.swift */,
+				CE4A503428C6742E00332F77 /* CustomBackView.swift */,
+				CE262BBA28BF5EFF005B55DF /* ChangeUsernameScreen */,
+				CEDCAF9028C0D9F2005D8324 /* FAQScreen */,
+				CE5E6C4428CA224800EEC5B6 /* BonusScreen */,
+				CEF6472728CB627A00DC29A3 /* MiniGameScreen(Beta) */,
+			);
+			path = AccountScreen;
+			sourceTree = "<group>";
+		};
+		CE17BCCD28B6A07E00DE5B3D /* FoodViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE17BCCE28B6A09200DE5B3D /* Food.storyboard */,
+				CE17BCD128B6A09F00DE5B3D /* FoodViewController.swift */,
+			);
+			path = FoodViewController;
+			sourceTree = "<group>";
+		};
+		CE18053628B6E47D00BAC5C0 /* HomePageScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE1EF96A28BBF7AC007EB20F /* MapViewController */,
+				CE18053728B6E49500BAC5C0 /* Home.storyboard */,
+				CE18054228B6E4A600BAC5C0 /* HomePageViewController.swift */,
+				CE18054628B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift */,
+				CE4A503728C674A700332F77 /* CustomHomeBackView.swift */,
+			);
+			path = HomePageScreen;
 			sourceTree = "<group>";
 		};
 		CE18464928AB9A2D003BCD42 /* Resources */ = {
@@ -88,6 +236,7 @@
 				CE8A6B34289ACF41002F1DD7 /* SceneDelegate.swift */,
 				CE8A6B3D289ACF43002F1DD7 /* LaunchScreen.storyboard */,
 				CE8A6B3B289ACF43002F1DD7 /* Assets.xcassets */,
+				CE1ED93828C8DB2E0085A2C8 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -95,30 +244,128 @@
 		CE18464B28AB9AEE003BCD42 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CEAFFA1528AE7FDA00011E65 /* RecipeManager.swift */,
+				CE1ED93F28C8F3B40085A2C8 /* WeatherManager.swift */,
+				CE5E6C4028CA211D00EEC5B6 /* AdviceManager.swift */,
+				CEDCAF8D28C0D439005D8324 /* PushNotification.swift */,
+				CE90703228C23CF900361D48 /* Shop.swift */,
 				CEB9562A28AD2AFC0021D261 /* UsersData.swift */,
-				CEAFFA1528AE7FDA00011E65 /* Manager.swift */,
+				CEFD6A7B28C3D72E00172388 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		CE18465828ABAC7B003BCD42 /* LoginingRegistrationStoryboard */ = {
+		CE18465E28ABCC56003BCD42 /* FavoritesScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CE5650C928A118D5001E1668 /* Registration.storyboard */,
-				CEF6FB4728AD41C50057D530 /* LoginViewController */,
-				CEF6FB4628AD41B20057D530 /* SignInViewController */,
-			);
-			path = LoginingRegistrationStoryboard;
-			sourceTree = "<group>";
-		};
-		CE18465E28ABCC56003BCD42 /* FavoritesViewController */ = {
-			isa = PBXGroup;
-			children = (
+				CE77F1C628B5226C00F29069 /* CompositionViewController */,
+				CE17BCCD28B6A07E00DE5B3D /* FoodViewController */,
+				CE367D7028B64EFB00B615FA /* Favorites.storyboard */,
 				CE18465528ABA6DB003BCD42 /* FavoritesViewController.swift */,
 				CE18465F28ABCC8A003BCD42 /* foodsCollectionViewCell.swift */,
 				CEA2B3BF28ABF2280027D3D4 /* RecipesTableViewCell.swift */,
+				CED940A028C803060044C1DC /* FavoritesBackView.swift */,
 			);
-			path = FavoritesViewController;
+			path = FavoritesScreen;
+			sourceTree = "<group>";
+		};
+		CE1EF96A28BBF7AC007EB20F /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE1EF96B28BBF7CD007EB20F /* Map.storyboard */,
+				CE1EF96E28BBF7E6007EB20F /* MapViewController.swift */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		CE262BBA28BF5EFF005B55DF /* ChangeUsernameScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE262BBB28BF5F16005B55DF /* ChangeUsername.storyboard */,
+				CE262BBE28BF5F3C005B55DF /* ChangeUsernameViewController.swift */,
+				CED9409D28C7FCDC0044C1DC /* ChangeUsernameBackView.swift */,
+			);
+			path = ChangeUsernameScreen;
+			sourceTree = "<group>";
+		};
+		CE367D6128B63D0C00B615FA /* RecoveryPassViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE367D6228B63D2600B615FA /* RecoveryViewController.swift */,
+			);
+			path = RecoveryPassViewController;
+			sourceTree = "<group>";
+		};
+		CE367D6828B647CE00B615FA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE367D6928B647F700B615FA /* StartScreen */,
+				CEF6FB4628AD41B20057D530 /* SignUpScreen */,
+				CEF6FB4728AD41C50057D530 /* LoginScreen */,
+				CE367D6C28B648D100B615FA /* TabBarViewController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE367D6928B647F700B615FA /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A6B38289ACF41002F1DD7 /* Main.storyboard */,
+				CE759120289BD39B00F7098A /* StartViewController.swift */,
+				CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		CE367D6C28B648D100B615FA /* TabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE5650D028A11CBE001E1668 /* MainTabBarViewController.swift */,
+				CE367D7A28B653D500B615FA /* MainTabBar.storyboard */,
+				CE18053628B6E47D00BAC5C0 /* HomePageScreen */,
+				CE18465E28ABCC56003BCD42 /* FavoritesScreen */,
+				CE77F1B528B4F50800F29069 /* CalculatorScreen */,
+				CE00FC5428BD2EF2007BC9EC /* AccountScreen */,
+			);
+			path = TabBarViewController;
+			sourceTree = "<group>";
+		};
+		CE5E6C4428CA224800EEC5B6 /* BonusScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E6C4528CA226100EEC5B6 /* BonusViewController.swift */,
+				CE5E6C4928CA227200EEC5B6 /* Bonus.storyboard */,
+				CE5E6C4C28CA33E800EEC5B6 /* BonusBackView.swift */,
+			);
+			path = BonusScreen;
+			sourceTree = "<group>";
+		};
+		CE77F1B528B4F50800F29069 /* CalculatorScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE367D7528B6529900B615FA /* Calculator.storyboard */,
+				CE77F1BC28B4F55300F29069 /* CalculatorViewController.swift */,
+				CE77F1C128B506D200F29069 /* BMRScreen */,
+				CED940A328C8043F0044C1DC /* CalculatorBackView.swift */,
+			);
+			path = CalculatorScreen;
+			sourceTree = "<group>";
+		};
+		CE77F1C128B506D200F29069 /* BMRScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE77F1C228B506E900F29069 /* BMRViewController.swift */,
+			);
+			path = BMRScreen;
+			sourceTree = "<group>";
+		};
+		CE77F1C628B5226C00F29069 /* CompositionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE367D8328B6576D00B615FA /* Recipe.storyboard */,
+				CE77F1C728B5229300F29069 /* RecipeViewController.swift */,
+			);
+			path = CompositionViewController;
 			sourceTree = "<group>";
 		};
 		CE8A6B26289ACF40002F1DD7 = {
@@ -144,8 +391,7 @@
 			children = (
 				CE18464928AB9A2D003BCD42 /* Resources */,
 				CE18464B28AB9AEE003BCD42 /* Model */,
-				CE8B457B289BD5B800003DEF /* View */,
-				CE8A6B58289ADBF2002F1DD7 /* Controller */,
+				CE367D6828B647CE00B615FA /* Controller */,
 				CE8A6B40289ACF43002F1DD7 /* Info.plist */,
 				CE8A6B4A289AD0CC002F1DD7 /* fonts */,
 			);
@@ -160,56 +406,51 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
-		CE8A6B58289ADBF2002F1DD7 /* Controller */ = {
+		CEDCAF9028C0D9F2005D8324 /* FAQScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CEB9562528ACF1DE0021D261 /* MainStoryboard */,
-				CE18465828ABAC7B003BCD42 /* LoginingRegistrationStoryboard */,
+				CEDCAF9128C0DA03005D8324 /* FAQ.storyboard */,
+				CEDCAF9428C0DA11005D8324 /* FAQViewController.swift */,
+				CEDCAF9728C0E028005D8324 /* FAQTableViewCell.swift */,
+				CED9409A28C7FBF90044C1DC /* FaqBackView.swift */,
 			);
-			path = Controller;
+			path = FAQScreen;
 			sourceTree = "<group>";
 		};
-		CE8B457B289BD5B800003DEF /* View */ = {
+		CEF6472728CB627A00DC29A3 /* MiniGameScreen(Beta) */ = {
 			isa = PBXGroup;
 			children = (
+				CEF6472828CB62C200DC29A3 /* Game.storyboard */,
+				CEF6472B28CB631F00DC29A3 /* GameViewController.swift */,
+				CEF6473128CB646400DC29A3 /* GameScene.swift */,
+				CE8C6B9928CF6D91006296EA /* MSButtonExitNode.swift */,
+				CEF3FC4B28CE5D2A00B6D4D2 /* MSButtonNode.swift */,
+				CEF3FC3728CE15C400B6D4D2 /* GameScene.sks */,
+				CEF3FC3128CE15A300B6D4D2 /* Hero.sks */,
+				CEF3FC3F28CE1FEA00B6D4D2 /* Obstacle.sks */,
+				CEF3FC4E28CE5F1200B6D4D2 /* GameEffects.sks */,
+				CEF3FC3C28CE1D3A00B6D4D2 /* CGFloatExtensions.swift */,
 			);
-			path = View;
+			path = "MiniGameScreen(Beta)";
 			sourceTree = "<group>";
 		};
-		CEB9562428ACF1C20021D261 /* StartViewController */ = {
+		CEF6FB4628AD41B20057D530 /* SignUpScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CE759120289BD39B00F7098A /* StartViewController.swift */,
-				CE5650C528A0E6A0001E1668 /* StartCollectionViewCell.swift */,
-			);
-			path = StartViewController;
-			sourceTree = "<group>";
-		};
-		CEB9562528ACF1DE0021D261 /* MainStoryboard */ = {
-			isa = PBXGroup;
-			children = (
-				CE8A6B38289ACF41002F1DD7 /* Main.storyboard */,
-				CE5650D028A11CBE001E1668 /* MainPageViewController.swift */,
-				CE18465E28ABCC56003BCD42 /* FavoritesViewController */,
-				CEB9562428ACF1C20021D261 /* StartViewController */,
-			);
-			path = MainStoryboard;
-			sourceTree = "<group>";
-		};
-		CEF6FB4628AD41B20057D530 /* SignInViewController */ = {
-			isa = PBXGroup;
-			children = (
+				CE4A502E28C6406200332F77 /* Registration.storyboard */,
 				CE8A6B5D289ADC24002F1DD7 /* SignUpViewController.swift */,
 			);
-			path = SignInViewController;
+			path = SignUpScreen;
 			sourceTree = "<group>";
 		};
-		CEF6FB4728AD41C50057D530 /* LoginViewController */ = {
+		CEF6FB4728AD41C50057D530 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
+				CE367D7F28B655DA00B615FA /* Login.storyboard */,
 				CE8A6B59289ADC11002F1DD7 /* LoginViewController.swift */,
+				CE367D6128B63D0C00B615FA /* RecoveryPassViewController */,
 			);
-			path = LoginViewController;
+			path = LoginScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +466,7 @@
 				CE8A6B2D289ACF41002F1DD7 /* Resources */,
 				CEE2F98E28A3A94F00B2B426 /* Run Script */,
 				848F5216DE98D3434064212A /* [CP] Embed Pods Frameworks */,
+				CED9403328C7B9170044C1DC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -272,11 +514,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5650CA28A118D5001E1668 /* Registration.storyboard in Resources */,
+				CE1EF96C28BBF7CD007EB20F /* Map.storyboard in Resources */,
+				CE262BBC28BF5F16005B55DF /* ChangeUsername.storyboard in Resources */,
 				CE8A6B3F289ACF43002F1DD7 /* LaunchScreen.storyboard in Resources */,
+				CE5E6C4A28CA227200EEC5B6 /* Bonus.storyboard in Resources */,
+				CEF3FC3828CE15C400B6D4D2 /* GameScene.sks in Resources */,
+				CE367D7128B64EFB00B615FA /* Favorites.storyboard in Resources */,
+				CE18053828B6E49500BAC5C0 /* Home.storyboard in Resources */,
 				CE8A6B3C289ACF43002F1DD7 /* Assets.xcassets in Resources */,
+				CE00FC5628BD2F0D007BC9EC /* Account.storyboard in Resources */,
+				CE367D8428B6576D00B615FA /* Recipe.storyboard in Resources */,
 				CE8A6B4C289AD0FE002F1DD7 /* TheBiggerTheBetter.ttf in Resources */,
+				CEF3FC4F28CE5F1200B6D4D2 /* GameEffects.sks in Resources */,
+				CE367D7B28B653D500B615FA /* MainTabBar.storyboard in Resources */,
+				CE4A502F28C6406200332F77 /* Registration.storyboard in Resources */,
+				CEF6472928CB62C200DC29A3 /* Game.storyboard in Resources */,
+				CE17BCCF28B6A09200DE5B3D /* Food.storyboard in Resources */,
 				CE8A6B3A289ACF41002F1DD7 /* Main.storyboard in Resources */,
+				CEF3FC4028CE1FEA00B6D4D2 /* Obstacle.sks in Resources */,
+				CEDCAF9228C0DA03005D8324 /* FAQ.storyboard in Resources */,
+				CE367D7628B6529900B615FA /* Calculator.storyboard in Resources */,
+				CE367D8028B655DA00B615FA /* Login.storyboard in Resources */,
+				CEF3FC3228CE15A300B6D4D2 /* Hero.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,18 +607,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDCAF8E28C0D439005D8324 /* PushNotification.swift in Sources */,
 				CE759121289BD39B00F7098A /* StartViewController.swift in Sources */,
+				CEF3FC3D28CE1D3A00B6D4D2 /* CGFloatExtensions.swift in Sources */,
+				CEF3FC4C28CE5D2A00B6D4D2 /* MSButtonNode.swift in Sources */,
 				CE18466028ABCC8A003BCD42 /* foodsCollectionViewCell.swift in Sources */,
-				CE5650D128A11CBE001E1668 /* MainPageViewController.swift in Sources */,
+				CE5E6C4128CA211D00EEC5B6 /* AdviceManager.swift in Sources */,
+				CEF6472C28CB631F00DC29A3 /* GameViewController.swift in Sources */,
+				CE1ED94028C8F3B40085A2C8 /* WeatherManager.swift in Sources */,
+				CE18054328B6E4A600BAC5C0 /* HomePageViewController.swift in Sources */,
+				CE17BCD228B6A09F00DE5B3D /* FoodViewController.swift in Sources */,
+				CE1EF96F28BBF7E6007EB20F /* MapViewController.swift in Sources */,
+				CE5650D128A11CBE001E1668 /* MainTabBarViewController.swift in Sources */,
+				CE5E6C4628CA226100EEC5B6 /* BonusViewController.swift in Sources */,
 				CE18465628ABA6DB003BCD42 /* FavoritesViewController.swift in Sources */,
+				CEFD6A7C28C3D72E00172388 /* UserModel.swift in Sources */,
+				CEDCAF9528C0DA11005D8324 /* FAQViewController.swift in Sources */,
 				CE5650C628A0E6A0001E1668 /* StartCollectionViewCell.swift in Sources */,
+				CE8C6B9A28CF6D91006296EA /* MSButtonExitNode.swift in Sources */,
+				CE367D6328B63D2600B615FA /* RecoveryViewController.swift in Sources */,
+				CE262BBF28BF5F3C005B55DF /* ChangeUsernameViewController.swift in Sources */,
+				CED9409E28C7FCDC0044C1DC /* ChangeUsernameBackView.swift in Sources */,
 				CEA2B3C028ABF2280027D3D4 /* RecipesTableViewCell.swift in Sources */,
 				CE8A6B5A289ADC11002F1DD7 /* LoginViewController.swift in Sources */,
-				CEAFFA1628AE7FDA00011E65 /* Manager.swift in Sources */,
+				CED940A128C803060044C1DC /* FavoritesBackView.swift in Sources */,
+				CED9409B28C7FBF90044C1DC /* FaqBackView.swift in Sources */,
+				CE1ED93928C8DB2E0085A2C8 /* Extensions.swift in Sources */,
+				CE4A503528C6742E00332F77 /* CustomBackView.swift in Sources */,
+				CEF6473228CB646400DC29A3 /* GameScene.swift in Sources */,
+				CE18054728B6F26A00BAC5C0 /* NewsMainPageCollectionViewCell.swift in Sources */,
+				CE5E6C4D28CA33E800EEC5B6 /* BonusBackView.swift in Sources */,
+				CEAFFA1628AE7FDA00011E65 /* RecipeManager.swift in Sources */,
 				CE8A6B5E289ADC24002F1DD7 /* SignUpViewController.swift in Sources */,
 				CE8A6B33289ACF41002F1DD7 /* AppDelegate.swift in Sources */,
+				CE4A503828C674A700332F77 /* CustomHomeBackView.swift in Sources */,
+				CE00FC5928BD2F2A007BC9EC /* AccountViewController.swift in Sources */,
+				CE77F1C328B506E900F29069 /* BMRViewController.swift in Sources */,
+				CE77F1BD28B4F55300F29069 /* CalculatorViewController.swift in Sources */,
+				CEDCAF9828C0E028005D8324 /* FAQTableViewCell.swift in Sources */,
+				CED940A428C8043F0044C1DC /* CalculatorBackView.swift in Sources */,
 				CEB9562B28AD2AFC0021D261 /* UsersData.swift in Sources */,
+				CE90703328C23CF900361D48 /* Shop.swift in Sources */,
 				CE8A6B35289ACF41002F1DD7 /* SceneDelegate.swift in Sources */,
+				CE77F1C828B5229300F29069 /* RecipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +726,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -491,7 +781,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -505,11 +795,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0A204F500672533D41DC8477 /* Pods-HealthPro.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79W7Z8MLYV;
 				INFOPLIST_FILE = HealthPro/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -525,11 +817,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C673CCB482C24BEEEE58DCC8 /* Pods-HealthPro.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79W7Z8MLYV;
 				INFOPLIST_FILE = HealthPro/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

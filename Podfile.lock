@@ -6,16 +6,31 @@ PODS:
     - Alamofire (~> 4.0)
     - SwiftyJSON (~> 4.0)
   - BetterSegmentedControl (1.3.0)
+  - IQKeyboardManagerSwift (6.5.10)
+  - PryntTrimmerView (4.0.2)
+  - Realm (10.25.1):
+    - Realm/Headers (= 10.25.1)
+  - Realm/Headers (10.25.1)
+  - RealmSwift (10.25.1):
+    - Realm (= 10.25.1)
+  - SteviaLayout (4.7.3)
   - SwiftLint (0.48.0)
   - SwiftyJSON (4.3.0)
+  - YPImagePicker (4.5.0):
+    - PryntTrimmerView (~> 4.0.2)
+    - SteviaLayout (~> 4.7.3)
 
 DEPENDENCIES:
   - Alamofire (= 4.9.1)
   - AlamofireImage
   - AlamofireSwiftyJSON
   - BetterSegmentedControl (~> 1.3)
+  - IQKeyboardManagerSwift
+  - Realm (= 10.25.1)
+  - RealmSwift (= 10.25.1)
   - SwiftLint
   - SwiftyJSON (~> 4.0)
+  - YPImagePicker
 
 SPEC REPOS:
   trunk:
@@ -23,17 +38,29 @@ SPEC REPOS:
     - AlamofireImage
     - AlamofireSwiftyJSON
     - BetterSegmentedControl
+    - IQKeyboardManagerSwift
+    - PryntTrimmerView
+    - Realm
+    - RealmSwift
+    - SteviaLayout
     - SwiftLint
     - SwiftyJSON
+    - YPImagePicker
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
   AlamofireSwiftyJSON: 74ee3804bed06d07857daf1eeb1615c85dba3997
   BetterSegmentedControl: 85d1b0343a09603b098884d527f550dfc8e6cdd9
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
+  Realm: 1a6e9b4f6983711655d8c0bcb6d2d29c3afbb1f3
+  RealmSwift: e72669550d27082aa4fad5d176f5076cfe806245
+  SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   SwiftLint: 284cea64b6187c5d6bd83e9a548a64104d546447
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  YPImagePicker: 6f410f475bd22fa8cd430495b54d4b2f15865c2d
 
-PODFILE CHECKSUM: feb2338a3a1b840017bc0e599df4465edf9ccb09
+PODFILE CHECKSUM: c190886da758a0a87f58cb479946c48e276da7d7
 
 COCOAPODS: 1.11.3
