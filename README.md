@@ -1,8 +1,6 @@
 # HealthPro
 
 This app was developed as part of the **Swift** programming language training.
-  
-**HealthPro** .*
 
 ## Getting Started
 
