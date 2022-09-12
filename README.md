@@ -44,8 +44,8 @@ Below are screenshots of the graphical interface of the application
   <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/8.png" width="200" >
   <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/9.png" width="200" >
   <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/10.png" width="200" >
-  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/11.png" width="200" >
   <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/12.png" width="200" >
+  <img src="https://github.com/valentinrymsha/HealthPro/blob/main/screenShots/11.png" width="200" >
 </p>
 
 
