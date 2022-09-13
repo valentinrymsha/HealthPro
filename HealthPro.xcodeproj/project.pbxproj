@@ -296,7 +296,7 @@
 			path = RecoveryPassViewController;
 			sourceTree = "<group>";
 		};
-		CE367D6828B647CE00B615FA /* Controller */ = {
+		CE367D6828B647CE00B615FA /* Moduls */ = {
 			isa = PBXGroup;
 			children = (
 				CE367D6928B647F700B615FA /* StartScreen */,
@@ -304,7 +304,7 @@
 				CEF6FB4728AD41C50057D530 /* LoginScreen */,
 				CE367D6C28B648D100B615FA /* TabBarViewController */,
 			);
-			path = Controller;
+			path = Moduls;
 			sourceTree = "<group>";
 		};
 		CE367D6928B647F700B615FA /* StartScreen */ = {
@@ -391,7 +391,7 @@
 			children = (
 				CE18464928AB9A2D003BCD42 /* Resources */,
 				CE18464B28AB9AEE003BCD42 /* Model */,
-				CE367D6828B647CE00B615FA /* Controller */,
+				CE367D6828B647CE00B615FA /* Moduls */,
 				CE8A6B40289ACF43002F1DD7 /* Info.plist */,
 				CE8A6B4A289AD0CC002F1DD7 /* fonts */,
 			);

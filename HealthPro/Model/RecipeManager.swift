@@ -9,13 +9,14 @@
 
 
 import Foundation
+import UIKit
 
 final class RecipeManager {
     
     static func checkUserOnServer(complition: @escaping (Root?) -> Void) {
         
         let session = URLSession.shared
-       
+        
         // Keys if >150 requests
         
 //        let key1 = "9f40dbb7b8a54e3b9d76a431a5c55615"

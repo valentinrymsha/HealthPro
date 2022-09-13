@@ -86,6 +86,11 @@ final class AccountViewController: UIViewController {
         present(alert, animated: true)
     }
     
+    private func betaAlert() {
+        
+       
+    }
+    
     private func setupWeatherData() {
         WeatherManager.checkUserOnServer { root in
             self.rootWeatherInfo = root
@@ -286,12 +291,20 @@ final class AccountViewController: UIViewController {
     }
     
     @IBAction func didTappedMinigameButton(_ sender: UIButton) {
-        guard let gameVC = gameStoryboard.instantiateViewController(withIdentifier: "gameVC") as? GameViewController else { return }
-       
-        present(gameVC, animated: true)
+        
+        let alert = UIAlertController(title: "This fiture is beta version\n App can work incorrect", message: "Continue if you agree", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Agree", style: .default, handler: {_ in
+            
+            guard let gameVC = self.gameStoryboard.instantiateViewController(withIdentifier: "gameVC") as? GameViewController else { return }
+            self.present(gameVC, animated: true)
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
+        
     }
-    
-    
 }
 
 // MARK: ImagePickerViewDelegate, NavigationDelegate

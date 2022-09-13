@@ -34,6 +34,15 @@ final class FavoritesViewController: UIViewController {
     
     private let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
+    private func errorAlert() {
+        
+        let alert = UIAlertController(title: "Request was fall", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try againg", style: .cancel, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
     // MARK: Lifecircle
     
     override func viewDidLoad() {
@@ -72,8 +81,8 @@ final class FavoritesViewController: UIViewController {
     @IBAction private func searchRecipesButton(_ sender: Any) {
         DispatchQueue.main.async {
             RecipeManager.checkUserOnServer { (root) in
-                self.recipesArray = root
-                self.recipes = self.recipesArray?.recipes
+                    self.recipesArray = root
+                    self.recipes = self.recipesArray?.recipes
             }
         }
         
